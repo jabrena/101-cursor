@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>101 Cursor AI</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="images/bg-compress-placeholder.webp">
+					<h2 style="color: white;">101 Cursor AI</h2>
+					<h3 style="color: white;">The AI Code Editor. <br/>Learning to use in Java Space</h3>
+					<img src="images/cursor-logo.webp" width="30%" />
+				</section>
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li>Introduction</li>
+						<li>From IDEA to Cursor AI</li>
+						<li>Pair programming with a LLM</li>
+						<li>Modes (Edit, Ask, Agent)</li>
+						<li>Popular prompts</li>
+						<li>Scenarios to use Cursor AI in Java Space</li>
+						<li>Cursor rules</li>
+						<li>Limitations & Concerns</li>
+						<li>Pricing</li>
+						<li>Q&A</li>
+					</ul>
+				</section>
+				<section>
+					<img src="images/demo-time.png" width="30%" />
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.configure({ slideNumber: true });
+			Reveal.configure({ slideNumber: 'c/t' });
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				controls: true,
+				controlsLayout: 'bottom-right',
+				progress: true,
+				center: true,
+				hash: true,
+				touch: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				slideNumber: true,
+				showSlideNumber: 'all',
+	
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			});
+		</script>
+	</body>
+</html>
