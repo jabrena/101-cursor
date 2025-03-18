@@ -21,23 +21,197 @@
 					<h3 style="color: white;">The AI Code Editor. <br/>Learning to use in Java Space</h3>
 					<img src="images/cursor-logo.webp" width="30%" />
 				</section>
+				<section align="left" data-background="#ffd7b5"><!-- data-background="./images/innovation.jpg" -->
+					<h2 align="center">Who I am</h2>
+					<table>
+						<tr>
+							<td>
+								<img src="./images/jabAvatar.jpg" width="100%" />
+							</td>
+							<td style="color: #336699; vertical-align: top">
+								Juan Antonio Breña Moral<br />
+								Technical Product Owner for Shared Platform @ Atradius CIO
+								<!--, 
+								Footballitics, 
+								Novag Chess user
+								-->
+								<br />
+								<a target="_blank" href="https://twitter.com/juanantoniobm">Twitter</a> |
+								<a target="_blank" href="https://github.com/jabrena">Github</a></li> |
+								<a target="_blank" href="https://www.linkedin.com/in/juanantoniobrenamoral">Linkedin</a>
+							</td>
+						</tr>
+						<!--
+						<tr>
+							<td colspan="2" align="center" style="color: #336699;">
+								Purpose: <i>"Riding dragons with innovation & fun"</i>
+							</td>
+						</tr>
+						-->
+						<tr>
+							<td colspan="2" align="center" style="color: #336699;">
+								<strong>Quotes:</strong> <i>"Lead me, follow me, or get out of my way." <br />"Pressure makes diamonds."</i><br />
+								<i>- George S. Patton Jr.</i>
+							</td>
+						</tr>
+						
+					</table>
+				</section>				
 				<section>
 					<h2>Agenda</h2>
 					<ul>
+						<li>Who I am</li>
 						<li>Introduction</li>
-						<li>From IDEA to Cursor AI</li>
+						<li>Reviewing the IDE</li>
+						<li>Value proposition</li>
+						<li>SLDC</li>
+						<!--
 						<li>Pair programming with a LLM</li>
 						<li>Modes (Edit, Ask, Agent)</li>
-						<li>Popular prompts</li>
-						<li>Scenarios to use Cursor AI in Java Space</li>
 						<li>Cursor rules</li>
+						-->
 						<li>Limitations & Concerns</li>
-						<li>Pricing</li>
 						<li>Q&A</li>
 					</ul>
 				</section>
 				<section>
-					<img src="images/demo-time.png" width="30%" />
+					<section>
+						<h2>Introduction</h2>
+					</section>
+					<section>
+						<p>
+							In your career, you implemented Java code with different IDEs...
+						</p>
+					</section>
+					<section>
+						<h3>IBM Visual Age for Java</h3>
+						<img src="images/ibm-visual-age-for-java.png" width="60%" />
+					</section>
+					<section>
+						<h3>Eclipse</h3>
+						<img src="images/eclipse.png" width="70%" />
+					</section>
+					<section>
+						<h3>IntelliJ IDEA</h3>
+						<img src="images/jetbrains-idea.png" width="70%" />
+					</section>
+					<section>
+						<h3>VSCode</h3>
+						<img src="images/vscode.png" width="60%" />
+					</section>
+					<section>
+						<p>
+							In all previous cases, 
+							Software engineers implemented Java solutions relying solely on 
+							their own talent & experience with Java programming language.
+						</p>
+					</section>
+					<section>
+						<p>
+							But in 2024, 
+							a new IDE generation appeared in the market like 
+							Cursor, Websurf or Devin adding new AI capabilities 
+							to improve the developer experience.
+						</p>
+					</section>
+					<section>
+						<p>
+							And this talk will try to show how to use Cursor AI in the context of SLDC.
+						</p>
+					</section>
+					<section>
+						<img src="images/cursor-logo.webp" width="30%" />
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Reviewing the IDE</h2>
+					</section>
+					<section>
+						<ul>
+							<li>[ ] Create a new maven project</li>
+							<li>[ ] Create a new Spring Boot project with REST support</li>
+							<li>[ ] Create a new Quarkus project with REST support</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							<strong>Prompt:</strong> Create a new maven project
+						</p>
+						<p>
+							<strong>Prompt:</strong> Create a new maven project with Java 24 support
+						</p>
+						<p>
+							<strong>Prompt:</strong> Create a new maven project with java.version Java 24
+						</p>							
+					</section>
+					<section>
+						<ul>
+							<li>[x] Create a new maven project</li>
+							<li>[ ] Create a new Spring Boot project with REST support</li>
+							<li>[ ] Create a new Quarkus project with REST support</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							<strong>Prompt:</strong> Create a new Spring boot project with REST support
+						</p>	
+						<p>
+							<strong>Prompt:</strong> Create a new Spring boot project with REST support with maven support
+						</p>						
+					</section>
+					<section>
+						<ul>
+							<li>[x] Create a new maven project</li>
+							<li>[x] Create a new Spring Boot project with REST support</li>
+							<li>[ ] Create a new Quarkus project with REST support</li>
+						</ul>
+					</section>	
+					<section>
+						<p>
+							<strong>Prompt:</strong> Create a new Quarkus project with REST support
+						</p>	
+						<p>
+							<strong>Prompt:</strong> Create a new Quarkus project with REST support with maven support
+						</p>						
+					</section>
+					<section>
+						<ul>
+							<li>[x] Create a new maven project</li>
+							<li>[x] Create a new Spring Boot project with REST support</li>
+							<li>[x] Create a new Quarkus project with REST support</li>
+						</ul>
+					</section>														
+					<section>
+						<p>
+							...
+						</p>
+					</section>
+					<section>
+						<img src="images/c4-component.png" width="50%" />
+					</section>
+					<section>
+						<img src="images/uml-sequence-diagram.png" width="100%" />
+					</section>
+					<section>
+						<p>
+							<strong>Prompt:</strong> Create a Spring boot project using 
+							the C4 Diagram and the UML Sequence Diagram
+						</p>
+						<p>
+							<strong>Prompt:</strong> Create a Spring boot project using 
+							the C4 Diagram and the UML Sequence Diagram with maven support, 
+							only using servlet approach and data access with Spring Data JDBC 
+						</p>			
+					</section>
+				</section>
+				<section>
+					<h2>SLDC</h2>
+					<img src="./images/sldc.webp" width="40%" />
+					<small><strong>Source: </strong><a href="https://datarob.com/essentials-software-development-life-cycle/" target="_blank">https://datarob.com/essentials-software-development-life-cycle/</a></small>
+				</section>
+				<section>
+					<img src="images/demo.png" width="80%" />
 				</section>
 			</div>
 		</div>
