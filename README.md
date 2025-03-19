@@ -10,3 +10,4 @@ open http://localhost:8080
 
 - https://www.cursor.com/
 - https://revealjs.com/installation/
+- https://editor-next.swagger.io/
