@@ -1,2 +1,3 @@
 .DS_Store
-.structurizr
+structurizr/logs/*
+structurizr/index/**

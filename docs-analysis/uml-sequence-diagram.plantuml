@@ -20,7 +20,7 @@ end
 
 group Read process
 
-"User" -> "REST API": GET /gods/greek
+"User" -> "REST API": GET /api/v1/gods/greek
 "God Db" -> "REST API": List of greek gods
 "User" <-- "REST API": List of greek gods
 
