@@ -5,7 +5,6 @@
 jwebserver -p 8000 -d "$(pwd)/docs/"
 
 #structurizr
-docker run -it --rm -p 8080:8080 -v $(pwd)/docs-analysis/structurizr:/usr/local/structurizr structurizr/lite:2024.12.07
 docker run -it --rm -p 8080:8080 -v $(pwd)/docs-analysis/structurizr:/usr/local/structurizr structurizr/onpremises:2024.12.07
 
 open http://localhost:8080
