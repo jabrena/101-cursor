@@ -1,0 +1,57 @@
+openapi: 3.0.3
+info:
+  title: Greek Gods API
+  description: API for retrieving information about Greek gods
+  version: 1.0.0
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  contact:
+    name: API Support
+    email: support@example.com
+servers:
+  - url: https://my-json-server.typicode.com/jabrena/latency-problems
+    description: Main server
+paths:
+  /greek:
+    get:
+      tags:
+        - greek-gods
+      summary: Get list of Greek gods
+      description: Returns an array of Greek god names
+      operationId: getGreekGods
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                example: [
+                  "Zeus",
+                  "Hera",
+                  "Poseidon",
+                  "Demeter",
+                  "Ares",
+                  "Athena",
+                  "Apollo",
+                  "Artemis",
+                  "Hephaestus",
+                  "Aphrodite",
+                  "Hermes",
+                  "Dionysus",
+                  "Hades",
+                  "Hypnos",
+                  "Nike",
+                  "Janus",
+                  "Nemesis",
+                  "Iris",
+                  "Hecate",
+                  "Tyche"
+                ]
+        '404':
+          description: Not found
+        '500':
+          description: Internal server error

@@ -1,5 +1,6 @@
 workspace {
     model {
+
         user = person "User"
         
         greekGodSystem = softwareSystem "System" {
@@ -8,6 +9,7 @@ workspace {
             schedulerService = container "Spring Boot Service2" "Periodical Greek God Database update"
             repository = container "Spring Data Repository" "Database access"
             database = container "Database" "PostgreSQL" "Relational Database"
+
         }
         
         externalSystem = softwareSystem "My JSON Server" "External system"
