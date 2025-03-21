@@ -1,36 +1,35 @@
 {
-  "openapi": "3.1.0",
+  "openapi": "3.0.3",
   "info": {
-    "title": "Spring Boot Application API",
-    "description": "API documentation for Spring Boot application",
+    "title": "Greek Gods API",
+    "description": "API for accessing information about Greek gods",
+    "version": "1.0.0",
     "contact": {
-      "name": "API Support",
-      "email": "support@example.com"
+      "name": "Greek Gods Service",
+      "email": "info@greekgods.example.com"
     },
     "license": {
-      "name": "Apache 2.0",
-      "url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
-    "version": "1.0.0"
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
   },
   "servers": [
     {
-      "url": "/",
-      "description": "Default Server URL"
+      "url": "/api/v1"
     }
   ],
   "paths": {
-    "/api/v1/gods": {
+    "/gods/greek": {
       "get": {
+        "summary": "Get all Greek gods",
+        "description": "Retrieve a list of all Greek gods with their information",
+        "operationId": "getAllGreekGods",
         "tags": [
-          "greek-god-controller"
+          "Greek Gods"
         ],
-        "summary": "Retrieve all Greek gods",
-        "description": "Returns a list of all Greek gods from the database",
-        "operationId": "getAllGods",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "A list of Greek gods",
             "content": {
               "application/json": {
                 "schema": {
@@ -41,6 +40,9 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Internal server error"
           }
         }
       }
@@ -50,6 +52,10 @@
     "schemas": {
       "GreekGod": {
         "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
         "properties": {
           "id": {
             "type": "integer",

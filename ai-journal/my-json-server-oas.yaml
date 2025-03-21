@@ -1,57 +1,33 @@
 openapi: 3.0.3
 info:
-  title: Greek Gods API
-  description: API for retrieving information about Greek gods
+  title: My JSON Server API
+  description: API for retrieving data from My JSON Server
   version: 1.0.0
-  license:
-    name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0
   contact:
-    name: API Support
-    email: support@example.com
+    name: My JSON Server
+    email: info@myjsonserver.example.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
 servers:
   - url: https://my-json-server.typicode.com/jabrena/latency-problems
-    description: Main server
 paths:
   /greek:
     get:
-      tags:
-        - greek-gods
-      summary: Get list of Greek gods
-      description: Returns an array of Greek god names
+      summary: Get Greek gods list
+      description: Retrieve a list of Greek god names
       operationId: getGreekGods
+      tags:
+        - Greek Gods
       responses:
         '200':
-          description: Successful operation
+          description: A list of Greek god names
           content:
             application/json:
               schema:
                 type: array
                 items:
                   type: string
-                example: [
-                  "Zeus",
-                  "Hera",
-                  "Poseidon",
-                  "Demeter",
-                  "Ares",
-                  "Athena",
-                  "Apollo",
-                  "Artemis",
-                  "Hephaestus",
-                  "Aphrodite",
-                  "Hermes",
-                  "Dionysus",
-                  "Hades",
-                  "Hypnos",
-                  "Nike",
-                  "Janus",
-                  "Nemesis",
-                  "Iris",
-                  "Hecate",
-                  "Tyche"
-                ]
-        '404':
-          description: Not found
+                example: ["Zeus", "Hera", "Poseidon", "Demeter", "Athena", "Apollo"]
         '500':
           description: Internal server error
