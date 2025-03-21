@@ -3,6 +3,7 @@
 ```bash
 #slides
 jwebserver -p 8000 -d "$(pwd)/docs/"
+open http://localhost:8000
 
 #structurizr
 docker run -it --rm -p 9000:8080 -v $(pwd)/structurizr:/usr/local/structurizr structurizr/onpremises:2024.12.07
@@ -28,6 +29,7 @@ curl http://localhost:8080/api/v1/gods
 ## References
 
 - https://www.cursor.com/
+- https://docs.cursor.com/
 - https://revealjs.com/installation/
 - https://editor-next.swagger.io/
 - https://structurizr.com/
@@ -36,3 +38,4 @@ curl http://localhost:8080/api/v1/gods
 - https://hub.docker.com/r/structurizr/lite/tags
 - https://hub.docker.com/r/structurizr/onpremises/tags
 - https://www.plantuml.com/plantuml/uml/
+- https://codely.com/en/blog
