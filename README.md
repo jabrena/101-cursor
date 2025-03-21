@@ -14,7 +14,7 @@ open http://localhost:9000
 ./mvnw versions:display-property-updates
 ```
 
-## Examples
+## Examples
 
 ```bash
 Use the @20240320-1.md as Prompt and analyze implement & test the following images to understand the required development.
