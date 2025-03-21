@@ -1,25 +1,25 @@
 openapi: 3.0.3
 info:
-  title: Greek Gods API
-  description: API for retrieving information about Greek gods
+  title: My JSON Server API
+  description: API for retrieving Greek gods data from external service
   version: 1.0.0
-  license:
-    name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0
   contact:
-    name: API Support
-    email: support@example.com
+    name: My JSON Server
+    email: info@myjsonserver.example.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
 servers:
   - url: https://my-json-server.typicode.com/jabrena/latency-problems
-    description: Main server
+    description: External JSON server
 paths:
   /greek:
     get:
       tags:
-        - greek-gods
-      summary: Get list of Greek gods
-      description: Returns an array of Greek god names
-      operationId: getGreekGods
+        - External Greek Gods
+      summary: Get Greek gods from external API
+      description: Returns a list of Greek gods from the external service
+      operationId: getExternalGreekGods
       responses:
         '200':
           description: Successful operation
@@ -28,30 +28,23 @@ paths:
               schema:
                 type: array
                 items:
-                  type: string
-                example: [
-                  "Zeus",
-                  "Hera",
-                  "Poseidon",
-                  "Demeter",
-                  "Ares",
-                  "Athena",
-                  "Apollo",
-                  "Artemis",
-                  "Hephaestus",
-                  "Aphrodite",
-                  "Hermes",
-                  "Dionysus",
-                  "Hades",
-                  "Hypnos",
-                  "Nike",
-                  "Janus",
-                  "Nemesis",
-                  "Iris",
-                  "Hecate",
-                  "Tyche"
-                ]
-        '404':
-          description: Not found
+                  $ref: '#/components/schemas/ExternalGreekGod'
         '500':
           description: Internal server error
+        '504':
+          description: Gateway timeout
+components:
+  schemas:
+    ExternalGreekGod:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: ID of the Greek god
+        name:
+          type: string
+          description: Name of the Greek god
+      required:
+        - id
+        - name
