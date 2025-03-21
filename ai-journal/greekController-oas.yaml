@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Greek Gods API",
-    "description": "API for accessing information about Greek gods",
+    "title": "Greek Gods REST API",
+    "description": "API for retrieving information about Greek gods",
     "version": "1.0.0",
     "contact": {
       "name": "Greek Gods Service",
@@ -15,21 +15,22 @@
   },
   "servers": [
     {
-      "url": "/api/v1"
+      "url": "http://localhost:8080",
+      "description": "Local development server"
     }
   ],
   "paths": {
-    "/gods/greek": {
+    "/api/v1/gods/greek": {
       "get": {
-        "summary": "Get all Greek gods",
-        "description": "Retrieve a list of all Greek gods with their information",
-        "operationId": "getAllGreekGods",
         "tags": [
           "Greek Gods"
         ],
+        "summary": "Get all Greek gods",
+        "description": "Returns a list of Greek gods",
+        "operationId": "getGreekGods",
         "responses": {
           "200": {
-            "description": "A list of Greek gods",
+            "description": "Successful operation",
             "content": {
               "application/json": {
                 "schema": {
@@ -60,7 +61,7 @@
           "id": {
             "type": "integer",
             "format": "int64",
-            "description": "Unique identifier for the Greek god",
+            "description": "ID of the Greek god",
             "example": 1
           },
           "name": {
