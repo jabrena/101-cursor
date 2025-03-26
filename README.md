@@ -8,6 +8,9 @@ open http://localhost:8000
 #structurizr
 docker run -it --rm -p 9000:8080 -v $(pwd)/structurizr:/usr/local/structurizr structurizr/onpremises:2024.12.07
 open http://localhost:9000
+
+curl --header "X-Authorization:1234567890" http://localhost:9000/api/workspace
+
 ```
 
 ## Examples
