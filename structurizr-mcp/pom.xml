@@ -11,6 +11,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>24</java.version>
+    <quarkus-bom.version>3.19.2</quarkus-bom.version>
+    <quarkus-mcp.version>1.0.0.Beta4</quarkus-mcp.version>
 
     <!-- Maven Plugins -->
     <maven.enforcer.version>3.5.0</maven.enforcer.version>
@@ -21,11 +23,16 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.junit</groupId>
-        <artifactId>junit-bom</artifactId>
-        <version>5.12.0</version>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-bom</artifactId>
+        <version>${quarkus-bom.version}</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.quarkiverse.mcp</groupId>
+        <artifactId>quarkus-mcp-server-stdio</artifactId>
+        <version>${quarkus-mcp.version}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson</groupId>
@@ -34,10 +41,22 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>5.12.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
   <dependencies>
+    <dependency>
+      <groupId>io.quarkiverse.mcp</groupId>
+      <artifactId>quarkus-mcp-server-stdio</artifactId>
+    </dependency>
     <dependency>
       <groupId>com.structurizr</groupId>
       <artifactId>structurizr-client</artifactId>
@@ -64,45 +83,45 @@
   <build>
     <plugins>
       <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-enforcer-plugin</artifactId>
-          <version>${maven.enforcer.version}</version>
-          <executions>
-              <execution>
-                  <id>enforce</id>
-                  <configuration>
-                      <rules>
-                          <dependencyConvergence />
-                          <banDuplicatePomDependencyVersions />
-                          <requireMavenVersion>
-                              <version>${maven.version}</version>
-                          </requireMavenVersion>
-                          <requireJavaVersion>
-                              <version>${java.version}</version>
-                          </requireJavaVersion>
-                          <bannedDependencies>
-                              <excludes>
-                                  <exclude>org.projectlombok:lombok</exclude>
-                              </excludes>
-                          </bannedDependencies>
-                      </rules>
-                      <fail>true</fail>
-                  </configuration>
-                  <goals>
-                      <goal>enforce</goal>
-                  </goals>
-              </execution>
-          </executions>
-      </plugin>    
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>${maven.enforcer.version}</version>
+        <executions>
+          <execution>
+            <id>enforce</id>
+            <configuration>
+              <rules>
+                <dependencyConvergence />
+                <banDuplicatePomDependencyVersions />
+                <requireMavenVersion>
+                  <version>${maven.version}</version>
+                </requireMavenVersion>
+                <requireJavaVersion>
+                  <version>${java.version}</version>
+                </requireJavaVersion>
+                <bannedDependencies>
+                  <excludes>
+                    <exclude>org.projectlombok:lombok</exclude>
+                  </excludes>
+                </bannedDependencies>
+              </rules>
+              <fail>true</fail>
+            </configuration>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>${maven.compiler.version}</version>
-          <configuration>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven.compiler.version}</version>
+        <configuration>
           <compilerArgument>-Xlint:all</compilerArgument><!-- -Werror -->
           <release>${java.version}</release>
-          </configuration>
-      </plugin>    
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>

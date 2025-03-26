@@ -8,7 +8,7 @@ docker run -it --rm -p 9000:8080 -v $(pwd)structurizr:/usr/local/structurizr str
 curl --header "X-Authorization:1234567890" http://localhost:9000/api/workspace
 
 ./mvnw clean verify
-./mvnw clean verify exec:java -Dexec.mainClass="info.jab.structurizr.mcp.StructurizrMcp"
+./mvnw clean verify exec:java -Dexec.mainClass="info.jab.structurizr.mcp.StructurizrPOC"
 
 {
   "workspaces": [
