@@ -24,6 +24,29 @@
 					</section>
 				</section>
 
+				<section>
+					<section>
+						<blockquote>
+							“There is no favorable wind for the sailor who doesn't know where to go”
+							<br />
+							<i>-Seneca</i>
+						</blockquote>
+					</section>
+					<section>
+						<blockquote>
+							“If you don't know how to ask the right question, you won't discover anything.”
+							<br />
+							<i>- W. Edwards Deming</i>
+						</blockquote>
+					</section>
+					<section>
+						<blockquote>
+							“You can't fake quality any more than you can fake good food.”
+							<br />
+							<i>- William S. Burroughs</i>
+						</blockquote>
+					</section>
+				</section>
 				<section align="left" data-background="#ffd7b5"><!-- data-background="./images/innovation.jpg" -->
 					<h2 align="center">Who I am</h2>
 					<table>
@@ -59,17 +82,28 @@
 						</tr>
 						
 					</table>
-				</section>				
+				</section>			
 				<section>
 					<h2>Agenda</h2>
 					<ul>
 						<li>Who I am</li>
+						<li>Goals</li>
 						<li>Introduction</li>
 						<li>Reviewing the IDE</li>
+						<li>Cursor development approach</li>
 						<li>Use cases</li>
 						<li>Limitations & Concerns</li>
 						<li>Q&A</li>
 					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Goals</h2>
+						<p>
+							This talk tries to explain in 45 minutes, how to use Cursor AI for Java Enterprise software development.
+						</p>
+						<img src="images/pirelli-carl-lewis.jpg" width="70%" />
+					</section>
 				</section>
 				<section>
 					<section>
@@ -104,6 +138,7 @@
 						<img src="images/vscode.png" width="70%" />
 						<p>VSCode</p>
 					</section>
+					<!--
 					<section>
 						<p>
 							In the last years, you could observe some signs of change 
@@ -113,6 +148,7 @@
 						<small><strong>Source: </strong><a href="https://blog.pragmaticengineer.com/are-llms-making-stackoverflow-irrelevant/" 
 							target="_blank">https://blog.pragmaticengineer.com/are-llms-making-stackoverflow-irrelevant/</a></small>
 					</section>
+					-->
 					<section>
 						<p>
 							In the another hand, Cursor is one of the Tech product which 
@@ -124,40 +160,95 @@
 					</section>
 					<section>
 						<p>
-							But... in this new niche, Cursor is not alone, exist other similar tools like:
+							But... in this new niche, Cursor is not alone, exist other tools:
 						</p>
-						<ul>
-							<li><a href="https://codeium.com/windsurf" target="_blank">Windsurf</a></li>
-							<li><a href="https://copilot.github.com/" target="_blank">Copilot</a></li>
-							<li><a href="https://devin.ai/" target="_blank">Devin</a></li>
-						</ul>
-					</section>
-					<section>
-						<img src="images/infoq-ai-trends.webp" width="60%" />
+						<img src="images/infoq-ai-trends.webp" width="50%" />
 						<small><strong>Source: </strong><a href="https://www.infoq.com/articles/ai-trends-disrupting-software-teams/" 
 							target="_blank">https://www.infoq.com/articles/ai-trends-disrupting-software-teams/</a></small>
 					</section>
 					<section>
-						<img src="images/cursor-logo.webp" width="30%" />
+						<img src="images/thoughtworks-radar-cursor.png" width="100%" />
+						<small><strong>Source: </strong><a href="https://www.thoughtworks.com/radar/tools/summary/cursor" 
+							target="_blank">https://www.thoughtworks.com/radar/tools/summary/cursor</a></small>
 					</section>
 					<section>
-						<p>
-							This talk delves into effective strategies for managing challenges
-							and maximizing benefits when integrating AI tools into Java Enterprise projects.
-						</p>
-						<img src="images/pirelli-carl-lewis.jpg" width="80%" />
+						<img src="images/cursor-logo.webp" width="30%" />
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Reviewing the IDE</h2>
+						<p>
+							The whole talk was prepared with the folowing Cursor version:
+						</p>
+						<img src="images/cursor-version.png" width="30%" />
+					</section>
+					<section>
+						<h2>Reviewing the IDE</h2>
 						<ul>
-							<li>Modes (Edit, Ask, Agent)</li>
-							<li>Settings</li>
-							<li>Cursor rules</li>
-							<li>MCP integration</li>
 							<li>Pricing</li>
+							<li>Privacy mode</li>
+							<li>Trust</li>
+							<li>Settings</li>
+							<li>Modes (Agent, Ask, Manual)</li>
+							<li>Cursor rules</li>
+							<li>Symbols</li>
+							<li>MCP integration</li>
 						</ul>
+					</section>
+					<section>
+						<h3>Pricing</h3>
+						<img src="images/cursor-pricing.png" width="100%" />
+						<small><strong>Source: </strong><a href="https://www.cursor.com/pricing" 
+							target="_blank">https://www.cursor.com/pricing</a></small>
+					</section>
+					<section>
+						<h3>Privacy mode</h3>
+						<img src="images/cursor-privacy-mode.png" width="80%" />
+						<small><strong>Source: </strong><a href="https://www.cursor.com/privacy" 
+							target="_blank">https://www.cursor.com/privacy</a></small>
+					</section>
+					<section>
+						<h3>Trust</h3>
+						<p>
+							SOC 2 is a compliance framework used to evaluate and validate an organizations information security practices. 
+						</p>
+						<p>
+							<ul>
+								<li>SOC 2 Type 1</li>
+								<li>SOC 2 Type 2</li>
+							</ul>
+						</p>
+						<small><strong>Source: </strong><a href="https://trust.cursor.com/" 
+							target="_blank">https://trust.cursor.com/</a></small>
+					</section>
+					<!--
+					<section>
+						<h3>Settings</h3>
+						<img src="images/review-cursor-settings-1.png" width="80%" />
+					</section>
+					<section>
+						<h3>Settings</h3>
+						<img src="images/review-cursor-settings-2.png" width="80%" />
+					</section>
+					-->
+					<section>
+						<h3>Settings</h3>
+						<img src="images/review-cursor-settings-3.png" width="80%" />
+						<p>
+							Review the usage of .cursorignore file to avoid indexing sensitive data.
+						</p>
+						<small><strong>Source: </strong><a href="https://www.cursor.com/security#codebase-indexing" 
+							target="_blank">https://www.cursor.com/security#codebase-indexing</a></small>
+					</section>
+					<section>
+						<h3>Settings</h3>
+						<img src="images/review-cursor-settings-3.png" width="80%" />
+						<p>
+							Learn how to use, add, and manage custom documentation as context in Cursor using @Docs
+						</p>
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/@-symbols/@-docs#docs" 
+							target="_blank">https://docs.cursor.com/context/@-symbols/@-docs#docs</a></small>
 					</section>
 					<section>
 						<h3>Modes</h3>
@@ -170,19 +261,6 @@
 							<li>Get explanations of complex functions</li>
 							<li>Find code patterns and examples</li>
 							<li>Discover and understand your codebase</li>
-						</ul>
-						<p>
-						<small><strong>Source: </strong><a href="https://docs.cursor.com/get-started/introduction" 
-							target="_blank">https://docs.cursor.com/get-started/introduction</a></small>
-						</p>
-					</section>
-					<section>
-						<h3>Edit Mode</h3>
-						<ul>
-							<li>Make single-turn edits to your code</li>
-							<li>Apply targeted changes with precision</li>
-							<li>Review and apply changes with confidence</li>
-							<li>Work with files individually</li>
 						</ul>
 						<p>
 						<small><strong>Source: </strong><a href="https://docs.cursor.com/get-started/introduction" 
@@ -203,21 +281,52 @@
 							target="_blank">https://docs.cursor.com/get-started/introduction</a></small>
 						</p>
 					</section>
-					<section>
-						<h3>Settings</h3>
-						<img src="images/review-cursor-settings-1.png" width="80%" />
-					</section>
-					<section>
-						<h3>Settings</h3>
-						<img src="images/review-cursor-settings-2.png" width="80%" />
-					</section>
-					<section>
-						<h3>Settings</h3>
-						<img src="images/review-cursor-settings-3.png" width="80%" />
-					</section>
+					<!--
 					<section>
 						<h3>Models</h3>
 						<img src="images/review-cursor-models.png" width="60%" />
+					</section>
+					-->
+					<section>
+						<h3>Cursor rules</h3>
+						<p>
+							Using rules in Cursor you can control the behavior of the underlying model. You can think of it as instructions and/or a system prompt for LLMs.
+						</p>
+						<ul>
+							<li><a href="https://github.com/PatrickJS/awesome-cursorrules/" target="_blank">https://github.com/PatrickJS/awesome-cursorrules/</a></li>
+							<li><a href="https://cursor.directory/" target="_blank">https://cursor.directory/</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Cursor rules</h3>
+						<img src="images/cursor-rules.png" width="80%" />
+					</section>
+					<section>
+						<h3>Symbols</h3>
+						<img src="images/cursor-symbols.png" width="80%" />
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/@-symbols/overview" 
+							target="_blank">https://docs.cursor.com/context/@-symbols/overview</a></small>
+					</section>
+					<section>
+						<h3>MCP servers</h3>
+						<p>
+							The Model Context Protocol (MCP) is an open protocol that standardizes how applications provide context and tools to LLMs. 
+							Think of MCP as a plugin system for Cursor - it allows you to extend the Agent’s capabilities by connecting it to various data sources 
+							and tools through standardized interfaces.
+						</p>
+						<p>
+							https://smithery.ai/server/@smithery-ai/server-sequential-thinking
+						</p>
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/model-context-protocol" 
+							target="_blank">https://docs.cursor.com/context/model-context-protocol</a></small>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Cursor development approach</h3>
+						<img src="images/cursor-approach.png" width="80%" />
+						<small><strong>Source: </strong><a href="https://levelup.gitconnected.com/ai-powered-documentation-driven-development-supercharge-your-coding-workflow-3f6125915e8f" 
+							target="_blank">https://levelup.gitconnected.com/ai-powered-documentation-driven-development-supercharge-your-coding-workflow-3f6125915e8f</a></small>
 					</section>
 				</section>
 				<section>
@@ -227,7 +336,19 @@
 					</section>
 					<section>
 						<h3>Use cases</h3>
+						<p>
+							Incremental development
+						</p>
 						<img src="images/incremental-development.png" width="60%" />
+					</section>
+					<section>
+						<h3>Use cases</h3>
+						<img src="images/standard-error.png" width="60%" />
+						<p>
+							Error = Actual value - Predicted value
+						</p>
+						<small><strong>Source: </strong><a href="https://ecampusontario.pressbooks.pub/introstats/chapter/13-3-standard-error-of-the-estimate/" 
+							target="_blank">https://ecampusontario.pressbooks.pub/introstats/chapter/13-3-standard-error-of-the-estimate/</a></small>
 					</section>
 					<section>
 						<img src="images/demo.png" width="80%" />
@@ -250,20 +371,9 @@
 							target="_blank">https://developers.redhat.com/blog/2016/12/09/spring-cloud-for-microservices-compared-to-kubernetes</a></small>
 					</section>
 					<section>
-						<ul>
-							<li>Prototyping & MVPs</li>
-							<li>Complex analysis</li>
-							<li>Business code Refactoring</li>
-							<li>Testing refactoring</li>
-							<li>Documentation</li>
-						</ul>
-					</section>
-					<section>
-						<ul>
-							<li>[ ] Create a new maven project</li>
-							<li>[ ] Create a new Spring Boot project with REST support</li>
-							<li>[ ] Create a new Quarkus project with REST support</li>
-						</ul>
+						<p>
+							First round of prompts
+						</p>
 					</section>
 					<section>
 						<p>
@@ -277,49 +387,28 @@
 						</p>							
 					</section>
 					<section>
-						<ul>
-							<li>[x] Create a new maven project</li>
-							<li>[ ] Create a new Spring Boot project with REST support</li>
-							<li>[ ] Create a new Quarkus project with REST support</li>
-						</ul>
-					</section>
-					<section>
 						<p>
 							<strong>Prompt:</strong> Create a new Spring boot project with REST support
 						</p>	
 						<p>
-							<strong>Prompt:</strong> Create a new Spring boot project with REST support with maven support
+							<strong>Prompt:</strong> Create a new Spring boot project with REST support and maven support
 						</p>						
 					</section>
-					<section>
-						<ul>
-							<li>[x] Create a new maven project</li>
-							<li>[x] Create a new Spring Boot project with REST support</li>
-							<li>[ ] Create a new Quarkus project with REST support</li>
-						</ul>
-					</section>	
 					<section>
 						<p>
 							<strong>Prompt:</strong> Create a new Quarkus project with REST support
 						</p>	
 						<p>
-							<strong>Prompt:</strong> Create a new Quarkus project with REST support with maven support
+							<strong>Prompt:</strong> Create a new Quarkus project with REST support and maven support
 						</p>						
-					</section>
-					<section>
-						<ul>
-							<li>[x] Create a new maven project</li>
-							<li>[x] Create a new Spring Boot project with REST support</li>
-							<li>[x] Create a new Quarkus project with REST support</li>
-						</ul>
-					</section>														
+					</section>													
 					<section>
 						<p>
-							...
+							Second round of prompts
 						</p>
 					</section>
 					<section>
-						<img src="images/c4-component.png" width="50%" />
+						<img src="images/structurizr-1-Container-001.png" width="60%" />
 					</section>
 					<section>
 						<img src="images/uml-sequence-diagram.png" width="100%" />
@@ -341,7 +430,50 @@
 					<section>
 						<img src="images/decision-tree.png" width="100%" />
 						<p>
-							Help the model to improve the efficiency of the Agent workflow.
+							Help the tool with some technical decisions to improve the efficiency of the Agent workflow exection.
+						</p>
+					</section>
+					<section>
+						<p>
+							At the end, Cursor agent perform better with good requirements written than adhoc prompts.
+						</p>
+					</section>
+					<section>
+						<p>
+							Third round of prompts
+						</p>
+					</section>
+					<section>
+						<p>
+							<strong>Prompt:</strong> Use the @20250320-1.md as Prompt and analyze implement & test 
+							the following images to understand the required development.
+
+						</p>
+						<p>
+							Add in the prompt:
+						</p>
+						<p>
+							<ul>
+								<li>Input OAS</li>
+								<li>Third party OAS</li>
+								<li>Database schema</li>
+								<li>C4 Diagram</li>
+								<li>UML Sequence Diagram</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<img src="images/demo.png" width="80%" />
+					</section>
+					<section>
+						<p>
+							Forth round of prompts
+						</p>
+					</section>
+					<section>
+						<h3>Category: Prototyping</h3>
+						<p>
+							<strong>Prompt:</strong> Create a website based on some screenshots
 						</p>
 					</section>
 				</section>
@@ -350,9 +482,24 @@
 						<h2>Limitations & Concerns</h2>
 					</section>
 					<section>
-						<img src="images/technical-debt.png" width="80%" />
+						<h3>Cognitive load</h3>
+						<img src="images/cognitive-load.png" width="70%" />
+						<small><strong>Source: </strong><a href="https://www.barefootteflteacher.com/p/what-is-cognitive-load-theory" 
+							target="_blank">https://www.barefootteflteacher.com/p/what-is-cognitive-load-theory</a></small>
+					</section>
+					<section>
+						<h3>Technical debt</h3>
+						<img src="images/technical-debt.png" width="70%" />
 						<small><strong>Source: </strong><a href="https://www.gitclear.com/ai_assistant_code_quality_2025_research" 
 							target="_blank">https://www.gitclear.com/ai_assistant_code_quality_2025_research</a></small>
+					</section>
+					<section>
+						<h3>Notes</h3>
+						<ul>
+							<li>Everything in main branch is responsability of the team, not the AI</li>
+							<li>Review periodically if the AI code generated is mastered by the team</li>
+							<li>The devil is in the details</li>
+						</ul>
 					</section>
 				</section>
 				<section>

@@ -11,6 +11,7 @@ left to right direction
 rectangle "When is better \nto use Cursor AI" as project
 rectangle "Greenfield project" as greenfield
 rectangle "Project in production" as prodution 
+rectangle "Prototype" as prototype 
 rectangle "MVP" as mvp
 rectangle "SLDC" as sldc
 rectangle "Feature" as feature
@@ -19,6 +20,7 @@ rectangle "Testing" as testing
 
 project --> greenfield
 project --> prodution
+project --> prototype
 
 greenfield --> mvp
 
