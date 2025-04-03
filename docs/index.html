@@ -100,7 +100,8 @@
 					<section>
 						<h2>Goals</h2>
 						<p>
-							This talk tries to explain in 45 minutes, how to use Cursor AI for Java Enterprise software development.
+							The talk is designed to explain in 60 minutes, 
+							how to use Cursor AI for Java Enterprise software development.
 						</p>
 						<img src="images/pirelli-carl-lewis.jpg" width="70%" />
 					</section>
@@ -108,34 +109,34 @@
 				<section>
 					<section>
 						<h2>Introduction</h2>
-					</section>
-					<section>
 						<p>
 							Java was released on May 23, 1995, 
-							as an alpha available only on Sun Microsystem's Solaris operating system.
+							available only on Sun Microsystem's Solaris operating system.
 						</p>
 						<img src="images/java-logo.svg" width="30%" />
 					</section>
 					<section>
 						<p>
-							During this time, Java software engineers implemented 
-							Java enterprise solutions by hand with their favorite IDE...
+							During the last 3 decades, Software engineers implemented 
+							Java enterprise solutions by hand using their favorite IDE...
 						</p>
 					</section>
 					<section>
 						<img src="images/ibm-visual-age-for-java.png" width="50%" />
 						<p>IBM Visual Age for Java</p>
 					</section>
+					<!--
 					<section>
 						<img src="images/eclipse.png" width="90%" />
 						<p>Eclipse</p>
 					</section>
+					-->
 					<section>
 						<img src="images/jetbrains-idea.png" width="80%" />
 						<p>IntelliJ IDEA</p>
 					</section>
 					<section>
-						<img src="images/vscode.png" width="70%" />
+						<img src="images/vscode.png" width="90%" />
 						<p>VSCode</p>
 					</section>
 					<!--
@@ -151,8 +152,7 @@
 					-->
 					<section>
 						<p>
-							In the another hand, Cursor is one of the Tech product which 
-							get investment with less time in the market.
+							But in 2023, Cursor appeared in the market with huge success...
 						</p>
 						<img src="images/intro-cursor-arr.png" width="40%" />
 						<small><strong>Source: </strong><a href="https://x.com/kubotamas/status/1887007803275141436" 
@@ -160,16 +160,24 @@
 					</section>
 					<section>
 						<p>
-							But... in this new niche, Cursor is not alone, exist other tools:
+							But... Cursor is not alone in this new niche:
 						</p>
 						<img src="images/infoq-ai-trends.webp" width="50%" />
 						<small><strong>Source: </strong><a href="https://www.infoq.com/articles/ai-trends-disrupting-software-teams/" 
 							target="_blank">https://www.infoq.com/articles/ai-trends-disrupting-software-teams/</a></small>
 					</section>
 					<section>
-						<img src="images/thoughtworks-radar-cursor.png" width="100%" />
+						<p>
+							And this success is recognized in Radar 2025:
+						</p>
+						<img src="images/thoughtworks-radar-cursor.png" width="90%" />
 						<small><strong>Source: </strong><a href="https://www.thoughtworks.com/radar/tools/summary/cursor" 
 							target="_blank">https://www.thoughtworks.com/radar/tools/summary/cursor</a></small>
+					</section>
+					<section>
+						<p>
+							So... let's dig into this new tool and share some ideas...
+						</p>
 					</section>
 					<section>
 						<img src="images/cursor-logo.webp" width="30%" />
@@ -186,19 +194,45 @@
 					<section>
 						<h2>Reviewing the IDE</h2>
 						<ul>
-							<li>Pricing</li>
-							<li>Privacy mode</li>
-							<li>Trust</li>
-							<li>Settings</li>
-							<li>Modes (Agent, Ask, Manual)</li>
-							<li>Cursor rules</li>
-							<li>Symbols</li>
-							<li>MCP integration</li>
+							<li>Security features
+								<ul>
+									<li>Business</li>
+									<li>Privacy mode</li>
+									<li>Trust</li>
+								</ul>
+							</li>
+							<li>Context features
+								<ul>
+									<li>Settings</li>
+									<li>Modes (Agent, Ask, Manual)</li>
+									<li>Cursor rules</li>
+									<li>Symbols</li>
+									<li>MCP integration</li>
+								</ul>
+							</li>
+
 						</ul>
 					</section>
 					<section>
-						<h3>Pricing</h3>
+						<h3>Security features</h3>
+						<p>
+							Add new cloud tools in large companies 
+							is not an easy task sometimes...
+						</p>
+						<img src="images/resistence.jpg" width="40%" />
+						<p>
+							So... review the security features to avoid issues...
+						</p>
+					</section>
+					<section>
+						<h3>Business</h3>
 						<img src="images/cursor-pricing.png" width="100%" />
+						<p>
+							<ul>
+								<li>Enforce privacy mode org-wide</li>
+								<li>SAML/OIDC SSO</li>
+							</ul>
+						</p>
 						<small><strong>Source: </strong><a href="https://www.cursor.com/pricing" 
 							target="_blank">https://www.cursor.com/pricing</a></small>
 					</section>
@@ -211,13 +245,11 @@
 					<section>
 						<h3>Trust</h3>
 						<p>
-							SOC 2 is a compliance framework used to evaluate and validate an organizations information security practices. 
+							Cursor operates a continuously monitored and 3rd-party audited security program. 
 						</p>
+						<img src="images/soc.png" width="40%" />
 						<p>
-							<ul>
-								<li>SOC 2 Type 1</li>
-								<li>SOC 2 Type 2</li>
-							</ul>
+							SOC 2 is a compliance framework used to evaluate and validate an organizations information security practices. 
 						</p>
 						<small><strong>Source: </strong><a href="https://trust.cursor.com/" 
 							target="_blank">https://trust.cursor.com/</a></small>
@@ -243,7 +275,7 @@
 					</section>
 					<section>
 						<h3>Settings</h3>
-						<img src="images/review-cursor-settings-3.png" width="80%" />
+						<img src="images/review-cursor-settings-docs.png" width="80%" />
 						<p>
 							Learn how to use, add, and manage custom documentation as context in Cursor using @Docs
 						</p>
@@ -281,6 +313,9 @@
 							target="_blank">https://docs.cursor.com/get-started/introduction</a></small>
 						</p>
 					</section>
+					<section>
+						<img src="images/demo.png" width="80%" />
+					</section>
 					<!--
 					<section>
 						<h3>Models</h3>
@@ -297,9 +332,14 @@
 							<li><a href="https://cursor.directory/" target="_blank">https://cursor.directory/</a></li>
 						</ul>
 					</section>
+					<!--
 					<section>
 						<h3>Cursor rules</h3>
 						<img src="images/cursor-rules.png" width="80%" />
+					</section>
+					-->
+					<section>
+						<img src="images/demo.png" width="80%" />
 					</section>
 					<section>
 						<h3>Symbols</h3>
@@ -311,14 +351,19 @@
 						<h3>MCP servers</h3>
 						<p>
 							The Model Context Protocol (MCP) is an open protocol that standardizes how applications provide context and tools to LLMs. 
-							Think of MCP as a plugin system for Cursor - it allows you to extend the Agent’s capabilities by connecting it to various data sources 
+							Think of MCP as a plugin system for Cursor - it allows you to extend the Agent's capabilities by connecting it to various data sources 
 							and tools through standardized interfaces.
 						</p>
+						<!--
 						<p>
 							https://smithery.ai/server/@smithery-ai/server-sequential-thinking
 						</p>
+						-->
 						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/model-context-protocol" 
 							target="_blank">https://docs.cursor.com/context/model-context-protocol</a></small>
+					</section>
+					<section>
+						<img src="images/demo.png" width="80%" />
 					</section>
 				</section>
 				<section>
