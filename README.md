@@ -25,6 +25,14 @@ pkill -f java
 curl http://localhost:8080/api/v1/gods
 ```
 
+## MCP Examples
+
+```
+jbang cache clear
+jbang catalog list
+jbang catalog list jabrena
+```
+
 ## References
 
 - https://www.cursor.com/
