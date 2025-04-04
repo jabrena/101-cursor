@@ -2,8 +2,8 @@
 
 ```bash
 #slides
-jwebserver -p 8000 -d "$(pwd)/docs/"
-open http://localhost:8000
+jwebserver -p 8005 -d "$(pwd)/docs/"
+open http://localhost:8005
 
 #structurizr
 docker run -it --rm -p 9000:8080 -v $(pwd)/structurizr:/usr/local/structurizr structurizr/onpremises:2024.12.07
