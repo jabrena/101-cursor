@@ -15,4 +15,4 @@ jobs:
           distribution: 'graalvm' # See 'Supported distributions' for available options
           java-version: '24'
       - name: Maven build
-        run: mvn --batch-mode --no-transfer-progress verify --file ./structurizr-mcp/pom.xml
+        run: mvn --batch-mode --no-transfer-progress verify --file ./demos/demo_07_requirements/structurizr-mcp/pom.xml
