@@ -301,3 +301,63 @@
 [INFO ] 2025-03-26 21:57:14.223 [Thread-1] Configuration - ********************************************************
 [INFO ] 2025-03-26 21:57:14.225 [Thread-1] Configuration -  Stopping Structurizr
 [INFO ] 2025-03-26 21:57:14.225 [Thread-1] Configuration - ********************************************************
+[INFO ] 2025-04-05 08:25:03.496 [main] ContextLoaderListener - ***********************************************************************************
+[INFO ] 2025-04-05 08:25:03.499 [main] ContextLoaderListener -   _____ _                   _              _          
+[INFO ] 2025-04-05 08:25:03.499 [main] ContextLoaderListener -  / ____| |                 | |            (_)         
+[INFO ] 2025-04-05 08:25:03.499 [main] ContextLoaderListener - | (___ | |_ _ __ _   _  ___| |_ _   _ _ __ _ _____ __ 
+[INFO ] 2025-04-05 08:25:03.499 [main] ContextLoaderListener -  \___ \| __| '__| | | |/ __| __| | | | '__| |_  / '__|
+[INFO ] 2025-04-05 08:25:03.500 [main] ContextLoaderListener -  ____) | |_| |  | |_| | (__| |_| |_| | |  | |/ /| |   
+[INFO ] 2025-04-05 08:25:03.500 [main] ContextLoaderListener - |_____/ \__|_|   \__,_|\___|\__|\__,_|_|  |_/___|_|   
+[INFO ] 2025-04-05 08:25:03.500 [main] ContextLoaderListener -                                                       
+[INFO ] 2025-04-05 08:25:03.500 [main] ContextLoaderListener - Structurizr on-premises installation
+[INFO ] 2025-04-05 08:25:03.501 [main] ContextLoaderListener -  - build: 2024.12.07 (2024-12-07T10:33:23Z)
+[INFO ] 2025-04-05 08:25:03.504 [main] ContextLoaderListener -  - structurizr-java: v3.2.0
+[INFO ] 2025-04-05 08:25:03.515 [main] ContextLoaderListener -  - structurizr-dsl: v3.2.0
+[INFO ] 2025-04-05 08:25:03.516 [main] ContextLoaderListener -  - structurizr-import: v3.2.0
+[INFO ] 2025-04-05 08:25:03.520 [main] ContextLoaderListener -  - structurizr-graphviz: v3.2.0
+[INFO ] 2025-04-05 08:25:03.522 [main] ContextLoaderListener - Data directory: /usr/local/structurizr (r: true; w: true; x: true)
+[INFO ] 2025-04-05 08:25:03.522 [main] ContextLoaderListener - URL: 
+[INFO ] 2025-04-05 08:25:03.524 [main] ContextLoaderListener - Memory: used=199MB; free=312MB; total=512MB; max=512MB
+[INFO ] 2025-04-05 08:25:03.524 [main] ContextLoaderListener - 
+[INFO ] 2025-04-05 08:25:03.525 [main] ContextLoaderListener - Internet connection: true
+[INFO ] 2025-04-05 08:25:03.525 [main] ContextLoaderListener - Authentication: file
+[INFO ] 2025-04-05 08:25:03.525 [main] ContextLoaderListener - API key: true
+[INFO ] 2025-04-05 08:25:03.526 [main] ContextLoaderListener - Session: local
+[INFO ] 2025-04-05 08:25:03.526 [main] ContextLoaderListener - Data storage: file
+[INFO ] 2025-04-05 08:25:03.527 [main] ContextLoaderListener - Caching: none
+[INFO ] 2025-04-05 08:25:03.527 [main] ContextLoaderListener - Workspace archiving: false
+[INFO ] 2025-04-05 08:25:03.527 [main] ContextLoaderListener - Workspace branches: false
+[INFO ] 2025-04-05 08:25:03.527 [main] ContextLoaderListener - Workspace scope: relaxed
+[INFO ] 2025-04-05 08:25:03.528 [main] ContextLoaderListener - Search: lucene
+[INFO ] 2025-04-05 08:25:03.565 [main] ContextLoaderListener - Graphviz (dot): true
+[INFO ] 2025-04-05 08:25:03.565 [main] ContextLoaderListener - DSL editor: true
+[INFO ] 2025-04-05 08:25:03.565 [main] ContextLoaderListener - ***********************************************************************************
+[INFO ] 2025-04-05 08:25:03.566 [main] ContextLoaderListener - MIT License
+[INFO ] 2025-04-05 08:25:03.566 [main] ContextLoaderListener - 
+[INFO ] 2025-04-05 08:25:03.566 [main] ContextLoaderListener - Copyright (c) 2024 Structurizr Limited
+[INFO ] 2025-04-05 08:25:03.566 [main] ContextLoaderListener - 
+[INFO ] 2025-04-05 08:25:03.567 [main] ContextLoaderListener - Permission is hereby granted, free of charge, to any person obtaining a copy
+[INFO ] 2025-04-05 08:25:03.567 [main] ContextLoaderListener - of this software and associated documentation files (the "Software"), to deal
+[INFO ] 2025-04-05 08:25:03.567 [main] ContextLoaderListener - in the Software without restriction, including without limitation the rights
+[INFO ] 2025-04-05 08:25:03.567 [main] ContextLoaderListener - to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+[INFO ] 2025-04-05 08:25:03.567 [main] ContextLoaderListener - copies of the Software, and to permit persons to whom the Software is
+[INFO ] 2025-04-05 08:25:03.567 [main] ContextLoaderListener - furnished to do so, subject to the following conditions:
+[INFO ] 2025-04-05 08:25:03.567 [main] ContextLoaderListener - 
+[INFO ] 2025-04-05 08:25:03.568 [main] ContextLoaderListener - The above copyright notice and this permission notice shall be included in all
+[INFO ] 2025-04-05 08:25:03.568 [main] ContextLoaderListener - copies or substantial portions of the Software.
+[INFO ] 2025-04-05 08:25:03.568 [main] ContextLoaderListener - 
+[INFO ] 2025-04-05 08:25:03.568 [main] ContextLoaderListener - THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+[INFO ] 2025-04-05 08:25:03.568 [main] ContextLoaderListener - IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+[INFO ] 2025-04-05 08:25:03.568 [main] ContextLoaderListener - FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+[INFO ] 2025-04-05 08:25:03.568 [main] ContextLoaderListener - AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+[INFO ] 2025-04-05 08:25:03.569 [main] ContextLoaderListener - LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+[INFO ] 2025-04-05 08:25:03.569 [main] ContextLoaderListener - OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+[INFO ] 2025-04-05 08:25:03.569 [main] ContextLoaderListener - SOFTWARE.
+[INFO ] 2025-04-05 08:25:03.569 [main] ContextLoaderListener - ***********************************************************************************
+[INFO ] 2025-04-05 08:25:04.493 [pool-4-thread-1] SearchController - Indexing workspace with ID 7
+[INFO ] 2025-04-05 08:25:04.493 [pool-4-thread-2] SearchController - Indexing workspace with ID 1
+[INFO ] 2025-04-05 08:25:45.900 [http-nio-8080-exec-4] AuthenticationSuccessHandler - jabrena successfully authenticated
+[INFO ] 2025-04-05 09:21:07.660 [http-nio-8080-exec-8] AuthenticationSuccessHandler - jabrena successfully authenticated
+[INFO ] 2025-04-05 09:32:20.663 [Thread-1] Configuration - ********************************************************
+[INFO ] 2025-04-05 09:32:20.664 [Thread-1] Configuration -  Stopping Structurizr
+[INFO ] 2025-04-05 09:32:20.664 [Thread-1] Configuration - ********************************************************

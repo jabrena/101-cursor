@@ -93,8 +93,11 @@
 						<li>Introduction</li>
 						<li>Reviewing the IDE</li>
 						<li>Cursor development approach</li>
-						<li>Demo</li>
+						<li>General demo</li>
+						<li>Cognitive load</li>
 						<li>Limitations & Concerns</li>
+						<li>Summary</li>
+						<li>References</li>
 						<li>Q&A</li>
 					</ul>
 				</section>
@@ -405,38 +408,19 @@
 				</section>
 				<section>
 					<section>
+						<h3>General demo</h3>
 						<img src="images/demo.png" width="80%" />
 					</section>
 					<section>
-						<h3>SLDC</h3>
+						<h3>Scenario</h3>
 						<img src="./images/demo/sldc.webp" width="40%" />
+						<img src="images/demo/ms.png" width="42%" />
 						<small><strong>Source: </strong><a href="https://datarob.com/essentials-software-development-life-cycle/" 
 							target="_blank">https://datarob.com/essentials-software-development-life-cycle/</a></small>
-					</section>
-					<!--
-					<section>
-						<h3>Use cases</h3>
-						<img src="./images/usecase-decision-tree.png" width="100%" />
-					</section>
-					<section>
-						<h3>Use cases</h3>
-						<p>
-							Incremental development
-						</p>
-						<img src="images/incremental-development.png" width="60%" />
-					</section>
-					-->
-					<section>
-						<h3>Use cases</h3>
-						<img src="images/demo/ms.png" width="40%" />
+						
 						<small><strong>Source: </strong><a href="https://developers.redhat.com/blog/2016/12/09/spring-cloud-for-microservices-compared-to-kubernetes" 
 							target="_blank">https://developers.redhat.com/blog/2016/12/09/spring-cloud-for-microservices-compared-to-kubernetes</a></small>
 					</section>
-					<!--
-					<section>
-						<img src="images/demo.png" width="80%" />
-					</section>
-					-->
 					<!--
 					<section>
 						<img src="images/prototypes.jpg" width="60%" />
@@ -506,42 +490,55 @@
 					</section>
 					-->
 					<section>
-						<h3>Structurizr</h3>
+						<h3>Analysis & Design</h3>
 						<p>
 							<img src="images/demo/structurizr-logo.png" width="100%" />
 						</p>
+						<pre data-id="code-animation">
+							<code class="hljs bash" data-trim data-line-numbers>
+								docker run -it --rm -p 9000:8080 -v \
+								$(pwd)/structurizr:/usr/local/structurizr \
+								structurizr/onpremises:2024.12.07
+								
+								open http://localhost:9000
+							</code>
+						</pre>
 						<small><strong>Source: </strong><a href="https://structurizr.com/" 
 							target="_blank">https://structurizr.com/</a></small>
 					</section>
 					<section>
-						<pre data-id="code-animation">
-						<code class="hljs bash" data-trim data-line-numbers>
-							docker run -it --rm -p 9000:8080 -v \
-							$(pwd)/structurizr:/usr/local/structurizr \
-							structurizr/onpremises:2024.12.07
-							
-							open http://localhost:9000
-						</code></pre>
-					</section>
-					<section>
+						<h3>Analysis & Design</h3>
 						<p>
-							<strong>Prompt:</strong> Use the @20250320-1.md as Prompt and analyze implement & test 
-							the following images to understand the required development.
-
-						</p>
-						<p>
-							Add in the prompt:
+							<strong>Requirements:</strong>
 						</p>
 						<p>
 							<ul>
-								<li>Input OAS</li>
-								<li>Third party OAS</li>
-								<li>Database schema</li>
+								<li>Gherkin scenarios</li>
+								<li>Open API Specification for the new service</li>
+								<li>Open API Specification for the third party service</li>
+								<li>Database schema design</li>
 								<li>C4 Diagram</li>
-								<li>UML Sequence Diagram</li>
+								<li>UML Sequence Diagram about the system</li>
 							</ul>
 						</p>
 					</section>
+					<section>
+						<h3>Analysis & Design</h3>
+						<img src="images/demo/structurizr-Component-001-thumbnail.png" width="50%" />
+					</section>
+					<section>
+						<h3>Analysis & Design</h3>
+						<img src="images/demo/uml-sequence-diagram.png" width="100%" />
+					</section>
+					<section>
+						<h3>Implementation</h3>
+						<p>
+							<strong>Prompt:</strong> Use the @20250320-1.md as Prompt and analyze implement & test 
+							the following images to understand the required development.
+						</p>
+						<img src="images/demo/clock.png" width="20%" />
+					</section>
+					<!--
 					<section>
 						<h3>Use cases</h3>
 						<img src="images/demo/standard-error.png" width="60%" />
@@ -551,23 +548,23 @@
 						<small><strong>Source: </strong><a href="https://ecampusontario.pressbooks.pub/introstats/chapter/13-3-standard-error-of-the-estimate/" 
 							target="_blank">https://ecampusontario.pressbooks.pub/introstats/chapter/13-3-standard-error-of-the-estimate/</a></small>
 					</section>
+					-->
 					<section>
-						<img src="images/demo/decision-tree.png" width="100%" />
+						<h3>Implementation</h3>
+						<img src="images/demo/decision-tree-spring-boot.png" width="100%" />
 						<p>
-							It is recommend to increase the efficiency, reducing the ambiguity.						
+							In the prompts, reduce the ambiguity to increase the code generation.						
+						</p>
+					</section>
+					<section>
+						<h3>Implementation</h3>
+						<img src="images/demo/decision-tree-quarkus.png" width="80%" />
+						<p>
+							In the prompts, reduce the ambiguity to increase the code generation.						
 						</p>
 					</section>
 				</section>
 				<section>
-					<section>
-						<h2>Limitations & Concerns</h2>
-					</section>
-					<section>
-						<h3>Limited context</h3>
-						<p>
-							LLM doesn't have the whole context of the project.
-						</p>
-					</section>
 					<section>
 						<h3>Cognitive load</h3>
 						<p>
@@ -583,12 +580,26 @@
 							Estimate your workload only using human capabilities.
 						</p>
 					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Limitations & Concerns</h2>
+						<p>
+							<ul>
+								<li>LLM doesn't have the whole context of the project. Dramatic for larges monorepos</li>
+								<li>Review the models with critical eyes. Sometimes, the models add more code that is not required.</li>
+								<li>For Junior and non Junior roles, AI could generate Knowledge ilussion. (Dunning-Kruger effect)</li>
+							</ul>
+						</p>
+					</section>
+					<!--
 					<section>
 						<h3>Efficient set of prompts could generate a good code</h3>
 						<img src="images/limitations/sculpture.png" width="25%" />
 						<small><strong>Source: </strong><a href="https://www.universityherald.com/articles/76976/20191204/ancient-greek-statues-and-their-true-meanings.htm" 
 							target="_blank">https://www.universityherald.com/articles/76976/20191204/ancient-greek-statues-and-their-true-meanings.htm</a></small>
 					</section>
+					-->
 					<!--
 					<section>
 						<h3>Technical debt</h3>
@@ -596,22 +607,66 @@
 						<small><strong>Source: </strong><a href="https://www.gitclear.com/ai_assistant_code_quality_2025_research" 
 							target="_blank">https://www.gitclear.com/ai_assistant_code_quality_2025_research</a></small>
 					</section>
-					-->
-					<!--
-					<section>
-						<h3>Notes</h3>
-						<ul>
-							<li>Everything in main branch is responsability of the team, not the AI</li>
-							<li>Review periodically if the AI code generated is mastered by the team</li>
-							<li>The devil is in the details</li>
-						</ul>
-					</section>
-					-->
+					
 					<section>
 						<h3>The devil is in the details</h3>
 						<img src="images/limitations/devil.png" width="30%" />
 						<small><strong>Source: </strong><a href="https://en.wikipedia.org/wiki/The_devil_is_in_the_details" 
 							target="_blank">https://en.wikipedia.org/wiki/The_devil_is_in_the_details</a></small>
+					</section>
+					-->
+				</section>
+				<section>
+					<h3>Summary</h3>
+					<p>
+						<ul>
+							<li>Cursor AI improve the daily engineering methodology</li>
+							<li>Prompt will not replace a Senior Engineering doing pair programming, but it could be a good assistant</li>
+							<li>For Senour engineers, it will save time</li>
+							<li>Create good cursor rules for Java and Frameworks, it could be healthy for the Java ecosystem</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<section>
+						<h3>References</h3>
+					</section>
+					<section>
+						<h3>Effective Java</h3>
+						<img src="images/books/book-effective-java.png" width="40%" />
+						<small><strong>Source: </strong><a href="https://www.oreilly.com/library/view/effective-java-3rd/9780134685991/" 
+							target="_blank">https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/</a></small>
+					</section>
+					<section>
+						<h3>Java Concurrency in Practice</h3>
+						<img src="images/books/book-java-concurrency-in-practice.jpg" width="40%" /><br />
+						<small><strong>Source: </strong><a href="https://jcip.net/" 
+							target="_blank">https://jcip.net/</a></small>
+					</section>
+					<section>
+						<h3>Concurrenct programming in Java</h3>
+						<img src="images/books/book-concurrent-programming.jpg" width="40%" /><br />
+						<small><strong>Source: </strong><a href=https://www.oreilly.com/library/view/concurrent-programming-in/0201310090/" 
+							target="_blank">https://www.oreilly.com/library/view/concurrent-programming-in/0201310090/</a></small>
+					</section>
+					<section>
+						<h3>Unit Testing</h3>
+						<img src="images/books/book-pragmatic-unit-testing-in-java8.jpg" width="40%" />
+						<small><strong>Source: </strong><a href="https://pragprog.com/titles/utj2/pragmatic-unit-testing-in-java-8-with-junit/" 
+							target="_blank">https://pragprog.com/titles/utj2/pragmatic-unit-testing-in-java-8-with-junit/</a></small>
+					</section>
+					<section>
+						<h3>Extreme Programming Explained</h3>
+						<img src="images/books/book-xp.jpg" width="40%" />
+						<br />
+						<small><strong>Source: </strong><a href="https://kentbeck.com/" 
+							target="_blank">https://kentbeck.com/</a></small>
+					</section>
+					<section>
+						<h3>Quarkus in action</h3>
+						<img src="images/books/book-quarkus-in-action.jpg" width="30%" /><br />
+						<small><strong>Source: </strong><a href="https://www.manning.com/books/quarkus-in-action" 
+							target="_blank">https://www.manning.com/books/quarkus-in-action</a></small>
 					</section>
 				</section>
 				<section>
@@ -643,6 +698,8 @@
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 				slideNumber: true,
 				showSlideNumber: 'all',
+				navigationMode: 'grid',
+				transition: 'fade',
 	
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
