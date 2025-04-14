@@ -27,4 +27,8 @@ jbang catalog list jabrena
 - https://hub.docker.com/r/structurizr/lite/tags
 - https://hub.docker.com/r/structurizr/onpremises/tags
 - https://www.plantuml.com/plantuml/uml/
+
+### Others
+
 - https://codely.com/en/blog
+- https://docs.google.com/presentation/d/1LxK1p9dGi9JbXXw5OqijE4ur1ID_dJ4eUUQhLiZPt4s/edit?slide=id.p#slide=id.p
