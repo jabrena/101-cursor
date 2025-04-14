@@ -1,11 +1,10 @@
 # 101 Cursor AI
 
+## How to show the slides
+
 ```bash
-#slides
 jwebserver -p 8005 -d "$(pwd)/docs/"
 open http://localhost:8005
-
-docker compose up -d
 ```
 
 
@@ -13,7 +12,6 @@ docker compose up -d
 
 ```
 jbang cache clear
-jbang catalog list
 jbang catalog list jabrena
 ```
 

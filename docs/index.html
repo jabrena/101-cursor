@@ -58,7 +58,7 @@
 							</td>
 							<td style="color: #336699; vertical-align: top">
 								Juan Antonio Breña Moral<br />
-								Technical Product Owner for Shared Platform @ Atradius CIO
+								Technical Product Owner for <br />Engineering Shared Platform <div style="display:inline-block;">@ Atradius CIO</div>
 								<!--, 
 								Footballitics, 
 								Novag Chess user
@@ -84,7 +84,78 @@
 						</tr>
 						
 					</table>
-				</section>			
+				</section>
+				<section>
+					<section>
+						<img src="./images/ppt.png" width="60%" />
+						<small><strong>Source: </strong><a href="https://cio-wiki.org/wiki/Leavitt%27s_Alignment_Model" target="_blank">Leavitt's Alignment Model (1965) >> People, Process and Technology Framework</a></small>
+					</section>
+					<section>
+						<h2>Evaluating a Programming Language Ecosystem</h2>
+						<table>
+							<tr>
+								<td>
+									<small>
+										<p><strong>Technical Foundation</strong></p>
+										<ul>
+											<li>Language Design: Consistency, readability, expressiveness</li>
+											<li>Performance Characteristics: Execution speed, memory usage, scalability</li>
+											<li>Type System: Static vs. dynamic, strong vs. weak, type inference capabilities</li>
+											<li>Memory Management: Manual, garbage collected, ownership models</li>
+											<li>Concurrency Model: Threads, async/await, actors, CSP</li>
+										</ul>
+									</small>
+								</td>
+								<td>
+									<small>
+										<p><strong>Developer Experience</strong></p>
+										<ul>
+											<li>Learning Curve : Approachability for beginners vs. experts</li>
+											<li>Documentation Quality : Completeness, clarity, examples, up-to-date</li>
+											<li><strong style="color: #ff8800;">Tooling : IDE support, debuggers, profilers, linters </strong></li>
+											<li>Package Management: Ease of dependency management, versioning</li>
+											<li>Build Systems : Simplicity, speed, reproducibility</li>
+										</ul>
+									</small>
+								</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h2>Evaluating a Programming Language Ecosystem</h2>
+						<table>
+							<tr>
+								<td>
+									<small>
+										<p><strong>Ecosystem Health</strong></p>
+										<ul>
+											<li>Package Ecosystem : Breadth, quality, and maintenance of libraries</li>
+											<li>Community Size : Active developers, forums, conferences</li>
+											<li>Industry Adoption : Use in production, job opportunities</li>
+											<li>Standardization : Governance model, evolution process</li>
+											<li>Stability : Breaking changes frequency, backward compatibility</li>
+										</ul>
+									</small>
+								</td>
+								<td>
+									<small>
+										<p><strong>Specialty Considerations</strong></p>
+										<ul>
+											<li>Domain Suitability : Web, mobile, data science, systems programming</li>
+											<li>Interoperability : FFI capabilities, ecosystem integration</li>
+											<li>Deployment Options : Cloud, containers, serverless, embedded</li>
+											<li>Testing Infrastructure : Unit testing, property testing, mocking</li>
+											<li>Security Track Record : Vulnerability history, security features</li>
+										</ul>
+									</small>
+								</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<img src="images/introduction/pirelli-carl-lewis.jpg" width="100%" />
+					</section>
+				</section>
 				<section>
 					<h2>Agenda</h2>
 					<ul>
@@ -94,13 +165,12 @@
 						<li>Reviewing the IDE</li>
 						<li>Cursor development approach</li>
 						<li>General demo</li>
-						<li>Cognitive load</li>
 						<li>Limitations & Concerns</li>
 						<li>Summary</li>
-						<li>References</li>
 						<li>Q&A</li>
 					</ul>
 				</section>
+				<!--
 				<section>
 					<section>
 						<h2>Goals</h2>
@@ -111,6 +181,7 @@
 						<img src="images/introduction/pirelli-carl-lewis.jpg" width="60%" />
 					</section>
 				</section>
+				-->
 				<section>
 					<section>
 						<h2>Introduction</h2>
@@ -217,17 +288,6 @@
 							</li>
 
 						</ul>
-					</section>
-					<section>
-						<h3>Security features</h3>
-						<p>
-							Add new cloud tools in large companies 
-							is not an easy task sometimes...
-						</p>
-						<img src="images/review/resistence.jpg" width="40%" />
-						<p>
-							So... review the security features to avoid issues...
-						</p>
 					</section>
 					<section>
 						<h3>Business</h3>
@@ -566,6 +626,16 @@
 				</section>
 				<section>
 					<section>
+						<h2>Limitations & Concerns</h2>
+						<p>
+							<ul>
+								<li>LLM doesn't have the whole context of the project. Dramatic for larges monorepos</li>
+								<li>Review the models with critical eyes. Sometimes, the models add more code that is not required.</li>
+								<li>For Junior and non Junior roles, AI could generate Knowledge ilussion. (Dunning-Kruger effect)</li>
+							</ul>
+						</p>
+					</section>
+					<section>
 						<h3>Cognitive load</h3>
 						<p>
 							All lines of code generated by any LLM must to be mastered by the team.
@@ -578,18 +648,6 @@
 						<h3>Cognitive load</h3>
 						<p>
 							Estimate your workload only using human capabilities.
-						</p>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>Limitations & Concerns</h2>
-						<p>
-							<ul>
-								<li>LLM doesn't have the whole context of the project. Dramatic for larges monorepos</li>
-								<li>Review the models with critical eyes. Sometimes, the models add more code that is not required.</li>
-								<li>For Junior and non Junior roles, AI could generate Knowledge ilussion. (Dunning-Kruger effect)</li>
-							</ul>
 						</p>
 					</section>
 					<!--
@@ -620,13 +678,14 @@
 					<h3>Summary</h3>
 					<p>
 						<ul>
-							<li>Cursor AI improve the daily engineering methodology</li>
+							<li>Cursor AI improves the daily engineering methodology</li>
 							<li>Prompt will not replace a Senior Engineering doing pair programming, but it could be a good assistant</li>
 							<li>For Senior engineers, it will save time</li>
 							<li>Create good cursor rules for Java and Frameworks, it could be healthy for the Java ecosystem</li>
 						</ul>
 					</p>
 				</section>
+				<!--
 				<section>
 					<section>
 						<h3>References</h3>
@@ -669,6 +728,7 @@
 							target="_blank">https://www.manning.com/books/quarkus-in-action</a></small>
 					</section>
 				</section>
+				-->
 				<section>
 					<h1>🙏 🙏 🙏</h1>
 					<p>
