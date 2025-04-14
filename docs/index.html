@@ -17,6 +17,23 @@
 	</head>
 	<body>
 		<div class="reveal">
+			<!-- My CSS Adventures in 2025 -->
+			<!-- Footer -->
+			<style>
+				.footer {
+					position: absolute;
+					left: 10px;
+					bottom: 0px;
+					z-index: 999;
+					background: #fff;
+					margin-bottom: 10px;
+					padding-bottom: 0px;
+				}
+			</style>
+
+			<div class="footer">
+				<small><a href="https://twitter.com/juanantoniobm" target="_blank">Twitter: @juanantoniobm</a></small>
+			</div>				
 			<div class="slides">
 				<section>
 					<section data-background-image="images/gradient-hero-prerender.avif">
@@ -66,7 +83,7 @@
 								<br />
 								<a target="_blank" href="https://twitter.com/juanantoniobm">Twitter</a> |
 								<a target="_blank" href="https://github.com/jabrena">Github</a></li> |
-								<a target="_blank" href="https://www.linkedin.com/in/juanantoniobrenamoral">Linkedin</a>
+								<a target="_blank" href="https://www.linkedin.com/in/juanantoniobrenamoral">LinkedIn</a>
 							</td>
 						</tr>
 						<!--
@@ -160,7 +177,6 @@
 					<h2>Agenda</h2>
 					<ul>
 						<li>Who I am</li>
-						<li>Goals</li>
 						<li>Introduction</li>
 						<li>Reviewing the IDE</li>
 						<li>Cursor development approach</li>
@@ -256,7 +272,13 @@
 						</p>
 					</section>
 					<section>
+						<p>
+							<strong>Cursor AI</strong>
+						</p>
 						<img src="images/introduction/cursor-logo.webp" width="30%" />
+						<p>
+							<a href="https://www.cursor.com/" target="_blank">https://www.cursor.com/</a>
+						</p>
 					</section>
 				</section>
 				<section>
@@ -270,6 +292,14 @@
 					<section>
 						<h2>Reviewing the IDE</h2>
 						<ul>
+							<li>Security features</li>
+							<li>Enterprise features</li>
+							<li>Context features</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Reviewing the IDE</h2>
+						<ul>
 							<li>Security features
 								<ul>
 									<li>Business</li>
@@ -277,16 +307,6 @@
 									<li>Trust</li>
 								</ul>
 							</li>
-							<li>Context features
-								<ul>
-									<li>Settings</li>
-									<li>Modes (Agent, Ask, Manual)</li>
-									<li>Cursor rules</li>
-									<li>Symbols</li>
-									<li>MCP integration</li>
-								</ul>
-							</li>
-
 						</ul>
 					</section>
 					<section>
@@ -312,13 +332,58 @@
 						<p>
 							Cursor operates a continuously monitored and 3rd-party audited security program. 
 						</p>
-						<img src="images/review/soc.png" width="40%" />
-						<p>
+						
+						<p><img src="images/review/soc.png" width="40%" /><br/>
 							SOC 2 is a compliance framework used to evaluate and validate an organizations information security practices. 
 						</p>
 						<small><strong>Source: </strong><a href="https://trust.cursor.com/" 
 							target="_blank">https://trust.cursor.com/</a></small>
 					</section>
+					<section>
+						<h2>Reviewing the IDE</h2>
+						<ul>
+							<li>Enterprise features
+								<ul>
+									<li>Team management</li>
+									<li>Budget management</li>
+									<li>Team metrics</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Team management</h3>
+						<img src="images/review/cursor-business-team.png" width="60%" />
+					</section>
+					<section>
+						<h3>Team management</h3>
+						<img src="images/review/cursor-business-team-add.png" width="70%" />
+					</section>
+					<section>
+						<h3>Budget management</h3>
+						<p>
+							Fix the monthly budget for the team:
+						</p>
+						<img src="images/review/cursor-business-budget.png" width="70%" />
+					</section>
+					<section>
+						<h3>Team metrics</h3>
+						<img src="images/review/cursor-business-metrics.png" width="70%" />
+					</section>
+					<section>
+						<h2>Reviewing the IDE</h2>
+						<ul>
+							<li>Context features
+								<ul>
+									<li>Settings</li>
+									<li>Modes (Agent, Ask, Manual)</li>
+									<li>Cursor rules</li>
+									<li>Symbols</li>
+									<li>MCP integration</li>
+								</ul>
+							</li>
+						</ul>
+					</section>				
 					<!--
 					<section>
 						<h3>Settings</h3>
@@ -744,22 +809,15 @@
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
 			Reveal.configure({ slideNumber: true });
-			Reveal.configure({ slideNumber: 'c/t' });
+			//Reveal.configure({ slideNumber: 'c/t' });
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
-				controls: true,
-				controlsLayout: 'bottom-right',
-				progress: true,
-				center: true,
 				hash: true,
-				touch: true,
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
 				slideNumber: true,
 				showSlideNumber: 'all',
-				navigationMode: 'grid',
-				transition: 'fade',
 	
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
