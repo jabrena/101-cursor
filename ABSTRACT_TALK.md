@@ -1,6 +1,6 @@
 # Abstract
 
-##Abstract in English
+## Abstract in English
 
 For almost 3 decades, Java Enterprise software has been implemented by hand by Software Engineers. In 2023, a new generation of tools with AI features has burst onto the market, and recently **Cursor AI** has received great attention from the global developer community.
 
@@ -15,7 +15,7 @@ The talk explains the main aspects of the talk using examples based on Spring Bo
 
 ---
 
-##0Abstract in Spanish
+## Abstract in Spanish
 
 Durante casi 3 décadas, el Java Enterprise software ha sido implementado a mano por Ingenieros de Software. En 2023, una nueva generación de herramientas con AI features ha irrumpido en el mercado y recientemente **Cursor AI** ha recibido una gran atención por parte de la comunidad de desarrolladores a escala mundial.
 
