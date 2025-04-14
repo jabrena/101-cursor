@@ -27,13 +27,3 @@ La sesión trata de alejarse del termino 'Vibe coding' y profundiza en:
 - Las posibles preocupaciones y limitaciones de estas nuevas herramientas.
 
 La charla explica las principales aspectos de la charla empleando ejemplos basados en Spring Boot o Quarkus.
-
-##
-
-Technical product owner (T4) for Engineering shared platform
-Atradius
-Building a high performance cross country platform team to deliver platform solutions for the topics:
-
-- Observability 
-- Security 
-- Event-driven
