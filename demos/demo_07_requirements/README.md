@@ -20,7 +20,8 @@ curl --header "X-Authorization:1234567890" http://localhost:9000/api/workspace
 ```bash
 Use the @20250405-1.md as Prompt and analyze implement & test the following images to understand the required development.
 
-
+kill -9 $(lsof -ti:8080)
+./mvnw clean quarkus:dev
 http://localhost:8080/q/dev-ui/extensions
 
 pkill -f java
