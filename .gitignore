@@ -3,3 +3,4 @@ target/
 .idea/
 .vscode/
 structurizr/logs/*
+node_modules/
