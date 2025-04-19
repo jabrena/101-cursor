@@ -13,6 +13,7 @@ open http://localhost:8005
 ```
 jbang cache clear
 jbang catalog list jabrena
+jbang catalog list mcp-java
 ```
 
 ## References
@@ -30,5 +31,7 @@ jbang catalog list jabrena
 
 ### Others
 
+- https://sacra.com/research/cursor-at-100m-arr/
+- https://techcrunch.com/2025/03/07/cursor-in-talks-to-raise-at-a-10b-valuation-as-ai-coding-sector-booms/
 - https://codely.com/en/blog
 - https://docs.google.com/presentation/d/1LxK1p9dGi9JbXXw5OqijE4ur1ID_dJ4eUUQhLiZPt4s/edit?slide=id.p#slide=id.p
