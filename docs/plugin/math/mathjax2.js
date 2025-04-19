@@ -13,7 +13,7 @@ export const MathJax2 = () => {
 		messageStyle: 'none',
 		tex2jax: {
 			inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ] ],
-			skipTags: [ 'script', 'noscript', 'style', 'textarea', 'pre', 'code' ]
+			skipTags: [ 'script', 'noscript', 'style', 'textarea', 'pre' ]
 		},
 		skipStartupTypeset: true
 	};
