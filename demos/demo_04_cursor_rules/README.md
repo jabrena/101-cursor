@@ -10,3 +10,4 @@ sdk install jbang
 jbang setup@jabrena init --help
 jbang setup@jabrena init --cursor java
 ```
+

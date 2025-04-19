@@ -7,15 +7,6 @@ jwebserver -p 8005 -d "$(pwd)/docs/"
 open http://localhost:8005
 ```
 
-
-## MCP Examples
-
-```
-jbang cache clear
-jbang catalog list jabrena
-jbang catalog list mcp-java
-```
-
 ## References
 
 - https://www.cursor.com/
