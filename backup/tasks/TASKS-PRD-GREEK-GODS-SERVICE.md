@@ -1,0 +1,58 @@
+## Tasks
+
+- [x] 1.0 Setup Quarkus Project Structure and Dependencies
+  - [x] 1.1 Create new Quarkus project (`greek-gods-service`) using Maven, Java 24, Quarkus 3.21.1.
+  - [x] 1.2 Ensure Maven Wrapper (`mvnw`) is included.
+  - [x] 1.3 Add required Quarkus dependencies to `pom.xml` (`rest`, `smallrye-health`, `scheduler`, `smallrye-openapi`, `jdbc-postgresql`, `hibernate-orm-panache`, `arc`, `rest-client-jackson`).
+  - [x] 1.4 Configure `maven-enforcer-plugin` in `pom.xml` (dependency convergence, banned dependencies, Java/Maven versions).
+  - [x] 1.5 Configure `versions-maven-plugin` in `pom.xml`.
+  - [x] 1.6 Configure `maven-surefire-plugin` and `maven-failsafe-plugin` in `pom.xml`.
+  - [x] 1.7 Create base package structure: `info.jab.ms` with sub-packages `domain`, `resources`, `services`, `repository`.
+  - [x] 1.8 Create main application class `info.jab.ms.MainApplication`.
+  - [x] 1.9 Configure `application.properties` for Quarkus DevServices (PostgreSQL: port 5430, db `greekgods`, init script), Hibernate (`drop-and-create`, log SQL).
+- [x] 2.0 Implement Database Layer (Entity, Repository, Schema)
+  - [x] 2.1 Define the `God` entity in `info.jab.ms.domain` based on the expected data structure (e.g., `id`, `name`).
+  - [x] 2.2 Create `schema.sql` in `src/main/resources` to define the `gods` table schema.
+  - [x] 2.3 Implement `GodRepository` in `info.jab.ms.repository` using Panache Repository interface.
+- [x] 3.0 Implement Third-Party API Integration (REST Client)
+  - [x] 3.1 Define/Generate the REST client interface (`ExternalGodClient`) in `info.jab.ms.services` based on `my-json-server-oas.yaml`.
+  - [x] 3.2 Configure the base URL for the REST client in `application.properties`.
+- [x] 4.0 Implement Core Business Logic (Services & Scheduler)
+  - [x] 4.1 Implement `GodUpdateService` in `info.jab.ms.services`.
+  - [x] 4.2 Add a scheduled method in `GodUpdateService` to run every 10 seconds (`@Scheduled`).
+  - [x] 4.3 Inject `ExternalGodClient` and `GodRepository` into `GodUpdateService`.
+  - [x] 4.4 Implement logic in the scheduled method to call the external API via the client, retrieve god data, and update the database via the repository (e.g., clear existing, insert new).
+  - [x] 4.5 Implement `GodQueryService` in `info.jab.ms.services`.
+  - [x] 4.6 Inject `GodRepository` into `GodQueryService`.
+  - [x] 4.7 Implement a method in `GodQueryService` to retrieve all god names from the repository.
+  - [x] 4.8 Add basic logging to service methods.
+- [x] 5.0 Implement REST API Endpoint (Controller)
+  - [x] 5.1 Implement `GreekController` in `info.jab.ms.resources` based on `greekController-oas.yaml`.
+  - [x] 5.2 Inject `GodQueryService` into `GreekController`.
+  - [x] 5.3 Implement the `GET /gods` endpoint to call `GodQueryService` and return the list of god names as JSON.
+  - [x] 5.4 Add basic logging to controller methods.
+- [ ] 6.0 Implement Testing (Unit, Integration, Acceptance)
+  - [x] 6.1 Create basic unit tests for services if applicable (though focus might be integration).
+  - [x] 6.2 Create integration tests for repository and service interactions using `@QuarkusTest`.
+  - [x] 6.3 Create `greek_gods.feature` file describing acceptance criteria.
+  - [x] 6.4 Implement `GreekGodsServiceAcceptanceIT.java` using REST Assured and `@QuarkusIntegrationTest` to verify the feature file scenarios against the `/gods` endpoint.
+  - [x] 6.5 Ensure `./mvnw clean verify` runs successfully.
+  - [x] 6.6 Verify `./mvnw quarkus:dev` runs without errors for 20+ seconds.
+
+### Relevant Files
+
+- `pom.xml` - Project configuration, dependencies, and build plugins.
+- `src/main/java/info/jab/ms/MainApplication.java` - Main Quarkus application class.
+- `src/main/resources/application.properties` - Application configuration (database, REST client URL, Hibernate).
+- `src/main/java/info/jab/ms/domain/God.java` - JPA entity representing a Greek God.
+- `src/main/resources/schema.sql` - Database schema definition for the `gods` table.
+- `src/main/java/info/jab/ms/repository/GodRepository.java` - Panache repository for database access.
+- `src/main/java/info/jab/ms/services/ExternalGodClient.java` - REST client interface for the third-party API.
+- `src/main/java/info/jab/ms/services/GodUpdateService.java` - Service containing the scheduled task to fetch and store god data.
+- `src/main/java/info/jab/ms/services/GodQueryService.java` - Service responsible for retrieving god data for the API.
+- `src/main/java/info/jab/ms/resources/GreekController.java` - REST controller exposing the `/gods` endpoint.
+- `my-json-server-oas.yaml` - OpenAPI spec for the third-party API (used for client generation/definition).
+- `greekController-oas.yaml` - OpenAPI spec defining the service's own REST API.
+- `src/test/resources/greek_gods.feature` - Acceptance criteria in Gherkin format.
+- `src/test/java/info/jab/ms/GreekGodsServiceAcceptanceIT.java` - REST Assured acceptance test.
+- Potentially other unit/integration test files under `src/test/java/info/jab/ms/`.
