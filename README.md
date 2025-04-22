@@ -5,10 +5,6 @@
 ```bash
 jwebserver -p 8005 -d "$(pwd)/docs/"
 open http://localhost:8005
-
-#Update reveal.js dependencies
-npm install
-npm start
 ```
 
 ## References
@@ -25,6 +21,7 @@ npm start
 - https://hub.docker.com/r/structurizr/onpremises/tags
 - https://www.plantuml.com/plantuml/uml/
 - https://github.com/jabrena/java-cursor-rules
+- https://github.com/jabrena/latency-problems
 
 ### Others
 

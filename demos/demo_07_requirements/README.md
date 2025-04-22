@@ -18,7 +18,18 @@ curl --header "X-Authorization:1234567890" http://localhost:9000/api/workspace
 ## Examples
 
 ```bash
-Use the @20250405-1.md as Prompt and analyze implement & test the following images to understand the required development.
+#Old
+Here's the feature @20250405-1.md as Prompt and analyze implement & test the following images to understand the required development.
+
+#New
+Use @1000-create-prd.mdc
+Here's the feature @20250405-1.md
+
+Now take @PRD-GREEK-GODS-SERVICE.md and create tasks using @1001-generate-tasks-from-prd.mdc
+
+Please start on 1.1 and use @1002-task-list.mdc
+
+---
 
 kill -9 $(lsof -ti:8080)
 ./mvnw clean quarkus:dev
