@@ -22,6 +22,7 @@ open http://localhost:8005
 - https://www.plantuml.com/plantuml/uml/
 - https://github.com/jabrena/java-cursor-rules
 - https://github.com/jabrena/latency-problems
+- https://excalidraw.com/
 
 ### Others
 
