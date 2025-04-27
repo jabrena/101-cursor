@@ -6,6 +6,12 @@
 jbang cache clear
 jbang catalog list jabrena
 jbang catalog list mcp-java
+
+jbang cursor-mcp-config@jabrena --help
+jbang cursor-mcp-config@jabrena --show
+jbang cursor-mcp-config@jabrena --backup
+jbang cursor-mcp-config@jabrena --replace example/mcp0.json
+jbang cursor-mcp-config@jabrena --replace example/mcp1.json
 ```
 
 ## Prompt
