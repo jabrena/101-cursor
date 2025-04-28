@@ -7,6 +7,16 @@ jwebserver -p 8005 -d "$(pwd)/docs/"
 open http://localhost:8005
 ```
 
+## Meetups
+
+### Madrid (2025/05/06)
+
+![](meetup-madrid.png)
+
+**Register here:**
+
+- https://www.meetup.com/es-ES/madridjug/events/307458529/?_xtd=gqFyqTI2NTY4MTI0NqFwo2FwaQ%253D%253D&from=ref
+
 ## References
 
 - https://www.cursor.com/
@@ -23,6 +33,7 @@ open http://localhost:8005
 - https://github.com/jabrena/java-cursor-rules
 - https://github.com/jabrena/latency-problems
 - https://excalidraw.com/
+- https://en.m.wikipedia.org/wiki/Large_language_model
 
 ### Others
 
