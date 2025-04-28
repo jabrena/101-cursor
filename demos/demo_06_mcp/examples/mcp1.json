@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "MCP Stopwatch": {
+      "command": "jbang",
+      "args": [
+        "mcp-stopwatch@jabrena"
+      ]
+    },
+    "jvminsight": {
+      "command": "jbang",
+      "args": [
+        "jvminsight@mcp-java"
+      ]
+    }
+  }
+}

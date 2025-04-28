@@ -11,7 +11,7 @@ The session aims to move away from the term 'Vibe coding' and delves into:
 - The advantages of using Java MCP servers in daily work.
 - The possible concerns and limitations of these new tools.
 
-The talk explains the main aspects of the talk using examples based on Spring Boot or Quarkus.
+The talk explains the main concepts of Cursor through examples based on Spring Boot or Quarkus.
 
 ---
 
@@ -26,4 +26,4 @@ La sesión trata de alejarse del termino 'Vibe coding' y profundiza en:
 - Las ventajas de usar servidores Java MCP en el trabajo diario.
 - Las posibles preocupaciones y limitaciones de estas nuevas herramientas.
 
-La charla explica las principales aspectos de la charla empleando ejemplos basados en Spring Boot o Quarkus.
+La charla explica los principales conceptos de Cursor a traves de ejemplos basados en Spring Boot o Quarkus.
