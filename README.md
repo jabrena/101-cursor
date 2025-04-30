@@ -1,5 +1,9 @@
 # 101 Cursor AI
 
+## Motivation
+
+This repository serves as a guide to Cursor, an innovative IDE integrating cutting-edge AI features. It explores how these AI tools can revolutionize the development process, offering significant advantages in productivity and code quality, especially within the Java ecosystem. The associated presentation provides a practical demonstration of these features and their impact on daily coding tasks for Java developers.
+
 ## How to show the slides
 
 ```bash
@@ -10,10 +14,6 @@ open http://localhost:8005
 ## Meetups
 
 ### Madrid (2025/05/06)
-
-![](meetup-madrid.png)
-
-**Register here:**
 
 - https://www.meetup.com/es-ES/madridjug/events/307458529/?_xtd=gqFyqTI2NTY4MTI0NqFwo2FwaQ%253D%253D&from=ref
 
