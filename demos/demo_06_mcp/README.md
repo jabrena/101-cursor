@@ -3,6 +3,9 @@
 ## Data
 
 ```bash
+source ./EXPORT.sh
+./mcp-stats.sh
+
 jwebserver -p 8001 -d "$(pwd)/demos/demo_06_mcp/"
 open http://localhost:8001/
 ```
