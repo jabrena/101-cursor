@@ -4,6 +4,8 @@
 
 This repository serves as a guide to Cursor, an innovative IDE integrating cutting-edge AI features. It explores how these AI tools can revolutionize the development process, offering significant advantages in productivity and code quality, especially within the Java ecosystem. The associated presentation provides a practical demonstration of these features and their impact on daily coding tasks for Java developers.
 
+- https://x.com/jerolba/status/1869464738725568610
+
 ## How to show the slides
 
 ```bash

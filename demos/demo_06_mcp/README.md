@@ -1,5 +1,12 @@
 # MCP Servers
 
+## Data
+
+```bash
+jwebserver -p 8001 -d "$(pwd)/demos/demo_06_mcp/"
+open http://localhost:8001/
+```
+
 ## MCP Examples
 
 ```

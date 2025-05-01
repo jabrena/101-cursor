@@ -27,6 +27,7 @@ In short:
 Privacy Mode is about controlling external data transmission and usage of your code by the AI provider.
 Codebase Indexing is about local analysis of your code to improve the assistant's understanding and features on your machine.
 Codebase indexing can generally function even with Privacy Mode enabled, as the indexing happens locally. Privacy Mode ensures that the content being indexed isn't unnecessarily shared externally.
+```
 
 ## Questions from the community
 

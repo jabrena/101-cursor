@@ -1,6 +1,8 @@
-# Demo 01 // Increase context with links
+# Demo 01 // Enrich the Context awareness in Cursor
 
-- Goal: enrich the Context awareness in Cursor
+## Goal
+
+Increase context awareness with links about documentation about techhnologies used in the repository
 
 ## Links
 

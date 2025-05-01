@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Regression Analysis</title>
+    
+    <!-- Chart.js for visualization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    
+    <!-- Simple styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .card.primary {
+            background-color: #e6f7ff;
+        }
+        
+        h1 {
+            color: #333;
+            margin-top: 0;
+        }
+        
+        h2 {
+            color: #555;
+            margin-top: 0;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        table th {
+            background-color: #f2f2f2;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .input-group {
+            margin-top: 15px;
+            display: flex;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+        
+        .input-container {
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        input[type="number"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100px;
+        }
+        
+        button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background-color: #3367d6;
+        }
+        
+        .prediction-result {
+            margin-left: 15px;
+            padding-top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Linear Regression Analysis for the creation of MCP servers created in Github</h1>
+        
+        <div class="card" id="regression-results">
+            <h2>Regression Results</h2>
+            <div id="equation"></div>
+            <div id="r-squared"></div>
+            <div id="slope-meaning"></div>
+        </div>
+        
+        <div class="container">
+            <h2>Data Visualization</h2>
+            <div class="chart-container">
+                <canvas id="regression-chart"></canvas>
+            </div>
+        </div>
+
+        <div class="card primary" id="predictions">
+            <h2>Predictions</h2>
+            <div id="next-week"></div>
+            <div id="next-month"></div>
+            
+            <div class="input-group">
+                <div class="input-container">
+                    <label for="days-input">Predict for day:</label>
+                    <input type="number" id="days-input" min="0">
+                </div>
+                <button id="predict-button">Predict</button>
+                <div class="prediction-result" id="prediction-result"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2>Statistical Analysis</h2>
+            <div id="statistical-analysis"></div>
+        </div>
+        
+        <div class="container">
+            <h2>Data Table</h2>
+            <div class="table-responsive">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Days</th>
+                            <th>Actual Results</th>
+                            <th>Predicted Results</th>
+                            <th>Residual</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data from the table provided
+        const data = [
+            /*
+            { DATE: '2024-12-01', RESULTS: 280, Days: 0 },
+            { DATE: '2024-12-08', RESULTS: 453, Days: 7 },
+            { DATE: '2024-12-15', RESULTS: 602, Days: 14 },
+            { DATE: '2024-12-22', RESULTS: 746, Days: 21 },
+            { DATE: '2024-12-29', RESULTS: 1044, Days: 28 },
+            { DATE: '2025-01-05', RESULTS: 1210, Days: 35 },
+            { DATE: '2025-01-12', RESULTS: 1336, Days: 42 },
+            { DATE: '2025-01-19', RESULTS: 1475, Days: 49 },
+            { DATE: '2025-01-26', RESULTS: 1597, Days: 56 },
+            { DATE: '2025-02-02', RESULTS: 1690, Days: 63 },
+            { DATE: '2025-02-09', RESULTS: 1794, Days: 70 },
+            { DATE: '2025-02-16', RESULTS: 1934, Days: 77 },
+             */
+            { DATE: '2025-02-23', RESULTS: 2174, Days: 84 },
+            { DATE: '2025-03-02', RESULTS: 2432, Days: 91 },
+            { DATE: '2025-03-09', RESULTS: 2877, Days: 98 },
+            { DATE: '2025-03-16', RESULTS: 3570, Days: 105 },
+            { DATE: '2025-03-23', RESULTS: 4591, Days: 112 },
+            { DATE: '2025-03-30', RESULTS: 5863, Days: 119 },
+            { DATE: '2025-04-06', RESULTS: 7365, Days: 126 },
+            { DATE: '2025-04-13', RESULTS: 8889, Days: 133 },
+            { DATE: '2025-04-20', RESULTS: 10306, Days: 140 },
+            { DATE: '2025-04-27', RESULTS: 11560, Days: 147 }
+        ];
+
+        // Extract x and y values
+        const xValues = data.map(item => item.Days);
+        const yValues = data.map(item => item.RESULTS);
+
+        // Calculate linear regression
+        function linearRegression(y, x) {
+            const n = y.length;
+            let sumX = 0;
+            let sumY = 0;
+            let sumXY = 0;
+            let sumXX = 0;
+            
+            for (let i = 0; i < n; i++) {
+                sumX += x[i];
+                sumY += y[i];
+                sumXY += x[i] * y[i];
+                sumXX += x[i] * x[i];
+            }
+            
+            const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+            const intercept = (sumY - slope * sumX) / n;
+            
+            // Calculate R-squared
+            const yMean = sumY / n;
+            let totalVariation = 0;
+            let residualVariation = 0;
+            
+            for (let i = 0; i < n; i++) {
+                totalVariation += Math.pow(y[i] - yMean, 2);
+                const prediction = slope * x[i] + intercept;
+                residualVariation += Math.pow(y[i] - prediction, 2);
+            }
+            
+            const rSquared = 1 - (residualVariation / totalVariation);
+            
+            return { slope, intercept, rSquared };
+        }
+
+        // Calculate regression
+        const regression = linearRegression(yValues, xValues);
+
+        // Function to predict values
+        function predictValue(days) {
+            return regression.slope * days + regression.intercept;
+        }
+
+        // Create regression line data for charting
+        function generateRegressionLineData() {
+            const minX = Math.min(...xValues);
+            const maxX = Math.max(...xValues);
+            const lineData = [];
+            
+            for (let x = minX; x <= maxX; x++) {
+                lineData.push({
+                    x: x,
+                    y: predictValue(x)
+                });
+            }
+            
+            return lineData;
+        }
+
+        // Initialize chart
+        function initChart() {
+            const ctx = document.getElementById('regression-chart').getContext('2d');
+            
+            const scatterData = data.map(item => ({
+                x: item.Days,
+                y: item.RESULTS
+            }));
+            
+            const regressionLineData = generateRegressionLineData();
+            
+            const chart = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [
+                        {
+                            label: 'Actual Data Points',
+                            data: scatterData,
+                            backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1,
+                            pointRadius: 6,
+                        },
+                        {
+                            label: 'Regression Line',
+                            data: regressionLineData,
+                            type: 'line',
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 2,
+                            fill: false,
+                            pointRadius: 0,
+                            tension: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            position: 'bottom',
+                            title: {
+                                display: true,
+                                text: 'Days'
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            title: {
+                                display: true,
+                                text: 'RESULTS'
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += `(Day: ${Math.round(context.parsed.x)}, Results: ${Math.round(context.parsed.y)})`;
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Populate regression results
+        function populateRegressionResults() {
+            document.getElementById('equation').innerHTML = `Equation: RESULTS = ${regression.slope.toFixed(2)}×Days + ${regression.intercept.toFixed(2)}`;
+            document.getElementById('r-squared').innerHTML = `R² (coefficient of determination): ${regression.rSquared.toFixed(4)}`;
+            document.getElementById('slope-meaning').innerHTML = `For each additional day, RESULTS increase by approximately ${regression.slope.toFixed(2)} units`;
+        }
+
+        // Populate predictions
+        function populatePredictions() {
+            const nextWeek = 52 + 7; // Current max days + 7
+            const nextMonth = 52 + 30; // Current max days + 30
+            
+            document.getElementById('next-week').innerHTML = `Next week (Day ${nextWeek}): ${Math.round(predictValue(nextWeek))}`;
+            document.getElementById('next-month').innerHTML = `Next month (Day ${nextMonth}): ${Math.round(predictValue(nextMonth))}`;
+        }
+
+        // Populate statistical analysis
+        function populateStatisticalAnalysis() {
+            const analysisElement = document.getElementById('statistical-analysis');
+            
+            analysisElement.innerHTML = `
+                <p>The linear regression model shows a strong positive relationship between Days and RESULTS with an R² value of ${regression.rSquared.toFixed(4)}.</p>
+                <p>This indicates that approximately ${(regression.rSquared * 100).toFixed(2)}% of the variation in RESULTS can be explained by the linear relationship with Days.</p>
+                <p>Based on this model, we can expect RESULTS to increase by about ${regression.slope.toFixed(2)} units per day.</p>
+            `;
+        }
+
+        // Populate data table
+        function populateDataTable() {
+            const tableBody = document.getElementById('table-body');
+            
+            tableBody.innerHTML = '';
+            
+            data.forEach(item => {
+                const predicted = predictValue(item.Days);
+                const residual = item.RESULTS - predicted;
+                
+                const row = document.createElement('tr');
+                
+                row.innerHTML = `
+                    <td>${item.DATE}</td>
+                    <td>${item.Days}</td>
+                    <td>${item.RESULTS}</td>
+                    <td>${Math.round(predicted)}</td>
+                    <td>${Math.round(residual)}</td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Add event listener for prediction button
+        function setupPredictionButton() {
+            const button = document.getElementById('predict-button');
+            const input = document.getElementById('days-input');
+            const resultElement = document.getElementById('prediction-result');
+            
+            button.addEventListener('click', function() {
+                const days = parseInt(input.value);
+                
+                if (!isNaN(days)) {
+                    const prediction = predictValue(days);
+                    resultElement.innerHTML = `Predicted RESULTS: <strong>${Math.round(prediction)}</strong>`;
+                } else {
+                    resultElement.innerHTML = 'Please enter a valid number of days';
+                }
+            });
+        }
+
+        // Initialize everything when the DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            populateRegressionResults();
+            populatePredictions();
+            populateStatisticalAnalysis();
+            populateDataTable();
+            setupPredictionButton();
+            initChart();
+        });
+    </script>
+</body>
+</html>
