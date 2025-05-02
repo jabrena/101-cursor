@@ -1,0 +1,243 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #d11515; /* AS red */
+    color: white;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border-bottom: 1px solid #a01010;
+}
+
+.top-bar .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.top-bar nav a, .user-actions span {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.sub-nav {
+    display: flex;
+    align-items: center;
+    background-color: #eee; /* Light grey */
+    padding: 10px 20px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.sub-nav h1 {
+    font-size: 1.2em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.sub-nav h1 img {
+    margin-right: 10px;
+}
+
+.sub-nav nav {
+    margin-left: 30px;
+}
+
+.sub-nav nav a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: white;
+}
+
+.main-story {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.main-story img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.main-story h2 {
+    color: #d11515;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.main-story h1 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.main-story p {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.news-grid article {
+    background-color: #fff;
+    /* border: 1px solid #eee; */
+}
+
+.news-grid article img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-grid article h3 {
+    color: #d11515;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    margin: 10px 0 5px 0;
+}
+
+.news-grid article h2 {
+    font-size: 1.1em;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+}
+
+.news-grid article p {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.news-grid .text-only {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+}
+
+.news-grid .text-only h3 {
+    margin-top: 0;
+}
+
+.news-grid .text-only img {
+   width: 60px;
+   height: 60px;
+   float: right;
+   margin-left: 10px;
+   border-radius: 50%;
+}
+
+
+.pagination {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.pagination span, .pagination a {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination span {
+    background-color: #eee;
+}
+
+footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #555;
+}
+
+footer section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+footer h3 {
+    font-size: 0.9em;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+}
+
+footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+footer .apps img {
+    float: right; /* Approximation */
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em; /* Make icons larger */
+    margin-right: 10px;
+}
+
+footer .legal p {
+    font-size: 0.7em;
+    line-height: 1.4;
+    color: #aaa;
+}
+
+footer .legal nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.8em;
+    margin-right: 15px;
+}
+
+footer .partners img {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    background-color: white; /* Placeholder background */
+    padding: 2px;
+} 

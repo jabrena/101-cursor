@@ -5,3 +5,4 @@ target/
 structurizr/logs/*
 node_modules/
 .cursor/
+EXPORT.sh
