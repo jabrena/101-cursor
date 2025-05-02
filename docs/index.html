@@ -198,11 +198,6 @@
 						</table>
 					</section>
 					-->
-					<!--
-					<section>
-						<img src="images/introduction/pirelli-carl-lewis.jpg" width="100%" />
-					</section>
-					-->
 				</section>
 
                 <section>
@@ -236,9 +231,9 @@
 							<li>Reviewing the IDE I (5min)</li>
 							<li>Reviewing the IDE II (25min)</li>
 							<li>Demo (10min)</li>
-							<li>Value proposition (5min)</li>
+							<li>Value proposition (9min)</li>
                             <li>Impact in Agile workflows (5min)</li>
-							<li>References (5min)</li>
+							<li>References (1min)</li>
 							<li>Q&A</li>
 						</ul>
 					</section>
@@ -464,7 +459,7 @@
                                 has features to enforce to not upload customer data</li>
                             <li>Using business accounts has features to define a Monthly budget for your team.</li>
                             <li>Cursor is audited by 3rd parties. (SOC2)</li>
-                            <li>Pro accounts are nice for Side Projects. (Limited time / Limited Premium requests available)</li>
+                            <li>PRO accounts are nice to begin, OSS and for side projects. (Limited time / Limited Premium requests required)</li>
                         </ul>
 					</section>
 				</section>
@@ -570,7 +565,7 @@
 						<h3>Settings / Docs</h3>
 						<img src="images/review/review-cursor-settings-docs.png" width="80%" />
 						<p>
-							Help cursor with the right documentation associated with your project/repository.
+							Help Cursor with the right documentation associated with your project/repository.
 						</p>
 						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/@-symbols/@-docs#docs"
 							target="_blank">https://docs.cursor.com/context/@-symbols/@-docs#docs</a></small>
@@ -589,16 +584,21 @@
 						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/rules"
 							target="_blank">https://docs.cursor.com/context/rules</a></small>
 					</section>
+                    <!--
 					<section>
 						<h3>Cursor rules</h3>
 						<img src="images/review/cursor-rules.png" width="80%" />
 					</section>
+                    -->
 					<section>
 						<h3>Cursor rules</h3>
 						<p>
 							<strong>Analogy: </strong>In the organizations,
-							exist specific expert roles with the title of IT Champions who define the guidelines for a specific Technology.
+							exist a specific expert set of roles with the title of
+                            <strong>IT Champions</strong> who define the guidelines
+                            for a specific Technology, in our case <strong>Java</strong>.
 						</p>
+                        <img src="images/introduction/java-logo.svg" width="25%" />
 					</section>
 					<section>
 						<h3>Cursor rules</h3>
@@ -640,6 +640,9 @@
 							<li><a href="https://github.com/PatrickJS/awesome-cursorrules/" target="_blank">https://github.com/PatrickJS/awesome-cursorrules/</a></li>
 							<li><a href="https://cursor.directory/" target="_blank">https://cursor.directory/</a></li>
 						</ul>
+                        <p>
+                            <strong>Note:</strong> Now, it is possible to create your own rules from Cursor.
+                        </p>
 					</section>
 					<section>
 						<h3>Cursor rules</h3>
@@ -658,9 +661,13 @@
 
 								jbang cache clear
 								jbang catalog list jabrena
+
 								jbang setup@jabrena init --cursor java
 							</code>
 						</pre>
+                        <p>
+                            If you have good ideas, PRs are welcome. 🙏🙏🙏
+                        </p>
 					</section>
 					<section>
 						<img src="images/demo.png" width="80%" />
@@ -692,20 +699,20 @@
 						<table>
 							<tr>
 								<!-- <th>Decade:</th> -->
-								<th>1990</th>
-								<th>2000</th>
+								<th>2000's</th>
+								<th>2010's</th>
 								<th>2024+</th>
 							</tr>
 							<tr>
 								<!-- <td>Solution:</td> -->
-								<td>Book</td>
-								<td>Google</td>
+								<td>Books</td>
+								<td>Google, StackOverflow, Blogs, etc...</td>
 								<td>ChatGPT, Cloude, Gemini...</td>
 							</tr>
                             <tr>
                                 <td><img src="images/books/book-effective-java.png" width="50%" /></td>
-                                <td><img src="images/review/google-icon.png" width="50%" /></td>
-                                <td><img src="images/review/chatgpt-icon.png" width="60%" /></td>
+                                <td><img src="images/review/google-icon.png" width="45%" /></td>
+                                <td><img src="images/review/chatgpt-icon.png" width="80%" /></td>
                             </tr>
 						</table>
 					</section>
@@ -738,7 +745,11 @@
 					</section>
 					<section>
 						<h3>Symbols</h3>
-						<img src="images/review/cursor-symbols.png" width="80%" />
+                        <p>
+                            You can help LLMs increasing awareness linking to the prompt,
+                            aspects like: Java classes, Diagrams (Images/Text), Logs with Error traces, etc.
+                        </p>
+						<img src="images/review/cursor-symbols.png" width="70%" />
 						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/@-symbols/overview"
 							target="_blank">https://docs.cursor.com/context/@-symbols/overview</a></small>
 					</section>
@@ -770,14 +781,19 @@
 						</p>
 						<img src="images/review/review-cursor-mcp2.png" width="100%" />
 					</section>
+                    <!--
 					<section>
 						<h3>MCP Severs</h3>
+                        <p>
+                            In some scenarios, it is possible to switch between different MCP servers.
+                        </p>
 						<pre data-id="code-animation">
 							<code class="hljs bash" data-trim data-line-numbers>
 								sdk install jbang
 
 								jbang cache clear
 								jbang catalog list jabrena
+
 								jbang cursor-mcp-config@jabrena --help
 								jbang cursor-mcp-config@jabrena --show
 								jbang cursor-mcp-config@jabrena --backup
@@ -786,6 +802,7 @@
 							</code>
 						</pre>
 					</section>
+                    -->
 					<section>
 						<h3>MCP Severs</h3>
 						<p>
@@ -847,9 +864,11 @@
                             </a>
                         </p>
 					</section>
+                    <!--
 					<section>
 						<img src="images/demo.png" width="80%" />
 					</section>
+                    -->
                     <section data-background-color="green">
 						<h2>Reviewing the IDE II</h2>
 						<h3>Summary</h3>
@@ -872,7 +891,7 @@
 					<section>
 						<h3>Detailed prompts</h3>
 						<p>
-							Imagine that you need to build a New microservice from scratch:
+							When you develop a new Microservice
 						</p>
 						<img src="./images/demo/sldc.webp" width="30%" />
 						<img src="images/demo/ms.png" width="31%" />
@@ -885,7 +904,9 @@
 					</section>
 					<section>
 						<h3>Detailed prompts</h3>
-						<p>In order to build it, you will have to review the architecture based on C4 Model:</p>
+						<p>
+                            You need to design the solution, maybe you could use C4 Model
+                        </p>
 						<p>
 							<img src="images/demo/structurizr-logo.png" width="60%" />
 						</p>
@@ -903,21 +924,6 @@
 					</section>
 					<section>
 						<h3>Detailed prompts</h3>
-						<p>
-							<strong>Requirements:</strong>
-						</p>
-						<p>
-							<ul>
-								<li>UML Sequence Diagram about the system</li>
-								<li>Gherkin scenarios</li>
-								<li>Open API Specification for the new service</li>
-								<li>Open API Specification for the third party service</li>
-								<li>Database schema design</li>
-							</ul>
-						</p>
-					</section>
-					<section>
-						<h3>Detailed prompts</h3>
                         <strong>C4 Model</strong><br />
 						<img src="images/demo/structurizr-1-SystemContext-001.png" width="15%" />
 					</section>
@@ -931,22 +937,43 @@
                         <strong>C4 Model</strong><br />
 						<img src="images/demo/structurizr-1-Component-001.png" width="50%" />
 					</section>
-					<section>
+                    <section>
 						<h3>Detailed prompts</h3>
                         <strong>UML Sequence Diagram</strong><br />
 						<img src="images/demo/uml-sequence-diagram.png" width="100%" />
 					</section>
-					<section>
+                    <section>
 						<h3>Detailed prompts</h3>
 						<p>
-							Reduce the ambiguity in prompts to increase the code quality generated and consume less tokens.
+							And other details in order to gather all the information to build the new service:
 						</p>
-						<img src="images/demo/decision-tree-quarkus.png" width="80%" />
+						<p>
+							<ul>
+								<li>UML Sequence Diagram about the system</li>
+								<li>Gherkin scenarios</li>
+								<li>Open API Specification for the new service</li>
+								<li>Open API Specification for the third party service</li>
+								<li>Database schema design</li>
+							</ul>
+						</p>
 					</section>
 					<section>
 						<h3>Detailed prompts</h3>
+                        <p>
+                            If you decide to start a development using a Prompt,
+							you should reduce the ambiguity in some technical decisions
+                            delegated to the LLM to increase the code quality generated, less loops and less tokens.
+						</p>
+						<img src="images/demo/decision-tree-quarkus.png" width="70%" />
+					</section>
+					<section>
+						<h3>Detailed prompts</h3>
+                        <p>
+                            Example of a long prompt:
+                        </p>
                         <img src="images/demo/long-prompt.png" width="60%" />
 					</section>
+                    <!--
                     <section>
 						<h3>Detailed prompts</h3>
                         <table>
@@ -960,6 +987,7 @@
                             </tr>
                         </table>
 					</section>
+                    -->
 					<section>
 						<img src="images/demo.png" width="80%" />
 					</section>
@@ -967,16 +995,19 @@
 						<h3>Detailed prompts</h3>
 						<p>
 							Detailed prompts are fine, but exist executions where
-                            the LLMs enter in infinite loops. (Not 100% reliable process)
+                            the LLMs enter in severals loops. (It is not a 100% reliable process)
 						</p>
+                        <p>
+                            So..
+                        </p>
 						<p>
-							So.. <strong>How to interact and take more control in the process?</strong>
+							<strong>How to solve the problem and interact more in the process?</strong>
 						</p>
 					</section>
                     <section>
                         <h3>Tasks management</h3>
                         <p>
-                            Can we just stop saying "one shot"?
+                            It is simple, we just stop saying "one shot"
                         </p>
                         <img src="images/demo/ryancarson-tweet.png" width="50%" />
                         <small>
@@ -1000,6 +1031,7 @@
 
 								jbang cache clear
 								jbang catalog list jabrena
+
 								jbang setup@jabrena init --cursor tasks
 							</code>
 						</pre>
@@ -1045,9 +1077,15 @@
                     <section>
                         <h3>Tasks management</h3>
                         <p>
-                            What is tge State of art in tasks management?
+                            What is the "State of the art" in Tasks management?
                         </p>
-                        <a href="https://www.task-master.dev/" target="_blank">https://www.task-master.dev/</a>
+                        <img src="images/review/task-master.png" width="50%" /><br />
+                        <small>
+                            <strong>Source: </strong><a href="https://www.task-master.dev/" target="_blank">https://www.task-master.dev/</a><br />
+                            <strong>Author: </strong><a href="https://x.com/EyalToledano" target="_blank">@EyalToledano</a>
+                        </small>
+
+
                     </section>
 					<!--
 					<section>
@@ -1141,9 +1179,17 @@
 											Writing and maintaining code
 										</span>
 									</li>
-									<li>Debugging and troubleshooting</li>
+									<li>
+                                        <span style="display: inline-block; color: black;  background: #DFFF6D;">
+                                            Debugging and troubleshooting
+                                        </span>
+                                    </li>
 									<li>Code review and documentation</li>
-									<li>Learning new technologies</li>
+									<li>
+                                        <span style="display: inline-block; color: black;  background: #DFFF6D;">
+                                            Learning new technologies
+                                        </span>
+                                    </li>
 								</ul>
 							</li>
 						</ul>
@@ -1232,8 +1278,11 @@
                                     </li>
 									<li>Documentation burden</li>
 									<li>Code maintenance challenges</li>
-									<li>Learning curve for new technologies
-									</li>
+									<li>
+                                        <span style="display: inline-block; color: black;  background: #DFFF6D;">
+                                            Learning curve for new technologies
+                                        </span>
+                                    </li>
 								</ul>
 							</li>
 						</ul>
@@ -1241,18 +1290,21 @@
 					<section>
 						<h3>Value proposition</h3>
 						<p>
-							Dunning-Kruger effect
+							<strong>Dunning-Kruger effect</strong>
 						</p>
 						<img src="images/value/dunning-krugger-effect.png" width="60%" />
 						<small><strong>Source: </strong><a href="https://agilecoffee.com/toolkit/dunning-kruger/"
 							target="_blank">https://agilecoffee.com/toolkit/dunning-kruger/</a></small>
 					</section>
                     <section>
-						<h3>Cognitive load</h3>
+                        <h3>Value proposition</h3>
 						<p>
-							All lines of code generated by any LLM must to be mastered by the team.
+                            <strong>Cognitive load</strong>
 						</p>
-						<img src="images/limitations/cognitive-load.png" width="50%" />
+						<p>
+							All lines of code generated by any LLM must to be mastered by the team. <strong>(Mandatory)</strong>
+						</p>
+						<img src="images/limitations/cognitive-load.png" width="45%" />
 						<small><strong>Source: </strong><a href="https://www.barefootteflteacher.com/p/what-is-cognitive-load-theory"
 							target="_blank">https://www.barefootteflteacher.com/p/what-is-cognitive-load-theory</a></small>
 					</section>
@@ -1415,13 +1467,52 @@
 					</section>
 					<section>
 						<h3>Impact in Agile workflows</h3>
+                        <p>
+                            Cursor doesn't affect the XP Workflow
+                        </p>
 						<img src="images/value/xp.png" width="70%" />
 					</section>
 					<section>
 						<h3>Impact in Agile workflows</h3>
+                        <p>
+                            Cursor doesn't affect the Scrum Workflow
+                        </p>
 						<img src="images/value/scrum.png" width="70%" />
 					</section>
-
+                    <section>
+                        <h3>Impact in Agile workflows</h3>
+                        <p>
+                            But... what happen if Cursor is used in a non healthy environment?
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Impact in Agile workflows</h3>
+                        <p>
+                            More additional surprises will appear in the repositories...
+                        </p>
+                        <img src="images/impact/gremlin.png" width="70%" />
+                    </section>
+                    <section>
+                        <h3>Impact in Agile workflows</h3>
+                        <p>
+                            Easy checklist to review in your Dev environment:
+                        </p>
+                        <ul>
+                            <li>Are you Squad well balanced & mature?</li>
+                            <li>Do you have Senior software engineers?</li>
+                            <li>Do you practice Pair programming?</li>
+                            <li>Do you practice code reviews in the PRs?</li>
+                            <li>Do you use Git in a profressional way?</li>
+                            <li>Do you have mentoring policies for Juniors?</li>
+                            <li>Do you work alone or your team?</li>
+                            <li>Do you have policies to avoid Knowledge silos?</li>
+                            <li>...</li>
+                        </ul>
+                    </section>
+					<section>
+                        <h3>Impact in Agile workflows</h3>
+						<img src="images/introduction/pirelli-carl-lewis.jpg" width="100%" />
+					</section>
 					<!--
 					<section>
 						<h3>Crossing the chasm</h3>
