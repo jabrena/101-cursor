@@ -25,16 +25,8 @@ open http://localhost:8005
 - https://docs.cursor.com/
 - https://revealjs.com/installation/
 - https://github.com/hakimel/reveal.js/releases
-- https://editor-next.swagger.io/
-- https://structurizr.com/
-- https://docs.structurizr.com/onpremises
-- https://docs.structurizr.com/onpremises/authentication/file
-- https://hub.docker.com/r/structurizr/lite/tags
-- https://hub.docker.com/r/structurizr/onpremises/tags
-- https://www.plantuml.com/plantuml/uml/
 - https://github.com/jabrena/java-cursor-rules
 - https://github.com/jabrena/latency-problems
-- https://excalidraw.com/
 - https://en.m.wikipedia.org/wiki/Large_language_model
 
 ### Others
@@ -44,3 +36,15 @@ open http://localhost:8005
 - https://codely.com/en/blog
 - https://docs.google.com/presentation/d/1LxK1p9dGi9JbXXw5OqijE4ur1ID_dJ4eUUQhLiZPt4s/edit?slide=id.p#slide=id.p
 - https://stackoverflow.com/questions/79528029/how-to-preserve-reveal-js-computer-browser-behavior-in-mobile#comment140351253_79528029
+
+### Tools
+
+- https://editor-next.swagger.io/
+- https://structurizr.com/
+- https://docs.structurizr.com/onpremises
+- https://docs.structurizr.com/onpremises/authentication/file
+- https://hub.docker.com/r/structurizr/lite/tags
+- https://hub.docker.com/r/structurizr/onpremises/tags
+- https://www.plantuml.com/plantuml/uml/
+- https://excalidraw.com/
+
