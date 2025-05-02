@@ -31,6 +31,8 @@ open http://localhost:8005
 
 ### Others
 
+- https://techcrunch.com/2025/03/07/cursor-in-talks-to-raise-at-a-10b-valuation-as-ai-coding-sector-booms/
+- https://servreality.com/news/jetbrains-startup-valued-at-7-billion/
 - https://sacra.com/research/cursor-at-100m-arr/
 - https://techcrunch.com/2025/03/07/cursor-in-talks-to-raise-at-a-10b-valuation-as-ai-coding-sector-booms/
 - https://codely.com/en/blog
