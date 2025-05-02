@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "Stopwatch MCP": {
+      "command": "jbang",
+      "args": [
+        "stopwatch-mcp@jabrena"
+      ]
+    },
+    "jvminsight": {
+      "command": "jbang",
+      "args": [
+        "jvminsight@mcp-java"
+      ]
+    },
+    "server-sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery-ai/server-sequential-thinking",
+        "--key",
+        "76c1421c-eaf9-40ae-a76e-d2741859348a"
+      ]
+    }
+  }
+}

@@ -1,9 +1,9 @@
 {
   "mcpServers": {
-    "MCP Stopwatch": {
+    "Stopwatch MCP": {
       "command": "jbang",
       "args": [
-        "mcp-stopwatch@jabrena"
+        "stopwatch-mcp@jabrena"
       ]
     },
     "jvminsight": {

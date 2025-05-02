@@ -27,6 +27,7 @@ open http://localhost:8005
 - https://github.com/hakimel/reveal.js/releases
 - https://github.com/jabrena/java-cursor-rules
 - https://github.com/jabrena/latency-problems
+- https://github.com/jabrena/stopwatch-mcp
 - https://en.m.wikipedia.org/wiki/Large_language_model
 
 ### Others
@@ -38,6 +39,7 @@ open http://localhost:8005
 - https://codely.com/en/blog
 - https://docs.google.com/presentation/d/1LxK1p9dGi9JbXXw5OqijE4ur1ID_dJ4eUUQhLiZPt4s/edit?slide=id.p#slide=id.p
 - https://stackoverflow.com/questions/79528029/how-to-preserve-reveal-js-computer-browser-behavior-in-mobile#comment140351253_79528029
+- https://medium.com/eightshapes-llc/design-system-subtasks-by-step-2f43d7d4bce0
 
 ### Tools
 
