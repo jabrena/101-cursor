@@ -7,9 +7,34 @@
 Use @1000-create-prd.mdc
 Here's the feature @20250428-1.md
 
+1. Provide a REST API to retrieve information about Greek Gods. 
+2. An operator who will use the REST API. 
+4. Yes, only the list. Yes. 
+5. Fixed business rule. A log message. 
+6. No extra metrics
+```
+
+```bash
 Now take @PRD-GREEK-GODS-SERVICE.md and create tasks using @1001-generate-tasks-from-prd.mdc
 
 Please start on 1.1 and use @1002-task-list.mdc
+```
+
+```bash
+Common code snipet to fix.
+
+    // Default constructor for JPA
+    public ExternalGreekGod() {
+    }
+
+    public ExternalGreekGod(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 
 ---
 
@@ -21,7 +46,9 @@ pkill -f java
 ./mvnw clean verify
 ./mvnw liquibase:dropAll
 ./mvnw clean spring-boot:run
-curl http://localhost:8080/api/v1/gods
+curl http://localhost:8080/api/v1/gods/
+
+
 
 quarkus ext ls
 quarkus ext list --concise -i -s jdbc
