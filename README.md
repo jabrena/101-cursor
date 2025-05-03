@@ -39,6 +39,8 @@ open http://localhost:8005
 - https://stackoverflow.com/questions/79528029/how-to-preserve-reveal-js-computer-browser-behavior-in-mobile#comment140351253_79528029
 - https://medium.com/eightshapes-llc/design-system-subtasks-by-step-2f43d7d4bce0
 - https://x.com/jerolba/status/1869464738725568610
+- https://www.youtube.com/live/opjCpLwFt00
+- https://www.youtube.com/watch?v=icSB-DKbqD4&ab_channel=MaxRydahlAndersen
 
 ### Tools
 
