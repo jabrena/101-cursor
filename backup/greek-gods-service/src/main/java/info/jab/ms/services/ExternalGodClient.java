@@ -14,11 +14,11 @@ import java.util.List;
  * in application.properties (e.g., external.god.api/mp-rest/url).
  */
 @RegisterRestClient(configKey = "external.god.api")
-@Path("/gods") // Assuming the endpoint path is /gods based on convention
+@Path("/greek") // Assuming the endpoint path is /gods based on convention
 public interface ExternalGodClient {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     List<ExternalGod> getGods();
 
-} 
+}

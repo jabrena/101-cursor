@@ -10,6 +10,13 @@ public class ExternalGod {
 
     private String name;
 
+    public ExternalGod() {
+    }
+
+    public ExternalGod(String name) {
+        this.name = name;
+    }
+
     // Getters and setters are needed for Jackson deserialization
     public String getName() {
         return name;
@@ -26,4 +33,4 @@ public class ExternalGod {
                "name='" + name + '\'' +
                '}';
     }
-} 
+}

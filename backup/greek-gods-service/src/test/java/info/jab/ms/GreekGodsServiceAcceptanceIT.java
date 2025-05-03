@@ -16,7 +16,7 @@ public class GreekGodsServiceAcceptanceIT {
     public void testGetGodsEndpoint() {
         given()
         .when()
-            .get("/gods")
+            .get("/api/v1/gods")
         .then()
             .statusCode(200)
             .contentType(ContentType.JSON)
@@ -30,4 +30,4 @@ public class GreekGodsServiceAcceptanceIT {
     // It verifies the endpoint is available and returns the correct structure.
     // Verifying specific data might require mocking the external dependency
     // even in integration tests or ensuring the scheduler runs predictably.
-} 
+}
