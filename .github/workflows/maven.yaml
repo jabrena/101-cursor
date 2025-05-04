@@ -14,5 +14,12 @@ jobs:
         with:
           distribution: 'graalvm' # See 'Supported distributions' for available options
           java-version: '24'
-      - name: Maven build
+
+      - name: Maven build (Structurizr MCP)
         run: mvn --batch-mode --no-transfer-progress verify --file ./demos/others/structurizr-mcp/pom.xml
+
+      - name: Maven build (Spring Boot)
+        run: mvn --batch-mode --no-transfer-progress verify --file ./backup/spring-boot/greek-gods-service/pom.xml
+
+      - name: Maven build (Quarkus)
+        run: mvn --batch-mode --no-transfer-progress verify --file ./backup/quarkus/greek-gods-service/pom.xml
