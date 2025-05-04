@@ -1,0 +1,69 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Spring Boot Application API",
+    "description": "API documentation for Spring Boot application",
+    "contact": {
+      "name": "API Support",
+      "email": "support@example.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/",
+      "description": "Default Server URL"
+    }
+  ],
+  "paths": {
+    "/api/v1/gods": {
+      "get": {
+        "tags": [
+          "greek-god-controller"
+        ],
+        "summary": "Retrieve all Greek gods",
+        "description": "Returns a list of all Greek gods from the database",
+        "operationId": "getAllGods",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GreekGod"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GreekGod": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Unique identifier for the Greek god",
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the Greek god",
+            "example": "Zeus"
+          }
+        }
+      }
+    }
+  }
+}
