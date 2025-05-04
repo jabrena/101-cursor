@@ -24,7 +24,7 @@
 		<swagger-annotations.version>2.2.15</swagger-annotations.version>
 		<jackson-databind-nullable.version>0.2.6</jackson-databind-nullable.version>
 		<jakarta-validation.version>3.0.2</jakarta-validation.version>
-		<wiremock.version>3.1.0</wiremock.version>
+		<wiremock.version>3.9.1</wiremock.version>
 		<liquibase.version>4.27.0</liquibase.version>
 	</properties>
 
@@ -67,6 +67,10 @@
 			<version>${jakarta-validation.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>io.swagger.core.v3</groupId>
 			<artifactId>swagger-annotations-jakarta</artifactId>
 			<version>${swagger-annotations.version}</version>
@@ -105,7 +109,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.wiremock</groupId>
-			<artifactId>wiremock</artifactId>
+			<artifactId>wiremock-standalone</artifactId>
 			<version>${wiremock.version}</version>
 			<scope>test</scope>
 		</dependency>
@@ -165,6 +169,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
+							<skip>true</skip>
 							<inputSpec>${project.basedir}/src/main/resources/api/greekController-oas.yaml</inputSpec>
 							<generatorName>spring</generatorName>
 							<configOptions>
@@ -252,13 +257,14 @@
 					<includes>
 						<include>**/*IT.java</include>
 					</includes>
-					<skip>true</skip>
+					<excludes>
+						<exclude>**/*Test.java</exclude>
+					</excludes>
 				</configuration>
 				<executions>
 					<execution>
 						<goals>
 							<goal>integration-test</goal>
-							<goal>verify</goal>
 						</goals>
 					</execution>
 				</executions>

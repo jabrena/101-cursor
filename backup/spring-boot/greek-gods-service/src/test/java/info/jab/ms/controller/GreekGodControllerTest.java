@@ -3,6 +3,7 @@ package info.jab.ms.controller;
 import info.jab.ms.domain.entity.GreekGod;
 import info.jab.ms.service.GreekGodService;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;

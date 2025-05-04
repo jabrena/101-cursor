@@ -60,6 +60,14 @@
 							<i>- W. Edwards Deming</i>
 						</blockquote>
 					</section>
+                    <section>
+                        <blockquote>
+                            "If you can't describe what you are doing as a process,
+                            you don't know what you're doing."
+                            <br />
+                            <i>- W. Edwards Deming</i>
+                        </blockquote>
+                    </section>
                     <!--
 					<section>
 						<blockquote>
@@ -330,6 +338,17 @@
 						</p>
 						<img src="images/cursor-ai-architecture.png" width="80%" />
 					</section>
+                    <section data-background-color="green">
+						<h2>Reviewing the IDE I</h2>
+						<h3>Why?</h3>
+						<p>
+							Add new tools in large companies is a hard task.
+						</p>
+						<p>
+							So, share some enterprise features
+							is a good way to facilitate the adoption of a new tool.
+						</p>
+					</section>
 					<section>
 						<h2>Reviewing the IDE I</h2>
 						<ul>
@@ -361,17 +380,6 @@
 							<li>Enterprise features</li>
                             <li>Product evolution</li>
 						</ul>
-					</section>
-					<section data-background-color="green">
-						<h2>Reviewing the IDE I</h2>
-						<h3>Why?</h3>
-						<p>
-							Add new tools in large companies is a hard task.
-						</p>
-						<p>
-							So, share some enterprise features
-							is a good way to facilitate the adoption of a new tool.
-						</p>
 					</section>
 					<section>
 						<h2>Reviewing the IDE I</h2>
@@ -821,6 +829,12 @@
 						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/model-context-protocol"
 							target="_blank">https://docs.cursor.com/context/model-context-protocol</a></small>
 					</section>
+                    <section>
+						<h3>MCP Severs</h3>
+						<img src="images/review/mcp-stats.png" width="60%" />
+                        <small><strong>Source: </strong><a href="https://github.com/search?q=mcp-server&type=repositories&s=stars&o=desc&p=1"
+							target="_blank">https://github.com/search?q=mcp-server&type=repositories&s=stars&o=desc&p=1</a></small>
+					</section>
 					<section>
 						<h3>MCP Severs</h3>
 						<p>
@@ -828,7 +842,33 @@
 						</p>
 						<img src="images/review/review-cursor-mcp2.png" width="100%" />
 					</section>
-
+                    <section>
+						<h3>MCP Severs</h3>
+						<p>
+							How to configure MCP: (mcp.json)
+						</p>
+                        <pre data-id="code-animation">
+							<code class="hljs bash" data-trim data-line-numbers>
+                                {
+                                    "mcpServers": {
+                                        "Stopwatch MCP": {
+                                            "command": "jbang",
+                                            "args": [
+                                                "stopwatch-mcp@jabrena"
+                                            ]
+                                        },
+                                        "jvminsight": {
+                                            "command": "jbang",
+                                            "args": [
+                                                "jvminsight@mcp-java"
+                                            ]
+                                        }
+                                    }
+                                }
+							</code>
+						</pre>
+					</section>
+                    <!--
 					<section>
 						<h3>MCP Severs</h3>
                         <p>
@@ -849,7 +889,8 @@
 							</code>
 						</pre>
 					</section>
-
+                    -->
+                    <!--
 					<section>
 						<h3>MCP Severs</h3>
 						<p>
@@ -860,14 +901,15 @@
 							<li><a href="https://github.com/punkpeye/awesome-mcp-servers" target="_blank">https://github.com/punkpeye/awesome-mcp-servers</a></li>
 						</ul>
 					</section>
+                    -->
 					<section>
 						<h3>MCP Severs</h3>
-						<img src="images/review/mcp-stats.png" width="60%" />
-                        <small><strong>Source: </strong><a href="https://github.com/search?q=mcp-server&type=repositories&s=stars&o=desc&p=1"
-							target="_blank">https://github.com/search?q=mcp-server&type=repositories&s=stars&o=desc&p=1</a></small>
-					</section>
-					<section>
-						<h3>MCP Severs</h3>
+						<p>
+							Where I can find useful MCP Servers?
+						</p>
+						<ul>
+							<li><a href="https://smithery.ai/" target="_blank">https://smithery.ai/</a></li>
+						</ul>
 						<p>
 							Where I can find useful MCP Servers in Java?
 						</p>
@@ -914,12 +956,14 @@
 							<li>Verify the sources of your local MCP servers</li>
 							<li>Verify that you are using local MCP servers closed releases</li>
 						</ul>
+                        <!--
                         <p>
                             Motivation for Remote MCP:
                             <a href="https://support.anthropic.com/en/articles/11175166-about-custom-integrations-using-remote-mcp">
                                 https://support.anthropic.com/en/articles/11175166-about-custom-integrations-using-remote-mcp
                             </a>
                         </p>
+                        -->
 					</section>
                     <section>
 						<img src="images/demo.png" width="80%" />
@@ -928,12 +972,12 @@
 						<h2>Reviewing the IDE II</h2>
 						<h3>Summary</h3>
                         <ul>
-                            <li>Cursor Ask mode reduces time to solve doubts that previous appraoches and
-                                Cursor Agent mode is a game changer to implement new features.
+                            <li><strong>Cursor Ask</strong> mode reduces time in order to solve doubts and
+                                <strong>Cursor Agent</strong> mode is a game changer to implement tasks in an unattended way.
                             </li>
                             <li>Cursor has several ways to facilite the context to LLMs.</li>
                             <li><strong><u>Cursor Rules is a new way to customize the LLMs behaviour.</u></strong></li>
-                            <li>Local MPC Servers will help in dynamic aspects of your development soon.</li>
+                            <li>MPC Servers has the potential to help in some Dev actions that previously required manual actions.</li>
                         </ul>
 					</section>
 				</section>
@@ -1103,19 +1147,27 @@
 						<h3>Detailed prompts</h3>
 						<p>
 							Detailed prompts are fine, but exist executions where
-                            the LLMs enter in severals loops. (It is not a 100% reliable process)
+                            the LLMs enter in severals loops. (It is not a 100% reliable process for large prompts)
 						</p>
+                        <img src="images/demo/nate-tweet.png" width="40%" />
+                        <small>
+                            <strong>Source: </strong><a href="https://x.com/nateparrott/status/1913204957043425395"
+                            target="_blank">https://x.com/nateparrott/status/1913204957043425395</a>
+                        </small>
+					</section>
+                    <section>
+						<h3>Detailed prompts</h3>
                         <p>
                             So..
                         </p>
 						<p>
-							<strong>How to solve the problem and interact more in the process?</strong>
+							<strong><u>How to solve the problem with large prompts and have the capacity to interact more in the process?</u></strong>
 						</p>
 					</section>
                     <section>
                         <h3>Tasks management</h3>
                         <p>
-                            It is simple, we just stop saying "one shot"
+                           <u>we just stop saying "one shot"</u>
                         </p>
                         <img src="images/demo/ryancarson-tweet.png" width="50%" />
                         <small>
@@ -1192,8 +1244,6 @@
                             <strong>Source: </strong><a href="https://www.task-master.dev/" target="_blank">https://www.task-master.dev/</a><br />
                             <strong>Author: </strong><a href="https://x.com/EyalToledano" target="_blank">@EyalToledano</a>
                         </small>
-
-
                     </section>
 					<!--
 					<section>
@@ -1285,10 +1335,35 @@
 									<li>Writing and maintaining code</li>
 									<li>Debugging and troubleshooting</li>
 									<li>Code review and documentation</li>
-									<li>Learning new technologies</li>
+									<li>
+                                        <span style="display: inline-block; color: black;  background: #FF0000;">
+                                            Learning new technologies
+                                        </span>
+                                    </li>
 								</ul>
 							</li>
 						</ul>
+					</section>
+					<section>
+						<h3>Value proposition</h3>
+						<p>
+							<strong>Dunning-Kruger effect</strong>
+						</p>
+						<img src="images/value/dunning-krugger-effect.png" width="60%" />
+						<small><strong>Source: </strong><a href="https://agilecoffee.com/toolkit/dunning-kruger/"
+							target="_blank">https://agilecoffee.com/toolkit/dunning-kruger/</a></small>
+					</section>
+                    <section>
+                        <h3>Value proposition</h3>
+						<p>
+                            <strong>Cognitive load</strong>
+						</p>
+						<p>
+							All lines of code generated by any LLM must to be mastered by the team. <strong>(Mandatory)</strong>
+						</p>
+						<img src="images/limitations/cognitive-load.png" width="45%" />
+						<small><strong>Source: </strong><a href="https://www.barefootteflteacher.com/p/what-is-cognitive-load-theory"
+							target="_blank">https://www.barefootteflteacher.com/p/what-is-cognitive-load-theory</a></small>
 					</section>
 					<section>
 						<h3>Value proposition</h3>
@@ -1350,35 +1425,10 @@
 									<li>Time spent on repetitive coding tasks</li>
 									<li>Documentation burden</li>
 									<li>Code maintenance challenges</li>
-									<li>
-                                        <span style="display: inline-block; color: black;  background: #FF0000;">
-                                            Learning curve for new technologies
-                                        </span>
-                                    </li>
+									<li>Learning curve for new technologies</li>
 								</ul>
 							</li>
 						</ul>
-					</section>
-					<section>
-						<h3>Value proposition</h3>
-						<p>
-							<strong>Dunning-Kruger effect</strong>
-						</p>
-						<img src="images/value/dunning-krugger-effect.png" width="60%" />
-						<small><strong>Source: </strong><a href="https://agilecoffee.com/toolkit/dunning-kruger/"
-							target="_blank">https://agilecoffee.com/toolkit/dunning-kruger/</a></small>
-					</section>
-                    <section>
-                        <h3>Value proposition</h3>
-						<p>
-                            <strong>Cognitive load</strong>
-						</p>
-						<p>
-							All lines of code generated by any LLM must to be mastered by the team. <strong>(Mandatory)</strong>
-						</p>
-						<img src="images/limitations/cognitive-load.png" width="45%" />
-						<small><strong>Source: </strong><a href="https://www.barefootteflteacher.com/p/what-is-cognitive-load-theory"
-							target="_blank">https://www.barefootteflteacher.com/p/what-is-cognitive-load-theory</a></small>
 					</section>
                     <!--
 					<section>
@@ -1513,7 +1563,10 @@
 							But.. it is not the problem of Cursor if your Dev culture doesn't include:
 							Pair programming, Collective Code Ownership, A wrong team size, others...
 						</p>
-						<img src="images/value/xp-tools.png" width="55%" />
+						<img src="images/value/xp-tools.png" width="40%" />
+                        <small><strong>Source: </strong><a href="https://www.pythian.com/blog/technical-track/top-5-extreme-programming-xp-tools-every-team-should-use"
+							target="_blank">https://www.pythian.com/blog/technical-track/top-5-extreme-programming-xp-tools-every-team-should-use</a>
+                        </small>
 					</section>
 					<section>
 						<h3>Impact in Agile workflows</h3>
@@ -1521,13 +1574,19 @@
                             Cursor doesn't affect the XP Workflow
                         </p>
 						<img src="images/value/xp.png" width="70%" />
+                        <small><strong>Source: </strong><a href="https://www.purrweb.com/blog/software-development-methodologies/"
+							target="_blank">https://www.purrweb.com/blog/software-development-methodologies/</a>
+                        </small>
 					</section>
 					<section>
 						<h3>Impact in Agile workflows</h3>
                         <p>
                             Cursor doesn't affect the Scrum Workflow
                         </p>
-						<img src="images/value/scrum.png" width="70%" />
+						<img src="images/value/scrum.png" width="60%" />
+                        <small><strong>Source: </strong><a href="https://www.purrweb.com/blog/software-development-methodologies/"
+							target="_blank">https://www.purrweb.com/blog/software-development-methodologies/</a>
+                        </small>
 					</section>
                     <!--
                     <section>
@@ -1611,6 +1670,7 @@
                     <section>
                         <h2>Takeaways</h2>
                         <ul>
+                            <li>LLMs doesn´t return the same results for the same Prompt.</li>
                             <li>Senior software engineers could take more benefits than Junior developers
                                 using this kind of new features.</li>
 
@@ -1630,6 +1690,7 @@
                             <li>[ ] Do you have policies to avoid silos?</li>
                             <li>[ ] Do you have policies to handle Technical debt?</li>
                             <li>[ ] Do you have mentoring processes for Juniors positions?</li>
+                            <li>[ ] Do you have documents about Definition of Done.</li>
                         </ul>
                     </section>
                 </section>
