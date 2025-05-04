@@ -1,5 +1,4 @@
 @startuml
-
 skinparam backgroundColor transparent
 skinparam RoundCorner 15
 skinparam Padding 10
@@ -10,12 +9,14 @@ left to right direction
 
 rectangle "New\nQuarkus\nProject" as project
 rectangle "Java 17" as java17
-rectangle "Java 21" as java21 
+rectangle "Java 21" as java21
 rectangle "Java 24" as java24 #cccccc
 rectangle "Maven" as maven #cccccc
-rectangle "Gradle" as gradle 
+rectangle "Gradle" as gradle
 rectangle "REST" as rest #cccccc
-rectangle "Panache ORM" as jdbc #cccccc 
+rectangle "Panache ORM" as jdbc #cccccc
+rectangle "JPA" as jpa
+rectangle "Dev Services PostgreSQL" as devservices #cccccc
 
 project --> java17
 project --> java21
@@ -26,5 +27,7 @@ java24 --> gradle
 
 maven --> rest
 maven --> jdbc
+maven --> jpa
+maven --> devservices
 
 @enduml

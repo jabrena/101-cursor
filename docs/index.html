@@ -607,7 +607,10 @@
 					</section>
 					<section>
 						<h3>Models</h3>
-						<img src="images/review/review-cursor-models.png" width="60%" />
+                        <p>
+                            Cursor provides access to main Commercial LLMs
+                        </p>
+						<img src="images/review/review-cursor-models2.png" width="30%" /><br />
 						<small><strong>Source: </strong><a href="https://docs.cursor.com/settings/models"
 							target="_blank">https://docs.cursor.com/settings/models</a></small>
 					</section>
@@ -633,7 +636,9 @@
                             <strong>IT Champions</strong> who define the guidelines
                             for a specific Technology, in our case <strong>Java</strong>.
 						</p>
-                        <img src="images/introduction/java-logo.svg" width="25%" />
+                        <ul>
+                            <li><a href="https://google.github.io/styleguide/javaguide.html" target="_blank">https://google.github.io/styleguide/javaguide.html</a></li>
+                        </ul>
 					</section>
 					<section>
 						<h3>Cursor rules</h3>
@@ -909,19 +914,19 @@
                             </a>
                         </p>
 					</section>
-                    <!--
-					<section>
+                    <section>
 						<img src="images/demo.png" width="80%" />
 					</section>
-                    -->
                     <section data-background-color="green">
 						<h2>Reviewing the IDE II</h2>
 						<h3>Summary</h3>
                         <ul>
-                            <li>Cursor Ask mode reduces time to solve doubts that previously required more intermediate steps.</li>
-                            <li>Cursors has several ways to facilite the context to LLMs to understand the repository.</li>
-                            <li><strong><u>Cursor Rules is a new way to improve Dev processes.</u></strong></li>
-                            <li>MPC Servers are a new niche, it will require some time to have good Java Dev features. Companies have focus on B2B Services. (Nov 2024)</li>
+                            <li>Cursor Ask mode reduces time to solve doubts that previous appraoches and
+                                Cursor Agent mode is a game changer to implement new features.
+                            </li>
+                            <li>Cursor has several ways to facilite the context to LLMs.</li>
+                            <li><strong><u>Cursor Rules is a new way to customize the LLMs behaviour.</u></strong></li>
+                            <li>Local MPC Servers will help in dynamic aspects of your development soon.</li>
                         </ul>
 					</section>
 				</section>
@@ -929,14 +934,49 @@
 					<section>
 						<h2>Demo</h2>
 						<ul>
+                            <li>Scenario</li>
 							<li>Detailed prompts</li>
 							<li>Tasks management</li>
 						</ul>
 					</section>
+                    <section>
+                        <h3>Scenario</h3>
+                        <p>
+                            The starting point:
+                        </p>
+                        <small>
+                            <pre data-id="code-animation">
+                                <code class="hljs gherkin" data-trim data-line-numbers>
+                                    Feature: Greek Gods API
+                                    As an API consumer
+                                    I want to retrieve information about Greek gods
+                                    So that I can use this data in my application
+
+                                    Background:
+                                    Given the Greek Gods API service is running
+                                    And the API base URL is "http://localhost:8080"
+
+                                    Scenario: Successfully retrieve all Greek gods
+                                    When I send a GET request to "/api/v1/gods/greek"
+                                    Then the response status code should be 200
+                                    And the response should be in JSON format
+                                    And the response should contain a list of Greek gods
+                                    And each god in the response should have the following attributes:
+                                        | attribute | type    |
+                                        | id        | integer |
+                                        | name      | string  |
+
+                                    ...
+                                </code>
+                            </pre>
+                        </small>
+                        <br />
+                        <img src="images/demo/gherkin.png" width="5%" />
+                    </section>
 					<section>
 						<h3>Detailed prompts</h3>
 						<p>
-							When you develop a new Microservice
+							Develop a new Microservice requires to review multiple aspects:
 						</p>
 						<img src="./images/demo/sldc.webp" width="30%" />
 						<img src="images/demo/ms.png" width="31%" />
@@ -950,7 +990,8 @@
 					<section>
 						<h3>Detailed prompts</h3>
 						<p>
-                            You need to design the solution, maybe you could use C4 Model
+                            And model the solution and adhere to an architectural approach.
+                            (Example: C4 Model)
                         </p>
 						<p>
 							<img src="images/demo/structurizr-logo.png" width="60%" />
@@ -990,7 +1031,7 @@
                     <section>
 						<h3>Detailed prompts</h3>
 						<p>
-							And other details in order to gather all the information to build the new service:
+							And gather all the required information to build the new service:
 						</p>
 						<p>
 							<ul>
@@ -1009,14 +1050,29 @@
 							you should reduce the ambiguity in some technical decisions
                             delegated to the LLM to increase the code quality generated, less loops and less tokens.
 						</p>
-						<img src="images/demo/decision-tree-quarkus.png" width="70%" />
+					</section>
+                    <section>
+						<h3>Detailed prompts</h3>
+                        <p>
+                            Some technical decisions in Spring Boot projects:
+                        </p>
+						<img src="images/demo/decision-tree-spring-boot.png" width="100%" />
+					</section>
+                    <section>
+						<h3>Detailed prompts</h3>
+                        <p>
+                            Some technical decisions in Quarkus projects:
+                        </p>
+						<img src="images/demo/decision-tree-quarkus.png" width="80%" />
 					</section>
 					<section>
 						<h3>Detailed prompts</h3>
                         <p>
-                            Example of a long prompt:
+                            Use the @20250320-1.md as Prompt and analyze implement & test the following images to understand the required development.
                         </p>
-                        <img src="images/demo/long-prompt.png" width="60%" />
+                        <img src="images/demo/long-prompt.png" width="55%" />
+                        <br/>
+                        <img src="images/demo/clock.png" width="10%" />
 					</section>
                     <!--
                     <section>
@@ -1539,25 +1595,34 @@
                     <section>
                         <h2>Takeaways</h2>
                         <ul>
-                            <li>Cursor AI is a good disruptive general purpose IDE that Java developers can use.</li>
-                            <li>Senior software engineers could take get more benefits than Junior developers.</li>
-                            <li>Run a Pilot for specific Cursor Rules for Java could be a good investment.</li>
-                            <li><u>A key aspect to be considered to adopt Cursor AI/others is the Dev Quality culture of the company.</u></li>
+                            <li>Cursor AI and other IDEs with AI capabilities are innovating in the IDE market for Java.</li>
+                            <li><u>Cursor Rules for Java</u> could be considered as an evolution of the classical Java Style guides.</li>
+                            <li>Models with reasoning capabilities or Models with MCP assistance are a game changer to structure a potential solution.</li>
+                            <li>Use Tasks in a session are a balanced solution to delegate features to LLMs and get control in any moment for Software Engineers.</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Takeaways</h2>
+                        <ul>
+                            <li>Senior software engineers could take more benefits than Junior developers
+                                using this kind of new features.</li>
+
+                            <li>If you work with Early-adopter technologies, commercial LLMs wil not provide good answers. (Example: TornadoVM questions)</li>
+                            <li><u>A key aspect to be considered to adopt Cursor AI/others is the Dev Quality culture of the company.</u></li>
+                        </ul>
+                    </section>
+                    <section>
                         <p>
                             Checklist to review in your Dev quality of the company:
                         </p>
                         <ul>
                             <li>[ ] Are you Squads well balanced?</li>
-                            <li>[ ] Do you practice Pair programming?</li>
-                            <li>[ ] Do you practice code reviews in the PRs?</li>
+                            <li>[ ] Do you practice Pair programming as a regular practice?</li>
+                            <li>[ ] Do you run healthy code reviews in the PRs?</li>
                             <li>[ ] Do you use Git in a professional way?</li>
-                            <li>[ ] Do you have mentoring processes for Juniors positions?</li>
                             <li>[ ] Do you have policies to avoid silos?</li>
-                            <li>[ ] Do you have policies to handle technical debt?</li>
+                            <li>[ ] Do you have policies to handle Technical debt?</li>
+                            <li>[ ] Do you have mentoring processes for Juniors positions?</li>
                         </ul>
                     </section>
                 </section>

@@ -10,14 +10,16 @@ left to right direction
 
 rectangle "New\nSpring Boot\nProject" as project
 rectangle "Java 17" as java17
-rectangle "Java 21" as java21 
+rectangle "Java 21" as java21
 rectangle "Java 24" as java24 #cccccc
 rectangle "Maven" as maven #cccccc
-rectangle "Gradle" as gradle 
+rectangle "Gradle" as gradle
 rectangle "Servlet" as servlet #cccccc
-rectangle "Reactive" as reactive 
+rectangle "Reactive" as reactive
 rectangle "REST" as rest #cccccc
-rectangle "Data JDBC" as jdbc #cccccc 
+rectangle "Data JDBC" as jdbc #cccccc
+rectangle "JPA" as jpa
+rectangle "Testcontainers PostgreSQL" as testcontainers #cccccc
 
 project --> java17
 project --> java21
@@ -31,5 +33,7 @@ maven --> reactive
 
 servlet --> rest
 servlet --> jdbc
+servlet --> jpa
+servlet --> testcontainers
 
 @enduml
