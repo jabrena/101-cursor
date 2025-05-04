@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * REST controller for accessing Greek God information.
  */
-@Path("/api/v1/gods")
+@Path("/api/v1/gods/greek")
 @Produces(MediaType.APPLICATION_JSON)
 public class GreekController {
 

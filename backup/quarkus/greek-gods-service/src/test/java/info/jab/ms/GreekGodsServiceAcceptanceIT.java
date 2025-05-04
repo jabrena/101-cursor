@@ -16,7 +16,7 @@ public class GreekGodsServiceAcceptanceIT {
     public void testGetGodsEndpoint() {
         given()
         .when()
-            .get("/api/v1/gods")
+            .get("/api/v1/gods/greek")
         .then()
             .statusCode(200)
             .contentType(ContentType.JSON)
