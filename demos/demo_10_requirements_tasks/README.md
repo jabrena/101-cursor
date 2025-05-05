@@ -7,11 +7,22 @@
 Use @1000-create-prd.mdc
 Here's the feature @20250428-1.md
 
-1. Provide a REST API to retrieve information about Greek Gods. 
-2. An operator who will use the REST API. 
-4. Yes, only the list. Yes. 
-5. Fixed business rule. A log message. 
+1. Provide a REST API to retrieve information about Greek Gods.
+2. An operator who will use the REST API.
+4. Yes, only the list. Yes.
+5. Fixed business rule. A log message.
 6. No extra metrics
+
+
+1. Provide a REST API to retrieve information about Greek Gods.
+2. An operator who will use the REST API.
+3.1 Insert only new gods
+3.2 3 retries
+4. Return full list
+5.1 Empty list
+5.2 Yes, 10 seconds
+6. No
+7. No Success metrics
 ```
 
 ```bash
