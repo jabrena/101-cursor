@@ -21,6 +21,7 @@ open http://localhost:8005
 
 - https://www.cursor.com/
 - https://docs.cursor.com/
+- https://www.reddit.com/r/cursor/s/UWLpjkg124
 - https://revealjs.com/installation/
 - https://github.com/hakimel/reveal.js/releases
 - https://github.com/jabrena/java-cursor-rules
