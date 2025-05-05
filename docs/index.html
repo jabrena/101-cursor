@@ -44,6 +44,7 @@
 				</section>
 
 				<section>
+                    <!--
 					<section>
 						<blockquote>
 							“Two basic rules of life are:
@@ -53,9 +54,11 @@
 							<i>- W. Edwards Deming</i>
 						</blockquote>
 					</section>
+                    -->
 					<section>
 						<blockquote>
-							“Quality comes not from inspection, but from improvement of the production process.”
+							“Quality comes not from inspection, but
+                            from <u>improvement of the production process</u>.”
 							<br />
 							<i>- W. Edwards Deming</i>
 						</blockquote>
@@ -63,7 +66,7 @@
                     <section>
                         <blockquote>
                             "If you can't describe what you are doing as a process,
-                            you don't know what you're doing."
+                            <u>you don't know what you're doing</u>."
                             <br />
                             <i>- W. Edwards Deming</i>
                         </blockquote>
@@ -90,7 +93,7 @@
                     -->
                     <section>
                         <blockquote>
-                            "Trust, but verify"
+                            "Trust, but <u>verify</u>"
                             <!--
                             <br />
                             (доверяй, но проверяй)"-->
@@ -100,7 +103,7 @@
                     </section>
                     <section>
                         <blockquote>
-                            "Visteme despacio que llevo prisa"
+                            "<u>Visteme despacio que llevo prisa</u>"
                             <br />
                             <i>- Carlos III</i>
                         </blockquote>
@@ -229,7 +232,7 @@
                     <section>
 						<h2>Poll</h2>
 						<p>
-							Can you raise your hand ✋, if you use <strong>Intellij Idea Ultimate</strong> or another licenced IDE paid by your company?
+							Can you raise your hand ✋, if you use <strong>Intellij Idea Ultimate</strong>?
 						</p>
 						<img src="images/trivia.png" width="20%" />
 					</section>
@@ -240,6 +243,7 @@
 						</p>
 						<img src="images/trivia.png" width="20%" />
 					</section>
+                    <!--
 					<section>
 						<h2>Poll</h2>
 						<p>
@@ -247,6 +251,7 @@
 						</p>
 						<img src="images/trivia.png" width="20%" />
 					</section>
+                    -->
 				</section>
 
 				<!-- Agenda -->
@@ -292,6 +297,7 @@
 							<a href="https://www.cursor.com/" target="_blank">https://www.cursor.com/</a>
 						</p>
 					</section>
+                    <!---
 					<section>
 						<p>
 							Cursor AI became the fastest startup to reach $100M in ARR (Annual Recurring Revenue)
@@ -300,6 +306,7 @@
 						<small><strong>Source: </strong><a href="https://sacra.com/research/cursor-at-100m-arr/"
 							target="_blank">https://sacra.com/research/cursor-at-100m-arr/</a></small>
 					</section>
+                    -->
 					<section>
 						<p>
 							ThoughtWorks Radar 2025Q1 // Tools
@@ -407,18 +414,8 @@
 						<p>
 							Cursor operates a continuously monitored and 3rd-party audited security program.
 						</p>
-						<p>
-							<img src="images/review/soc.png" width="50%" />
-						</p>
-						<small><strong>Source: </strong><a href="https://trust.cursor.com/"
-							target="_blank">https://trust.cursor.com/</a></small>
-					</section>
-					<section>
-						<h3>Trust</h3>
-						<p>
-							<img src="images/review/soc.png" width="50%" />
-						</p>
-						<p>
+                        <p>
+                            <img src="images/review/soc.png" width="40%" /><br />
 							<strong>SOC 2</strong> is a compliance framework used to evaluate and validate an organizations
 								information security practices.
 						</p>
@@ -517,8 +514,22 @@
 					<section>
 						<h2>Reviewing the IDE II</h2>
 						<ul>
-							<li>Developer features</li>
-							<li>Context features</li>
+							<li>Developer features
+                                <ul>
+									<li>Tab model</li>
+									<li>Review changes (Cursor PR)</li>
+								</ul>
+                            </li>
+							<li>Context features
+								<ul>
+									<li>Settings</li>
+									<li>Models</li>
+									<li>Cursor rules</li>
+									<li>Modes (Agent, Ask, Manual)</li>
+									<li>Symbols</li>
+									<li>MCP Servers</li>
+								</ul>
+							</li>
 						</ul>
 					</section>
 					<section>
@@ -584,9 +595,11 @@
                             target="_blank">https://dev.to/mollynem/git-github--workflow-fundamentals-5496</a>
                         </small>
 					</section>
+                    <!--
 					<section>
 						<img src="images/demo.png" width="80%" />
 					</section>
+                    -->
 					<section>
 						<h2>Reviewing the IDE II</h2>
 						<ul>
@@ -696,6 +709,7 @@
 							<li><a href="https://cursor.directory/" target="_blank">https://cursor.directory/</a></li>
 						</ul>
                         <p>
+                            <strong>Note:</strong> The previous links share .cursorrules files.<br />
                             <strong>Note:</strong> Now, it is possible to create your own rules from Cursor.
                         </p>
 					</section>
@@ -791,11 +805,22 @@
 					<section>
 						<h3>Agent Mode</h3>
 						<p>
-							Example:
+							Example to fix a test:
 						</p>
 						<img src="images/review/review-cursor-mode-agent.png" width="80%" />
 					</section>
-					<section>
+                    <section>
+                        <h3>Agent Mode</h3>
+                        <p>
+                            Example for prototyping:
+                        </p>
+                        <img src="images/review/mike-tweet.png" width="100%" />
+                        <small>
+                            <strong>Source: </strong><a href="https://x.com/mpetyx/status/1912428437077184670"
+                            target="_blank">https://x.com/mpetyx/status/1912428437077184670</a>
+                        </small>
+                    </section>
+                    <section>
 						<img src="images/demo.png" width="80%" />
 					</section>
 					<section>
@@ -840,12 +865,12 @@
 						<p>
 							How to configure MCP:
 						</p>
-						<img src="images/review/review-cursor-mcp2.png" width="100%" />
+						<img src="images/review/review-cursor-mcp3.png" width="80%" />
 					</section>
                     <section>
 						<h3>MCP Severs</h3>
 						<p>
-							How to configure MCP: (mcp.json)
+							How to configure MCP: (~/.cursor/mcp.json)
 						</p>
                         <pre data-id="code-animation">
 							<code class="hljs bash" data-trim data-line-numbers>
@@ -868,11 +893,11 @@
 							</code>
 						</pre>
 					</section>
-                    <!--
+
 					<section>
 						<h3>MCP Severs</h3>
                         <p>
-                            In some scenarios, it is possible to switch between different MCP servers.
+                            Maybe in some scenarios you could require multiple set of MCP servers...
                         </p>
 						<pre data-id="code-animation">
 							<code class="hljs bash" data-trim data-line-numbers>
@@ -889,7 +914,7 @@
 							</code>
 						</pre>
 					</section>
-                    -->
+
                     <!--
 					<section>
 						<h3>MCP Severs</h3>
@@ -1056,10 +1081,23 @@
 								open http://localhost:9000
 							</code>
 						</pre>
-						<small><strong>Source: </strong><a href="https://structurizr.com/"
-							target="_blank">https://structurizr.com/</a></small>
+						<small>
+                            <strong>Source: </strong><a href="https://c4model.com/"
+							target="_blank">https://c4model.com/</a><br />
+                            <strong>Source: </strong><a href="https://structurizr.com/"
+							target="_blank">https://structurizr.com/</a>
+                        </small>
 					</section>
 					<section>
+						<h3>Detailed prompts</h3>
+                        <strong>C4 Model</strong><br />
+						<img src="images/demo/c4model.png" width="80%" />
+                        <small>
+                            <strong>Source: </strong><a href="https://c4model.com/"
+							target="_blank">https://c4model.com/</a>
+                        </small>
+					</section>
+                    <section>
 						<h3>Detailed prompts</h3>
                         <strong>C4 Model</strong><br />
 						<img src="images/demo/structurizr-1-SystemContext-001.png" width="15%" />
@@ -1167,12 +1205,23 @@
                     <section>
                         <h3>Tasks management</h3>
                         <p>
-                           <u>we just stop saying "one shot"</u>
+                           <u>Just stop saying "one shot"</u>
                         </p>
                         <img src="images/demo/ryancarson-tweet.png" width="50%" />
                         <small>
                             <strong>Source: </strong><a href="https://x.com/ryancarson/status/1913204957043425395"
                             target="_blank">https://x.com/ryancarson/status/1913204957043425395</a>
+                        </small>
+                    </section>
+                    <section>
+                        <h3>Tasks management</h3>
+                        <p>
+                            Change the point of view: From a large prompt to a set of tasks.
+                        </p>
+                        <img src="images/demo/incremental-development.png" width="50%" />
+                        <small>
+                            <strong>Source: </strong><a href="https://www.scrum.org/resources/blog/what-iterative-incremental-delivery-hunt-perfect-example"
+                            target="_blank">https://www.scrum.org/resources/blog/what-iterative-incremental-delivery-hunt-perfect-example</a>
                         </small>
                     </section>
 					<section>
@@ -1656,41 +1705,50 @@
 							target="_blank">https://levelup.gitconnected.com/ai-powered-documentation-driven-development-supercharge-your-coding-workflow-3f6125915e8f</a></small>
 					</section>
 					-->
-				</section>
-                <section>
-                    <section>
-                        <h2>Takeaways</h2>
-                        <ul>
-                            <li>Cursor AI and other IDEs with AI capabilities are innovating in the IDE market for Java.</li>
-                            <li><u>Cursor Rules for Java</u> could be considered as an evolution of the classical Java Style guides.</li>
-                            <li>Models with reasoning capabilities or Models with MCP assistance are a game changer to structure a potential solution.</li>
-                            <li>Use Tasks in a session are a balanced solution to delegate features to LLMs and get control in any moment for Software Engineers.</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Takeaways</h2>
-                        <ul>
-                            <li>LLMs doesn´t return the same results for the same Prompt.</li>
-                            <li>Senior software engineers could take more benefits than Junior developers
-                                using this kind of new features.</li>
-
-                            <li>If you work with Early-adopter technologies, commercial LLMs wil not provide good answers. (Example: TornadoVM questions)</li>
-                            <li><u>A key aspect to be considered to adopt Cursor AI/others is the Dev Quality culture of the company.</u></li>
-                        </ul>
-                    </section>
                     <section>
                         <p>
                             Checklist to review in your Dev quality of the company:
                         </p>
                         <ul>
                             <li>[ ] Are you Squads well balanced?</li>
+                            <li>[ ] Do you have any mentoring policy for entry roles?</li>
                             <li>[ ] Do you practice Pair programming as a regular practice?</li>
                             <li>[ ] Do you run healthy code reviews in the PRs?</li>
-                            <li>[ ] Do you use Git in a professional way?</li>
-                            <li>[ ] Do you have policies to avoid silos?</li>
+                            <!-- <li>[ ] Do you use Git in a professional way?</li> -->
+                            <li>[ ] Do you have policies to avoid Silos?</li>
+                            <li>[ ] Do you have a culture of Knowledge sharing?</li>
                             <li>[ ] Do you have policies to handle Technical debt?</li>
-                            <li>[ ] Do you have mentoring processes for Juniors positions?</li>
                             <li>[ ] Do you have documents about Definition of Done.</li>
+                        </ul>
+                    </section>
+                    <!--
+                    <section>
+                        <h3>Dreifus Model</h3>
+                        <img src="images/impact/dreifus-model.png" width="50%" />
+                        <small><strong>Source: </strong><a href="https://www.researchgate.net/publication/273041020_Technology-enhanced_learning_in_anaesthesia_and_educational_theory"
+							target="_blank">https://www.researchgate.net/publication/273041020_Technology-enhanced_learning_in_anaesthesia_and_educational_theory</a></small>
+                    </section>
+                    -->
+				</section>
+                <section>
+                    <section>
+                        <h2>Takeaways</h2>
+                        <ul>
+                            <li>Cursor AI and other IDEs with AI capabilities are innovating in the IDE market for Java.</li>
+                            <li><u>Cursor Rules for Java</u> could be considered as an evolution of the classical Java Style guides,
+                                but it has more potential capabilities.</li>
+                            <li>Using Tasks are a balanced solution to delegate features to LLMs and get control in any moment for Software Engineers.</li>
+                            <li>LLMs doesn't return the same results for the same Prompt.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Takeaways</h2>
+                        <ul>
+                            <li>Senior software engineers could take more benefits than Junior developers
+                                using this kind of new features.</li>
+
+                            <li>If you work with Early-adopter technologies, commercial LLMs wil not provide good answers. (Example: TornadoVM questions)</li>
+                            <li><u>A key aspect to be considered to adopt Cursor AI/others is the Dev Quality culture of the company.</u></li>
                         </ul>
                     </section>
                 </section>
