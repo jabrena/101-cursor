@@ -1,6 +1,6 @@
 # Demo 01 / Learn to use Tab
 
-## Goal: Show how tab works
+## Goal: Show how tab works
 
 - https://my-json-server.typicode.com/jabrena/latency-problems
 
