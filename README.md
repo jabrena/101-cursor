@@ -11,13 +11,13 @@ jwebserver -p 8005 -d "$(pwd)/docs/"
 open http://localhost:8005
 ```
 
-## Meetups
+## Meetups & Conferences
 
 ### MadridJUG / Madrid (2025/05/06)
 
 - https://www.meetup.com/es-ES/madridjug/events/307458529/?_xtd=gqFyqTI2NTY4MTI0NqFwo2FwaQ%253D%253D&from=ref
 
-### W-JAX / Munich (2025/11/06)
+### W-JAX / Munich (2025/11/06 - 16:45 - 17:45)
 
 - https://jax.de/generative-ai-ecosystem/cursor-ai-101-java-enterprise/
 
