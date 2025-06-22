@@ -13,9 +13,13 @@ open http://localhost:8005
 
 ## Meetups
 
-### Madrid (2025/05/06)
+### MadridJUG / Madrid (2025/05/06)
 
 - https://www.meetup.com/es-ES/madridjug/events/307458529/?_xtd=gqFyqTI2NTY4MTI0NqFwo2FwaQ%253D%253D&from=ref
+
+### W-JAX / Munich (2025/11/06)
+
+- https://jax.de/generative-ai-ecosystem/cursor-ai-101-java-enterprise/
 
 ## References
 
@@ -24,7 +28,6 @@ open http://localhost:8005
 - https://www.reddit.com/r/cursor/s/UWLpjkg124
 - https://revealjs.com/installation/
 - https://github.com/hakimel/reveal.js/releases
-- https://github.com/jabrena/java-cursor-rules
 - https://github.com/jabrena/latency-problems
 - https://github.com/jabrena/stopwatch-mcp
 - https://en.m.wikipedia.org/wiki/Large_language_model
@@ -54,3 +57,15 @@ open http://localhost:8005
 - https://www.plantuml.com/plantuml/uml/
 - https://excalidraw.com/
 
+## Cursor rules ecosystem
+
+- https://github.com/jabrena/101-cursor
+- https://github.com/jabrena/cursor-rules-methodology
+- https://github.com/jabrena/cursor-rules-agile
+- https://github.com/jabrena/cursor-rules-java
+- https://github.com/jabrena/cursor-rules-spring-boot
+- https://github.com/jabrena/cursor-rules-examples
+- https://github.com/jabrena/cursor-rules-sandbox
+- https://github.com/jabrena/plantuml-to-png-cli
+- https://github.com/jabrena/setup-cli
+- https://github.com/jabrena/jbang-catalog
