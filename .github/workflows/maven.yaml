@@ -15,9 +15,6 @@ jobs:
           distribution: 'graalvm' # See 'Supported distributions' for available options
           java-version: '25'
 
-      - name: Maven build (Structurizr MCP)
-        run: mvn --batch-mode --no-transfer-progress verify --file ./demos/others/structurizr-mcp/pom.xml
-
       - name: Maven build (Spring Boot)
         run: mvn --batch-mode --no-transfer-progress verify --file ./backup/spring-boot/greek-gods-service/pom.xml
 
