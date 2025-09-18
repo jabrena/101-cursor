@@ -1,0 +1,1902 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>101 Cursor AI</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<link rel="icon" href="images/java-icon.png" type="image/png" />
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- My CSS Adventures in 2025 -->
+			<!-- Footer -->
+			<style>
+				.footer {
+					position: absolute;
+					left: 10px;
+					bottom: 0px;
+					z-index: 999;
+					background: #fff;
+					margin-bottom: 10px;
+					padding-bottom: 0px;
+				}
+			</style>
+			<div class="footer">
+				<small><a href="https://twitter.com/juanantoniobm" target="_blank">Twitter: @juanantoniobm</a></small>
+			</div>
+
+			<div class="slides">
+				<section>
+					<section data-background-image="images/gradient-hero-prerender.avif">
+						<h2 style="color: white;">101 Cursor AI</h2>
+						<h3 style="color: white;">Learning to use for Java Enterprise projects</h3>
+						<p style="color: white;">v0.1.0-SNAPSHOT</p>
+                        <img src="images/context/cursor-logo.webp" width="30%" />
+					</section>
+				</section>
+
+				<section>
+
+					<section>
+						<blockquote>
+							“Two basic rules of life are:
+							<br />1) Change is inevitable.
+							<br />2) Everybody resists change.”
+							<br />
+							<i>- W. Edwards Deming</i>
+						</blockquote>
+					</section>
+
+					<section>
+						<blockquote>
+							“Quality comes not from inspection, but
+                            from <u>improvement of the production process</u>.”
+							<br />
+							<i>- W. Edwards Deming</i>
+						</blockquote>
+					</section>
+                    <section>
+                        <blockquote>
+                            "If you can't describe what you are doing as a process,
+                            <u>you don't know what you're doing</u>."
+                            <br />
+                            <i>- W. Edwards Deming</i>
+                        </blockquote>
+                    </section>
+                    <!--
+					<section>
+						<blockquote>
+							“People have a right to joy in their work.”
+							<br />
+							<i>- W. Edwards Deming</i>
+						</blockquote>
+					</section>
+                    -->
+
+					<section>
+						<h2>The father of Total Quality</h2>
+						<p>
+							Edwards William Deming (1900-1993)
+						</p>
+						<img src="images/deming.png" width="70%" />
+						<small><strong>Source: </strong><a href="https://blog.lifeqisystem.com/william-edwards-deming"
+							target="_blank">https://blog.lifeqisystem.com/william-edwards-deming</a></small>
+					</section>
+
+                    <!--
+                    <section>
+                        <blockquote>
+                            "Trust, but <u>verify</u>"
+                            <br />
+                            <i>- Russian proverb</i>
+                        </blockquote>
+                    </section>
+                    -->
+                    <!--
+                    <section>
+                        <blockquote>
+                            "<u>Visteme despacio que llevo prisa</u>"
+                            <br />
+                            <i>- Carlos III</i>
+                        </blockquote>
+                    </section>
+                    -->
+				</section>
+				<section align="left" data-background="#ffd7b5"><!-- data-background="./images/innovation.jpg" -->
+					<h2 align="center">Who I am</h2>
+					<table>
+						<tr>
+							<td>
+								<img src="./images/jabAvatar.jpg" width="100%" />
+							</td>
+							<td style="color: #336699; vertical-align: top">
+								Juan Antonio Breña Moral<br />
+								Technical Product Owner for <br />Engineering Shared Platform <div style="display:inline-block;">@ Atradius CIO</div>
+								<!--,
+								Footballitics,
+								Novag Chess user
+								-->
+								<br />
+								<a target="_blank" href="https://twitter.com/juanantoniobm">Twitter</a> |
+								<a target="_blank" href="https://github.com/jabrena">Github</a></li> |
+								<a target="_blank" href="https://www.linkedin.com/in/juanantoniobrenamoral">LinkedIn</a>
+							</td>
+						</tr>
+						<!--
+						<tr>
+							<td colspan="2" align="center" style="color: #336699;">
+								Purpose: <i>"Riding dragons with innovation & fun"</i>
+							</td>
+						</tr>
+						-->
+						<tr>
+							<td colspan="2" align="center" style="color: #336699;">
+								<strong>Quotes:</strong> <i>"Lead me, follow me, or get out of my way." <br />"Pressure makes diamonds."</i><br />
+								<i>- George S. Patton Jr.</i>
+							</td>
+						</tr>
+
+					</table>
+				</section>
+				<section>
+					<section>
+						<img src="./images/ppt.png" width="60%" />
+						<small><strong>Source: </strong><a href="https://cio-wiki.org/wiki/Leavitt%27s_Alignment_Model" target="_blank">Leavitt's Alignment Model (1965) >> People, Process and Technology Framework</a></small>
+					</section>
+					<!--
+					<section>
+						<h2>Evaluating a Programming Language Ecosystem</h2>
+						<img src="images/duke.png" width="30%" />
+					</section>
+					<section>
+						<h2>Evaluating a Programming Language Ecosystem</h2>
+						<table>
+							<tr>
+								<td>
+									<small>
+										<p><strong>Technical Foundation</strong></p>
+										<ul>
+											<li>Language Design: Consistency, readability, expressiveness</li>
+											<li>Performance Characteristics: Execution speed, memory usage, scalability</li>
+											<li>Type System: Static vs. dynamic, strong vs. weak, type inference capabilities</li>
+											<li>Memory Management: Manual, garbage collected, ownership models</li>
+											<li>Concurrency Model: Threads, async/await, actors, CSP</li>
+										</ul>
+									</small>
+								</td>
+								<td>
+									<small>
+										<p><strong>Developer Experience</strong></p>
+										<ul>
+											<li>Learning Curve : Approachability for beginners vs. experts</li>
+											<li>Documentation Quality : Completeness, clarity, examples, up-to-date</li>
+											<li><strong style="color: #ff8800;">Tooling : IDE support, debuggers, profilers, linters </strong></li>
+											<li>Package Management: Ease of dependency management, versioning</li>
+											<li>Build Systems : Simplicity, speed, reproducibility</li>
+										</ul>
+									</small>
+								</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h2>Evaluating a Programming Language Ecosystem</h2>
+						<table>
+							<tr>
+								<td>
+									<small>
+										<p><strong>Ecosystem Health</strong></p>
+										<ul>
+											<li>Package Ecosystem : Breadth, quality, and maintenance of libraries</li>
+											<li>Community Size : Active developers, forums, conferences</li>
+											<li>Industry Adoption : Use in production, job opportunities</li>
+											<li>Standardization : Governance model, evolution process</li>
+											<li>Stability : Breaking changes frequency, backward compatibility</li>
+										</ul>
+									</small>
+								</td>
+								<td>
+									<small>
+										<p><strong>Specialty Considerations</strong></p>
+										<ul>
+											<li>Domain Suitability : Web, mobile, data science, systems programming</li>
+											<li>Interoperability : FFI capabilities, ecosystem integration</li>
+											<li>Deployment Options : Cloud, containers, serverless, embedded</li>
+											<li>Testing Infrastructure : Unit testing, property testing, mocking</li>
+											<li>Security Track Record : Vulnerability history, security features</li>
+										</ul>
+									</small>
+								</td>
+							</tr>
+						</table>
+					</section>
+					-->
+				</section>
+
+                <section>
+                    <img src="./images/warning.png" width="20%" />
+                    <p>
+                        This talk couldn't age well over time.
+                    </p>
+                </section>
+
+				<!-- Polls -->
+				<section>
+                    <section>
+						<h2>Poll</h2>
+						<p>
+							Can you raise your hand ✋, if you use <strong>Intellij Idea Ultimate</strong>?
+						</p>
+						<img src="images/trivia.png" width="20%" />
+					</section>
+					<section>
+						<h2>Poll</h2>
+						<p>
+							Can you raise your hand ✋, if you have tried <strong>Cursor AI</strong>?
+						</p>
+						<img src="images/trivia.png" width="20%" />
+					</section>
+                    <!--
+					<section>
+						<h2>Poll</h2>
+						<p>
+							Why has <strong>Cursor AI</strong> become such a hot topic of conversation lately?
+						</p>
+						<img src="images/trivia.png" width="20%" />
+					</section>
+                    -->
+				</section>
+
+				<!-- Agenda -->
+				<section>
+					<section>
+						<h2>Agenda</h2>
+						<ul>
+							<li>Who I am</li>
+							<li>Context</li>
+							<li>Reviewing the IDE I</li>
+							<li>Reviewing the IDE II</li>
+							<li>Demo</li>
+							<li>Value proposition</li>
+                            <li>Impact in Agile workflows</li>
+                            <li>Takeaways</li>
+							<li>References</li>
+							<li>Q&A</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Agenda</h2>
+						<ul>
+							<li>Who I am</li>
+							<li>Context (5min)</li>
+							<li>Reviewing the IDE I (5min)</li>
+							<li>Reviewing the IDE II (25min)</li>
+							<li>Demo (10min)</li>
+							<li>Value proposition (5min)</li>
+                            <li>Impact in Agile workflows (5min)</li>
+                            <li>Takeaways (5min)</li>
+							<li>References</li>
+							<li>Q&A</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- Context -->
+				<section>
+					<section>
+						<h2>Context</h2>
+						<img src="images/context/cursor-logo.webp" width="30%" />
+						<p>
+							<a href="https://www.cursor.com/" target="_blank">https://www.cursor.com/</a>
+						</p>
+					</section>
+                    <section>
+                        <h2>Context</h2>
+						<p>
+							Cursor version used for the talk:
+						</p>
+						<img src="images/review/cursor-version.png" width="30%" />
+					</section>
+                    <!---
+					<section>
+						<p>
+							Cursor AI became the fastest startup to reach $100M in ARR (Annual Recurring Revenue)
+						</p>
+						<img src="images/context/intro-cursor-arr.png" width="40%" />
+						<small><strong>Source: </strong><a href="https://sacra.com/research/cursor-at-100m-arr/"
+							target="_blank">https://sacra.com/research/cursor-at-100m-arr/</a></small>
+					</section>
+                    -->
+					<section>
+						<p>
+							ThoughtWorks Radar 2025Q1 // Tools
+						</p>
+						<img src="images/context/thoughtworks-radar-cursor.png" width="90%" />
+						<small><strong>Source: </strong><a href="https://www.thoughtworks.com/radar/tools/summary/cursor"
+							target="_blank">https://www.thoughtworks.com/radar/tools/summary/cursor</a></small>
+					</section>
+                    <section>
+                        <img src="images/context/infoq-architecture-trends.png" width="90%" />
+                        <small><strong>Source: </strong><a href="https://www.infoq.com/articles/architecture-trends-2025/"
+                            target="_blank">https://www.infoq.com/articles/architecture-trends-2025/</a></small>
+                    </section>
+                    <!--
+					<section>
+						<img src="images/context/infoq-ai-trends.webp" width="60%" />
+						<small><strong>Source: </strong><a href="https://www.infoq.com/articles/ai-trends-disrupting-software-teams/"
+							target="_blank">https://www.infoq.com/articles/ai-trends-disrupting-software-teams/</a></small>
+					</section>
+                    -->
+				</section>
+
+				<!-- Reviewing the IDE -->
+				<section>
+					<section>
+						<h2>Reviewing the IDE I</h2>
+						<p>
+							General idea about Cursor:
+						</p>
+						<img src="images/cursor-ai-architecture.png" width="80%" />
+					</section>
+                    <section data-background-color="green">
+						<h2>Reviewing the IDE I</h2>
+						<h3>Why?</h3>
+						<p>
+							Add new tools in large companies is a hard task.
+						</p>
+						<p>
+							So, share some enterprise features
+							is a good way to facilitate the adoption of a new tool.
+						</p>
+					</section>
+					<section>
+						<h2>Reviewing the IDE I</h2>
+						<ul>
+							<li>Security features
+								<ul>
+									<li>Privacy mode</li>
+									<li>Trust</li>
+								</ul>
+							</li>
+							<li>Enterprise features
+								<ul>
+									<li>Business account</li>
+									<li>Budget management</li>
+									<li>Team management</li>
+									<li>Team metrics</li>
+								</ul>
+							</li>
+                            <li>Product evolution
+                                <ul>
+                                    <li>Velocity</li>
+                                </ul>
+                            </li>
+						</ul>
+					</section>
+                    <section>
+						<h2>Reviewing the IDE I</h2>
+						<ul>
+							<li>Security features</li>
+							<li>Enterprise features</li>
+                            <li>Product evolution</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Reviewing the IDE I</h2>
+						<ul>
+							<li>Security features
+								<ul>
+									<li>Privacy mode</li>
+									<li>Trust</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Privacy mode</h3>
+						<img src="images/review/cursor-privacy-mode.png" width="80%" />
+						<p>
+							<strong>Note:</strong> with a Pro account, the developer needs to disable.
+							But with a Business account, this feature is handle at the organization level.
+						</p>
+						<small><strong>Source: </strong><a href="https://www.cursor.com/privacy"
+							target="_blank">https://www.cursor.com/privacy</a></small>
+					</section>
+					<section>
+						<h3>Trust</h3>
+						<p>
+							Cursor operates a continuously monitored and 3rd-party audited security program.
+						</p>
+                        <p>
+                            <img src="images/review/soc.png" width="40%" /><br />
+							<strong>SOC 2</strong> is a compliance framework used to evaluate and validate an organizations
+								information security practices.
+						</p>
+						<small><strong>Source: </strong><a href="https://trust.cursor.com/"
+							target="_blank">https://trust.cursor.com/</a></small>
+					</section>
+					<section>
+						<h2>Reviewing the IDE I</h2>
+						<ul>
+							<li>Enterprise features
+								<ul>
+									<li>Business account</li>
+									<li>Budget management</li>
+									<li>Team management</li>
+									<li>Team metrics</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Business account</h3>
+						<img src="images/review/cursor-pricing.png" width="100%" />
+						<p>
+							<ul>
+								<li>Enforce privacy mode org-wide</li>
+								<li>SAML/OIDC SSO</li>
+							</ul>
+						</p>
+						<small><strong>Source: </strong><a href="https://www.cursor.com/pricing"
+							target="_blank">https://www.cursor.com/pricing</a></small>
+					</section>
+					<section>
+						<h3>Budget management</h3>
+						<p>
+							Set a monthly budget for the team:
+						</p>
+						<img src="images/review/cursor-business-budget.png" width="70%" />
+					</section>
+					<section>
+						<h3>Team management</h3>
+						<p>
+							Set up your team:
+						</p>
+						<img src="images/review/cursor-business-team.png" width="50%" />
+					</section>
+					<!--
+					<section>
+						<h3>Team management</h3>
+						<img src="images/review/cursor-business-team-add.png" width="60%" />
+					</section>
+					-->
+					<section>
+						<h3>Team metrics</h3>
+						<p>
+							How much your team are using Cursor?
+						</p>
+						<img src="images/review/cursor-business-metrics.png" width="60%" />
+					</section>
+                    <section>
+                        <h3>Product evolution</h3>
+                        <ul>
+                            <li>Velocity</li>
+                        </ul>
+                    </section>
+                    <section>
+						<h3>Velocity</h3>
+                        <p>
+                            Cursor Dev team delivers new features
+                            every 1/2 weeks. (Lighweight patches) 🔥🔥🔥
+                        </p>
+						<pre data-id="code-animation">
+							<code class="hljs bash" data-trim data-line-numbers>
+                                git rev-list --count HEAD \
+                                    -- docs/images/review/cursor-version.png
+
+                                git log --pretty=format:"%ad" --date=iso \
+                                    -- docs/images/review/cursor-version.png
+							</code>
+						</pre>
+						<small><strong>Source: </strong><a href="https://www.cursor.com/changelog"
+							target="_blank">https://www.cursor.com/changelog</a></small>
+					</section>
+                    <section data-background-color="green">
+						<h2>Reviewing the IDE I</h2>
+						<h3>Summary</h3>
+                        <ul>
+                            <li>Using business accounts for enterprise scenarios
+                                has features to enforce to not upload customer data</li>
+                            <li>Using business accounts has features to define a Monthly budget for your team.</li>
+                            <li>Cursor is audited by 3rd parties. (SOC2)</li>
+                            <li>PRO accounts are nice to begin, OSS and for side projects. (Limited time / Limited Premium requests required)</li>
+                        </ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Reviewing the IDE II</h2>
+						<p>
+							General idea about Cursor:
+						</p>
+						<img src="images/cursor-ai-architecture.png" width="80%" />
+					</section>
+                    <section data-background-color="green">
+						<h2>Reviewing the IDE II</h2>
+						<h3>WHY</h3>
+                        <p>
+                            Discover the new features were added to a specific IDE product in compare with tradictional IDEs, with the idea
+                            to perceive the benefits.
+                        </p>
+					</section>
+					<section>
+						<h2>Reviewing the IDE II</h2>
+						<ul>
+							<li>Developer features
+                                <ul>
+									<li>Tab model</li>
+									<li>Review changes (Cursor PR)</li>
+								</ul>
+                            </li>
+							<li>Context features
+								<ul>
+									<li>Settings</li>
+									<li>Models</li>
+									<li>Cursor rules</li>
+									<li>Modes (Agent, Ask, Manual)</li>
+									<li>Symbols</li>
+									<li>MCP Servers</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Reviewing the IDE II</h2>
+						<ul>
+							<li>Developer features
+								<ul>
+									<li>Tab model</li>
+									<li>Review changes (Cursor PR)</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Tab model</h3>
+						<p>
+							Tab completion in Cursor is powered by advanced AI models that understand your code context. As you type, you'll receive intelligent suggestions that:
+						</p>
+						<p>
+							<ul>
+								<li>Complete your current line of code</li>
+								<li>Suggest entire function implementations</li>
+								<li>Help with common patterns and boilerplate</li>
+								<li>Adapt to your coding style over time</li>
+							</ul>
+						</p>
+						<small>
+							<strong>Source: </strong><a href="https://docs.cursor.com/get-started/introduction#tab"
+							target="_blank">https://docs.cursor.com/get-started/introduction#tab</a><br />
+							<strong>Source: </strong><a href="https://www.cursor.com/blog/tab-update"
+							target="_blank">https://www.cursor.com/blog/tab-update</a>
+						</small>
+					</section>
+					<section>
+						<img src="images/demo.png" width="80%" />
+					</section>
+					<section>
+						<h3>Review changes</h3>
+                        <img src="images/review/git-workflow.png" width="40%" />
+                        <p>
+                            <strong>Note:</strong> If your are going to implement a complex tasks with the help of a LLM,
+                            please commit previous work.
+                        </p>
+						<small>
+                            <strong>Source: </strong><a href="https://docs.cursor.com/chat/apply"
+							target="_blank">https://docs.cursor.com/chat/apply</a><br />
+                            <strong>Source:</strong><a href="https://dev.to/mollynem/git-github--workflow-fundamentals-5496"
+                            target="_blank">https://dev.to/mollynem/git-github--workflow-fundamentals-5496</a>
+                        </small>
+					</section>
+                    <!--
+					<section>
+						<img src="images/demo.png" width="80%" />
+					</section>
+                    -->
+					<section>
+						<h2>Reviewing the IDE II</h2>
+						<ul>
+							<li>Context features
+								<ul>
+									<li>Settings</li>
+									<li>Models</li>
+									<li>Cursor rules</li>
+									<li>Modes (Agent, Ask, Manual)</li>
+									<li>Symbols</li>
+									<li>MCP Servers</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Settings / Codebase Indexing</h3>
+						<img src="images/review/review-cursor-settings-3.png" width="70%" />
+						<p>
+							<strong>Note:</strong> Review the usage of .cursorignore file to avoid indexing sensitive data.
+						</p>
+						<small><strong>Source: </strong><a href="https://www.cursor.com/security#codebase-indexing"
+							target="_blank">https://www.cursor.com/security#codebase-indexing</a></small>
+					</section>
+					<section>
+						<h3>Settings / Docs</h3>
+						<img src="images/review/review-cursor-settings-docs.png" width="80%" />
+						<p>
+							Help Cursor with the right documentation associated with your project/repository.
+						</p>
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/@-symbols/@-docs#docs"
+							target="_blank">https://docs.cursor.com/context/@-symbols/@-docs#docs</a></small>
+					</section>
+					<section>
+						<h3>Models</h3>
+                        <p>
+                            Cursor provides access to main Commercial LLMs
+                        </p>
+						<img src="images/review/review-cursor-models2.png" width="30%" /><br />
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/settings/models"
+							target="_blank">https://docs.cursor.com/settings/models</a></small>
+					</section>
+					<section>
+						<h3>Cursor rules</h3>
+						<p>
+							Using rules in Cursor you can control the behavior of the underlying model. You can think of it as instructions and/or a system prompt for LLMs.
+						</p>
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/rules"
+							target="_blank">https://docs.cursor.com/context/rules</a></small>
+					</section>
+                    <!--
+					<section>
+						<h3>Cursor rules</h3>
+						<img src="images/review/cursor-rules.png" width="80%" />
+					</section>
+                    -->
+					<section>
+						<h3>Cursor rules</h3>
+						<p>
+							<strong>Analogy: </strong>In the organizations,
+							exist a specific expert set of roles with the title of
+                            <strong>IT Champions</strong> who define the guidelines
+                            for a specific Technology, in our case <strong>Java</strong>.
+						</p>
+                        <ul>
+                            <li><a href="https://google.github.io/styleguide/javaguide.html" target="_blank">https://google.github.io/styleguide/javaguide.html</a></li>
+                        </ul>
+					</section>
+					<section>
+						<h3>Cursor rules</h3>
+						<small>
+							<table>
+								<tr>
+									<th>Rule Type</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>Always</td>
+									<td>Always included in the model context</td>
+								</tr>
+								<tr>
+									<td>Auto Attached</td>
+									<td>Included when files matching a glob pattern are referenced</td>
+								</tr>
+								<tr>
+									<td>Agent Requested</td>
+									<td>Rule is available to the AI, which decides whether to include it. Must provide a description</td>
+								</tr>
+								<tr>
+									<td>Manual</td>
+									<td>Only included when explicitly mentioned using @ruleName</td>
+								</tr>
+							</table>
+						</small>
+						<br />
+						<br />
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/rules"
+							target="_blank">https://docs.cursor.com/context/rules</a></small>
+					</section>
+					<section>
+						<h3>Cursor rules</h3>
+						<p>
+							Where I can find cursor rules?
+						</p>
+						<ul>
+							<li><a href="https://github.com/PatrickJS/awesome-cursorrules/" target="_blank">https://github.com/PatrickJS/awesome-cursorrules/</a></li>
+							<li><a href="https://cursor.directory/" target="_blank">https://cursor.directory/</a></li>
+						</ul>
+                        <p>
+                            <strong>Note:</strong> The previous links share .cursorrules files.<br />
+                            <strong>Note:</strong> Now, it is possible to create your own rules from Cursor.
+                        </p>
+					</section>
+					<section>
+						<h3>Cursor rules</h3>
+						<p>
+							Where I can find specific cursor rules for Java?
+						</p>
+						<ul>
+							<li><a href="https://github.com/jabrena/cursor-rules-java" target="_blank">https://github.com/jabrena/cursor-rules-java</a></li>
+						</ul>
+						<p>
+							How to apply them in my repository? $(pwd).cursor/rules
+						</p>
+						<pre data-id="code-animation">
+							<code class="hljs bash" data-trim data-line-numbers>
+								sdk install jbang
+
+								jbang cache clear
+								jbang catalog list jabrena
+
+								jbang setup@jabrena init --cursor java
+							</code>
+						</pre>
+                        <p>
+                            If you have good ideas, PRs are welcome. 🙏🙏🙏
+                        </p>
+					</section>
+					<section>
+						<img src="images/demo.png" width="80%" />
+					</section>
+					<section>
+						<h3>Modes</h3>
+						<img src="images/review/review-cursor-modes.png" width="60%" />
+                        <p>
+                            Natural language interface for exploring, editing, and managing code with contextual AI assistance in Chat mode.
+                        </p>
+                        <small><strong>Source: </strong><a href="https://docs.cursor.com/chat/overview"
+							target="_blank">https://docs.cursor.com/chat/overview</a></small>
+					</section>
+					<section>
+						<h3>Ask Mode</h3>
+						<ul>
+							<li>Ask questions about specific code sections</li>
+							<li>Get explanations of complex functions</li>
+							<li>Find code patterns and examples</li>
+							<li>Discover and understand your codebase</li>
+						</ul>
+						<p>
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/get-started/introduction"
+							target="_blank">https://docs.cursor.com/get-started/introduction</a></small>
+						</p>
+					</section>
+					<section>
+						<h3>Ask Mode</h3>
+						<table>
+							<tr>
+								<!-- <th>Decade:</th> -->
+								<th>2000's</th>
+								<th>2010's</th>
+								<th>2024+</th>
+							</tr>
+							<tr>
+								<!-- <td>Solution:</td> -->
+								<td>Books</td>
+								<td>Google, StackOverflow, Blogs, etc...</td>
+								<td>ChatGPT, Cloude, Gemini...</td>
+							</tr>
+                            <tr>
+                                <td><img src="images/books/book-effective-java.png" width="50%" /></td>
+                                <td><img src="images/review/google-icon.png" width="45%" /></td>
+                                <td><img src="images/review/chatgpt-icon.png" width="80%" /></td>
+                            </tr>
+						</table>
+					</section>
+					<section>
+						<img src="images/demo.png" width="80%" />
+					</section>
+					<section>
+						<h3>Agent Mode</h3>
+						<ul>
+							<li>Make codebase-wide changes and refactoring</li>
+							<li>Implement new features from requirements</li>
+							<li>Debug complex issues across multiple files</li>
+							<li>Generate tests and documentation</li>
+							<li>Maintain consistency across your entire project</li>
+						</ul>
+						<p>
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/get-started/introduction"
+							target="_blank">https://docs.cursor.com/get-started/introduction</a></small>
+						</p>
+					</section>
+					<section>
+						<h3>Agent Mode</h3>
+						<p>
+							Example to fix a test:
+						</p>
+						<img src="images/review/review-cursor-mode-agent.png" width="80%" />
+					</section>
+                    <section>
+                        <h3>Agent Mode</h3>
+                        <p>
+                            Example for prototyping:
+                        </p>
+                        <img src="images/review/mike-tweet.png" width="100%" />
+                        <small>
+                            <strong>Source: </strong><a href="https://x.com/mpetyx/status/1912428437077184670"
+                            target="_blank">https://x.com/mpetyx/status/1912428437077184670</a>
+                        </small>
+                    </section>
+                    <section>
+						<img src="images/demo.png" width="80%" />
+					</section>
+					<section>
+						<h3>Symbols</h3>
+                        <p>
+                            You can help LLMs increasing awareness linking to the prompt,
+                            aspects like: Java classes, Diagrams (Images/Text), Logs with Error traces, etc.
+                        </p>
+						<img src="images/review/cursor-symbols.png" width="70%" />
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/@-symbols/overview"
+							target="_blank">https://docs.cursor.com/context/@-symbols/overview</a></small>
+					</section>
+					<section>
+						<img src="images/demo.png" width="80%" />
+					</section>
+					<section>
+						<h3>MCP Severs</h3>
+						<img src="images/review/mcp.png" width="50%" />
+						<p>
+							Model Context Protocol (MCP) is an open protocol that standardizes how applications provide context to LLMs.
+						</p>
+						<small><strong>Source: </strong><a href="https://modelcontextprotocol.io/introduction"
+							target="_blank">https://modelcontextprotocol.io/introduction</a></small>
+					</section>
+					<section>
+						<h3>MCP Severs</h3>
+						<p>
+							Think of MCP as a plugin system for Cursor:
+						</p>
+						<img src="images/review/mcp-architecture.png" width="50%" />
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/context/model-context-protocol"
+							target="_blank">https://docs.cursor.com/context/model-context-protocol</a></small>
+					</section>
+                    <section>
+						<h3>MCP Severs</h3>
+						<img src="images/review/mcp-stats.png" width="60%" />
+                        <small><strong>Source: </strong><a href="https://github.com/search?q=mcp-server&type=repositories&s=stars&o=desc&p=1"
+							target="_blank">https://github.com/search?q=mcp-server&type=repositories&s=stars&o=desc&p=1</a></small>
+					</section>
+					<section>
+						<h3>MCP Severs</h3>
+						<p>
+							How to configure MCP:
+						</p>
+						<img src="images/review/review-cursor-mcp3.png" width="80%" />
+					</section>
+                    <section>
+						<h3>MCP Severs</h3>
+						<p>
+							How to configure MCP: (~/.cursor/mcp.json)
+						</p>
+                        <pre data-id="code-animation">
+							<code class="hljs bash" data-trim data-line-numbers>
+                                {
+                                    "mcpServers": {
+                                        "Stopwatch MCP": {
+                                            "command": "jbang",
+                                            "args": [
+                                                "stopwatch-mcp@jabrena"
+                                            ]
+                                        },
+                                        "jvminsight": {
+                                            "command": "jbang",
+                                            "args": [
+                                                "jvminsight@mcp-java"
+                                            ]
+                                        }
+                                    }
+                                }
+							</code>
+						</pre>
+					</section>
+                    <!--
+					<section>
+						<h3>MCP Severs</h3>
+                        <p>
+                            Maybe in some scenarios you could require multiple set of MCP servers...
+                        </p>
+						<pre data-id="code-animation">
+							<code class="hljs bash" data-trim data-line-numbers>
+								sdk install jbang
+
+								jbang cache clear
+								jbang catalog list jabrena
+
+								jbang cursor-mcp-config@jabrena --help
+								jbang cursor-mcp-config@jabrena --show
+								jbang cursor-mcp-config@jabrena --backup
+								jbang cursor-mcp-config@jabrena --replace examples/mcp0.json
+								jbang cursor-mcp-config@jabrena --replace examples/mcp1.json
+							</code>
+						</pre>
+					</section>
+                    -->
+                    <!--
+					<section>
+						<h3>MCP Severs</h3>
+						<p>
+							Where I can find useful MCP Servers?
+						</p>
+						<ul>
+							<li><a href="https://smithery.ai/" target="_blank">https://smithery.ai/</a></li>
+							<li><a href="https://github.com/punkpeye/awesome-mcp-servers" target="_blank">https://github.com/punkpeye/awesome-mcp-servers</a></li>
+						</ul>
+					</section>
+                    -->
+					<section>
+						<h3>MCP Severs</h3>
+						<p>
+							Where I can find useful MCP Servers?
+						</p>
+						<ul>
+							<li><a href="https://smithery.ai/" target="_blank">https://smithery.ai/</a></li>
+						</ul>
+						<p>
+							Where I can find useful MCP Servers in Java?
+						</p>
+                        <small>
+                            <ul>
+                                <li>
+                                    <a href="https://mcp-java.github.io/" target="_blank">https://mcp-java.github.io/</a> (jvminsight, kubernetes, containers, filesystem, jdbc)
+                                    <ul>
+                                        <li>Sources: <a href="https://github.com/quarkiverse/quarkus-mcp-servers"
+                                            target="_blank">https://github.com/quarkiverse/quarkus-mcp-servers</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/brunoborges/jvm-diagnostics-mcp"
+                                    target="_blank">https://github.com/brunoborges/jvm-diagnostics-mcp</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/jdubois/azure-cli-mcp"
+                                    target="_blank">https://github.com/jdubois/azure-cli-mcp</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/stephanj/MCPJavaFileSystem"
+                                    target="_blank">https://github.com/stephanj/MCPJavaFileSystem</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/stephanj/GitHubMCP"
+                                    target="_blank">https://github.com/stephanj/GitHubMCP</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/microcks/microcks"
+                                    target="_blank">https://github.com/microcks/microcks</a>
+                                </li>
+                            </ul>
+                        </small>
+					</section>
+					<!--
+					<section>
+						<h3>MCP</h3>
+						<img src="images/review/mcp-java.png" width="60%" /><br/>
+						<small><strong>Source: </strong><a href="https://mcp-java.github.io/"
+							target="_blank">https://mcp-java.github.io/</a></small>
+					</section>
+					-->
+					<section>
+						<h3>MCP Severs</h3>
+						<img src="images/warning.png" width="10%" /><br/>
+						<ul>
+							<li>Verify the sources of your local MCP servers</li>
+							<li>Verify that you are using local MCP servers closed releases</li>
+						</ul>
+                        <!--
+                        <p>
+                            Motivation for Remote MCP:
+                            <a href="https://support.anthropic.com/en/articles/11175166-about-custom-integrations-using-remote-mcp">
+                                https://support.anthropic.com/en/articles/11175166-about-custom-integrations-using-remote-mcp
+                            </a>
+                        </p>
+                        -->
+					</section>
+                    <section>
+						<img src="images/demo.png" width="80%" />
+					</section>
+                    <section data-background-color="green">
+						<h2>Reviewing the IDE II</h2>
+						<h3>Summary</h3>
+                        <ul>
+                            <li><strong>Cursor Ask</strong> mode reduces time in order to solve doubts and
+                                <strong>Cursor Agent</strong> mode is a game changer to implement tasks in an unattended way.
+                            </li>
+                            <li>Cursor has several ways to facilite the context to LLMs.</li>
+                            <li><strong><u>Cursor Rules is a new way to customize the LLMs behaviour.</u></strong></li>
+                            <li>MPC Servers has the potential to help in some Dev actions that previously required manual actions.</li>
+                        </ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Demo</h2>
+						<ul>
+                            <li>Scenario</li>
+							<li>Detailed prompts</li>
+							<li>Tasks management</li>
+						</ul>
+					</section>
+                    <section>
+                        <h3>Scenario</h3>
+                        <p>
+                            The starting point:
+                        </p>
+                        <small>
+                            <pre data-id="code-animation">
+                                <code class="hljs gherkin" data-trim data-line-numbers>
+                                    Feature: Greek Gods API
+                                    As an API consumer
+                                    I want to retrieve information about Greek gods
+                                    So that I can use this data in my application
+
+                                    Background:
+                                    Given the Greek Gods API service is running
+                                    And the API base URL is "http://localhost:8080"
+
+                                    Scenario: Successfully retrieve all Greek gods
+                                    When I send a GET request to "/api/v1/gods/greek"
+                                    Then the response status code should be 200
+                                    And the response should be in JSON format
+                                    And the response should contain a list of Greek gods
+                                    And each god in the response should have the following attributes:
+                                        | attribute | type    |
+                                        | id        | integer |
+                                        | name      | string  |
+
+                                    ...
+                                </code>
+                            </pre>
+                        </small>
+                        <br />
+                        <img src="images/demo/gherkin.png" width="5%" />
+                    </section>
+					<section>
+						<h3>Detailed prompts</h3>
+						<p>
+							Develop a new Microservice requires to review multiple aspects:
+						</p>
+						<img src="./images/demo/sldc.webp" width="30%" />
+						<img src="images/demo/ms.png" width="31%" />
+						<small>
+							<strong>Source: </strong><a href="https://datarob.com/essentials-software-development-life-cycle/"
+							target="_blank">https://datarob.com/essentials-software-development-life-cycle/</a><br />
+							<strong>Source: </strong><a href="https://developers.redhat.com/blog/2016/12/09/spring-cloud-for-microservices-compared-to-kubernetes"
+							target="_blank">https://developers.redhat.com/blog/2016/12/09/spring-cloud-for-microservices-compared-to-kubernetes</a>
+						</small>
+					</section>
+					<section>
+						<h3>Detailed prompts</h3>
+						<p>
+                            And model the solution and adhere to an architectural approach.
+                            (Example: C4 Model)
+                        </p>
+						<p>
+							<img src="images/demo/structurizr-logo.png" width="60%" />
+						</p>
+						<pre data-id="code-animation">
+							<code class="hljs bash" data-trim data-line-numbers>
+								docker run -it --rm -p 9000:8080 -v \
+								$(pwd)/structurizr:/usr/local/structurizr \
+								structurizr/onpremises:2024.12.07
+
+								open http://localhost:9000
+							</code>
+						</pre>
+						<small>
+                            <strong>Source: </strong><a href="https://c4model.com/"
+							target="_blank">https://c4model.com/</a><br />
+                            <strong>Source: </strong><a href="https://structurizr.com/"
+							target="_blank">https://structurizr.com/</a>
+                        </small>
+					</section>
+					<section>
+						<h3>Detailed prompts</h3>
+                        <strong>C4 Model</strong><br />
+						<img src="images/demo/c4model.png" width="80%" />
+                        <small>
+                            <strong>Source: </strong><a href="https://c4model.com/"
+							target="_blank">https://c4model.com/</a>
+                        </small>
+					</section>
+                    <section>
+						<h3>Detailed prompts</h3>
+                        <strong>C4 Model</strong><br />
+						<img src="images/demo/structurizr-1-SystemContext-001.png" width="15%" />
+					</section>
+					<section>
+						<h3>Detailed prompts</h3>
+                        <strong>C4 Model</strong><br />
+						<img src="images/demo/structurizr-1-Container-001.png" width="60%" />
+					</section>
+					<section>
+						<h3>Detailed prompts</h3>
+                        <strong>C4 Model</strong><br />
+						<img src="images/demo/structurizr-1-Component-001.png" width="50%" />
+					</section>
+                    <section>
+						<h3>Detailed prompts</h3>
+                        <strong>UML Sequence Diagram</strong><br />
+						<img src="images/demo/uml-sequence-diagram.png" width="100%" />
+					</section>
+                    <section>
+						<h3>Detailed prompts</h3>
+						<p>
+							And gather all the required information to build the new service:
+						</p>
+						<p>
+							<ul>
+								<li>UML Sequence Diagram about the system</li>
+								<li>Gherkin scenarios</li>
+								<li>Open API Specification for the new service</li>
+								<li>Open API Specification for the third party service</li>
+								<li>Database schema design</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h3>Detailed prompts</h3>
+                        <p>
+                            If you decide to start a development using a Prompt,
+							you should reduce the ambiguity in some technical decisions
+                            delegated to the LLM to increase the code quality generated, less loops and less tokens.
+						</p>
+					</section>
+                    <section>
+						<h3>Detailed prompts</h3>
+                        <p>
+                            Some technical decisions in Spring Boot projects:
+                        </p>
+						<img src="images/demo/decision-tree-spring-boot.png" width="100%" />
+					</section>
+                    <section>
+						<h3>Detailed prompts</h3>
+                        <p>
+                            Some technical decisions in Quarkus projects:
+                        </p>
+						<img src="images/demo/decision-tree-quarkus.png" width="80%" />
+					</section>
+					<section>
+						<h3>Detailed prompts</h3>
+                        <p>
+                            Use the @20250320-1.md as Prompt and analyze implement & test the following images to understand the required development.
+                        </p>
+                        <img src="images/demo/long-prompt.png" width="55%" />
+                        <br/>
+                        <img src="images/demo/clock.png" width="10%" />
+					</section>
+                    <!--
+                    <section>
+						<h3>Detailed prompts</h3>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="images/demo/idea-ai-1.png" width="60%" />
+                                </td>
+                                <td>
+                                    <img src="images/demo/idea-ai-2.png" width="100%" />
+                                </td>
+                            </tr>
+                        </table>
+					</section>
+                    -->
+					<section>
+						<img src="images/demo.png" width="80%" />
+					</section>
+					<section>
+						<h3>Detailed prompts</h3>
+						<p>
+							Detailed prompts are fine, but exist executions where
+                            the LLMs enter in severals loops. (It is not a 100% reliable process for large prompts)
+						</p>
+                        <img src="images/demo/nate-tweet.png" width="40%" />
+                        <small>
+                            <strong>Source: </strong><a href="https://x.com/nateparrott/status/1913204957043425395"
+                            target="_blank">https://x.com/nateparrott/status/1913204957043425395</a>
+                        </small>
+					</section>
+                    <section>
+						<h3>Detailed prompts</h3>
+                        <p>
+                            So..
+                        </p>
+						<p>
+							<strong><u>How to solve the problem with large prompts and have the capacity to interact more in the process?</u></strong>
+						</p>
+					</section>
+                    <section>
+                        <h3>Tasks management</h3>
+                        <p>
+                           <u>Just stop saying "one shot"</u>
+                        </p>
+                        <img src="images/demo/ryancarson-tweet.png" width="50%" />
+                        <small>
+                            <strong>Source: </strong><a href="https://x.com/ryancarson/status/1913204957043425395"
+                            target="_blank">https://x.com/ryancarson/status/1913204957043425395</a>
+                        </small>
+                    </section>
+                    <section>
+                        <h3>Tasks management</h3>
+                        <p>
+                            Change the point of view: From a large prompt to a set of tasks.
+                        </p>
+                        <img src="images/demo/incremental-development.png" width="50%" />
+                        <small>
+                            <strong>Source: </strong><a href="https://www.scrum.org/resources/blog/what-iterative-incremental-delivery-hunt-perfect-example"
+                            target="_blank">https://www.scrum.org/resources/blog/what-iterative-incremental-delivery-hunt-perfect-example</a>
+                        </small>
+                    </section>
+					<section>
+						<h3>Tasks management</h3>
+						<p>
+							<ul>
+								<li><a href="https://github.com/jabrena/cursor-rules-tasks" target="_blank">https://github.com/jabrena/cursor-rules-tasks</a></li>
+							</ul>
+						</p>
+						<p>
+							How to apply them in my repository? $(pwd).cursor/rules
+						</p>
+						<pre data-id="code-animation">
+							<code class="hljs bash" data-trim data-line-numbers>
+								sdk install jbang
+
+								jbang cache clear
+								jbang catalog list jabrena
+
+								jbang setup@jabrena init --cursor tasks
+							</code>
+						</pre>
+						<p>
+							Many thanks to
+							<a href="https://x.com/EyalToledano" target="_blank">@EyalToledano</a>,
+							<a href="https://x.com/elie2222" target="_blank">@elie2222</a> &
+							<a href="https://x.com/ryancarson" target="_blank">@ryancarson</a>
+							 for the ideas about <strong>Task management</strong> in Cursor.
+						</p>
+					</section>
+					<section>
+						<h3>Tasks management</h3>
+						<p>
+							<strong>Step 1: Create a Product Requirements Document (PRD)</strong>
+						</p>
+						<blockquote>
+							Use the rule @1000-create-prd.mdc
+							Here's the feature @20250506-1.md
+						</blockquote>
+					</section>
+					<section>
+						<h3>Tasks management</h3>
+						<p>
+							<strong>Step 2: Create a Product Requirements Document (PRD)</strong>
+						</p>
+						<blockquote>
+							Take @PRD-GREEK-GODS-SERVICE.md and create the tasks using the rule @1001-generate-tasks-from-prd.mdc
+						</blockquote>
+					</section>
+					<section>
+						<h3>Tasks management</h3>
+						<p>
+							<strong>Step 3: Implement the different tasks</strong>
+						</p>
+						<blockquote>
+							Start on 1.1 and use the rule @1002-task-list.mdc
+						</blockquote>
+					</section>
+					<section>
+						<img src="images/demo.png" width="80%" />
+					</section>
+                    <section>
+                        <h3>Tasks management</h3>
+                        <p>
+                            What is the "State of the art" in Tasks management?
+                        </p>
+                        <img src="images/review/task-master.png" width="50%" /><br />
+                        <small>
+                            <strong>Source: </strong><a href="https://www.task-master.dev/" target="_blank">https://www.task-master.dev/</a><br />
+                            <strong>Author: </strong><a href="https://x.com/EyalToledano" target="_blank">@EyalToledano</a>
+                        </small>
+                    </section>
+					<!--
+					<section>
+						<h3>Use cases</h3>
+						<img src="images/demo/standard-error.png" width="60%" />
+						<p>
+							Error = Actual value - Predicted value
+						</p>
+						<small><strong>Source: </strong><a href="https://ecampusontario.pressbooks.pub/introstats/chapter/13-3-standard-error-of-the-estimate/"
+							target="_blank">https://ecampusontario.pressbooks.pub/introstats/chapter/13-3-standard-error-of-the-estimate/</a></small>
+					</section>
+					-->
+					<!--
+					<section>
+						<h3>Implementation</h3>
+						<img src="images/demo/decision-tree-spring-boot.png" width="100%" />
+						<p>
+							In the prompts, reduce the ambiguity to increase the code generation.
+						</p>
+					</section>
+					-->
+				</section>
+
+				<!-- Value proposition -->
+				<section>
+					<section>
+						<h3>Value proposition</h3>
+						<img src="images/value/value-proposition-canvas.png" width="70%" />
+						<small><strong>Source: </strong><a href="https://www.strategyzer.com/library/the-value-proposition-canvas"
+							target="_blank">https://www.strategyzer.com/library/the-value-proposition-canvas</a></small>
+					</section>
+                    <!--
+					<section>
+						<h3>Value proposition</h3>
+						<img src="images/value/prompt.png" width="70%" />
+					</section>
+                    -->
+					<section>
+						<h3>Value proposition</h3>
+						<p>
+							The Circle (Right side) - Customer Profile:
+						</p>
+						<ul>
+							<li><strong>Customer Jobs:</strong>
+								<ul>
+									<li>What customers are trying to get done</li>
+								</ul>
+							</li>
+							<li><strong>Gains:</strong>
+								<ul>
+									<li>The benefits/outcomes customers want to achieve</li>
+								</ul>
+							</li>
+							<li><strong>Pains:</strong>
+								<ul>
+									<li>The negative experiences, risks, and obstacles customers face</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Value proposition</h3>
+						<p>
+							The Square (Left side) - Value Proposition Map:
+						</p>
+						<ul>
+							<li><strong>Products and Services:</strong>
+								<ul>
+									<li>The items and services you offer</li>
+								</ul>
+							</li>
+							<li><strong>Gain Creators:</strong>
+								<ul>
+									<li>How your offering creates customer gains</li>
+								</ul>
+							</li>
+							<li><strong>Pain Relievers:</strong>
+								<ul>
+									<li>How your offering alleviates customer pains</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Value proposition</h3>
+						<ul>
+							<li><strong>Customer Jobs:</strong> What customers are trying to get done (Software Engineer)
+								<ul>
+									<li>Writing and maintaining code</li>
+									<li>Debugging and troubleshooting</li>
+									<li>Code review and documentation</li>
+									<li>
+                                        <span style="display: inline-block; color: black;  background: #FF0000;">
+                                            Learning new technologies
+                                        </span>
+                                    </li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Value proposition</h3>
+						<p>
+							<strong>Dunning-Kruger effect</strong>
+						</p>
+						<img src="images/value/dunning-krugger-effect.png" width="60%" />
+						<small><strong>Source: </strong><a href="https://agilecoffee.com/toolkit/dunning-kruger/"
+							target="_blank">https://agilecoffee.com/toolkit/dunning-kruger/</a></small>
+					</section>
+                    <section>
+                        <h3>Value proposition</h3>
+						<p>
+                            <strong>Cognitive load</strong>
+						</p>
+						<p>
+							All lines of code generated by any LLM must to be mastered by the team. <strong>(Mandatory)</strong>
+						</p>
+						<img src="images/limitations/cognitive-load.png" width="45%" />
+						<small><strong>Source: </strong><a href="https://www.barefootteflteacher.com/p/what-is-cognitive-load-theory"
+							target="_blank">https://www.barefootteflteacher.com/p/what-is-cognitive-load-theory</a></small>
+					</section>
+					<section>
+						<h3>Value proposition</h3>
+						<ul>
+							<li><strong>Customer Jobs:</strong> What customers are trying to get done (Software Engineer)
+								<ul>
+									<li>Critical Analysis:
+										<ul>
+											<li>Not all development tasks benefit from AI</li>
+											<li>Some tasks require human creativity</li>
+											<li>Complex architectural decisions need human insights</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Value proposition</h3>
+						<ul>
+							<li><strong>Gains:</strong> The benefits/outcomes customers want to achieve (Software Engineer)
+								<ul>
+									<li>Faster development cycles</li>
+									<li>Improved code consistency</li>
+									<li>Better documentation practices</li>
+									<li>Learning from AI suggestions</li>
+									<li>Better tests</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+                    <!--
+					<section>
+						<h3>Value proposition</h3>
+						<ul>
+							<li><strong>Gains:</strong> The benefits/outcomes customers want to achieve (Software Engineer)
+								<ul>
+									<li>Critical Concerns:
+										<ul>
+											<li>May create false sense of productivity</li>
+											<li>Could lead to over-reliance on AI</li>
+											<li>
+												<span style="display: inline-block; color: black;  background: #FF0000;">
+													Team dynamics might be affected
+												</span>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+                    -->
+					<section>
+						<h3>Value proposition</h3>
+						<ul>
+							<li><strong>Pains:</strong> The negative experiences, risks, and obstacles customers face (Software Engineer)
+								<ul>
+									<li>Time spent on repetitive coding tasks</li>
+									<li>Documentation burden</li>
+									<li>Code maintenance challenges</li>
+									<li>Learning curve for new technologies</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+                    <!--
+					<section>
+						<h3>Value proposition</h3>
+						<ul>
+							<li><strong>Pains:</strong> The negative experiences, risks, and obstacles customers face (Software Engineer)
+								<ul>
+									<li>Critical Concerns:
+										<ul>
+											<li>AI might not understand legacy code well</li>
+											<li>Could introduce new types of errors</li>
+											<li><del>Security and privacy risks</del></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+                    -->
+                    <!--
+					<section>
+						<h3>Value proposition</h3>
+						<ul>
+							<li><strong>Products and Services:</strong> The items and services you offer (Cursor AI)
+								<ul>
+									<li>Canvas AI as an AI-powered development tool</li>
+									<li>Integrated development environment with AI capabilities</li>
+									<li>Code completion and generation features</li>
+									<li>Code analysis and refactoring capabilities</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Value proposition</h3>
+						<ul>
+							<li><strong>Gain Creators:</strong> How your offering creates customer gains (Cursor AI)
+								<ul>
+									<li>Increased developer productivity</li>
+									<li>Faster code generation and completion</li>
+									<li>Reduced time spent on repetitive tasks</li>
+									<li>Better code quality through AI suggestions</li>
+									<li>Enhanced documentation capabilities</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+                    -->
+                    <!--
+					<section>
+						<h3>Value proposition</h3>
+						<ul>
+							<li><strong>Gain Creators:</strong> How your offering creates customer gains (Cursor AI)
+								<ul>
+									<li>Critical Concerns:
+										<ul>
+											<li>May create dependency on AI suggestions</li>
+											<li>
+												<span style="display: inline-block; color: black;  background: #FF0000;">
+													Could lead to less deep understanding of code
+												</span>
+											</li>
+											<li>
+												<span style="display: inline-block; color: black;  background: #FF0000;">
+													Quality of suggestions varies by context
+												</span>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+                    -->
+                    <!--
+					<section>
+						<h3>Value proposition</h3>
+						<ul>
+							<li><strong>Pain Relievers:</strong> How your offering alleviates customer pains (Cursor AI)
+								<ul>
+									<li>Reduces manual coding effort</li>
+									<li>Minimizes time spent on boilerplate code</li>
+									<li>Helps catch potential bugs early</li>
+									<li>Assists with code documentation</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+                    -->
+                    <!--
+					<section>
+						<h3>Value proposition</h3>
+						<ul>
+							<li><strong>Pain Relievers:</strong> How your offering alleviates customer pains (Cursor AI)
+								<ul>
+									<li>Critical Concerns:
+										<ul>
+											<li>May introduce incorrect or insecure code</li>
+											<li>Could suggest outdated patterns</li>
+											<li>
+												<span style="display: inline-block; color: black;  background: #FF0000;">
+													<del>Privacy concerns with code sharing</del>
+												</span>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+                    -->
+                </section>
+                <section>
+                    <!--
+                    <section>
+						<h3>Impact in Agile workflows</h3>
+						<p>
+							Let's review the impact of Cursor AI in Agile processes.
+						</p>
+					</section>
+                    -->
+					<section>
+						<h3>Impact in Agile workflows</h3>
+						<p>
+							Cursor improve the build/code phase.
+						</p>
+						<img src="images/value/dev-cicd-process.png" width="70%" />
+					</section>
+					<section>
+						<h3>Impact in Agile workflows</h3>
+						<p>
+							But.. it is not the problem of Cursor if your Dev culture doesn't include:
+							Pair programming, Collective Code Ownership, A wrong team size, others...
+						</p>
+						<img src="images/value/xp-tools.png" width="40%" />
+                        <small><strong>Source: </strong><a href="https://www.pythian.com/blog/technical-track/top-5-extreme-programming-xp-tools-every-team-should-use"
+							target="_blank">https://www.pythian.com/blog/technical-track/top-5-extreme-programming-xp-tools-every-team-should-use</a>
+                        </small>
+					</section>
+					<section>
+						<h3>Impact in Agile workflows</h3>
+                        <p>
+                            Cursor doesn't affect the XP Workflow
+                        </p>
+						<img src="images/value/xp.png" width="70%" />
+                        <small><strong>Source: </strong><a href="https://www.purrweb.com/blog/software-development-methodologies/"
+							target="_blank">https://www.purrweb.com/blog/software-development-methodologies/</a>
+                        </small>
+					</section>
+					<section>
+						<h3>Impact in Agile workflows</h3>
+                        <p>
+                            Cursor doesn't affect the Scrum Workflow
+                        </p>
+						<img src="images/value/scrum.png" width="60%" />
+                        <small><strong>Source: </strong><a href="https://www.purrweb.com/blog/software-development-methodologies/"
+							target="_blank">https://www.purrweb.com/blog/software-development-methodologies/</a>
+                        </small>
+					</section>
+                    <!--
+                    <section>
+                        <h3>Impact in Agile workflows</h3>
+                        <p>
+                            But... what happen if Cursor is used in a non healthy Dev environment?
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Impact in Agile workflows</h3>
+                        <p>
+                            Surprises will appear in the repositories...
+                        </p>
+                        <img src="images/impact/gremlin.png" width="70%" />
+                        <p>
+                            yeah-yeah-yeah-yeah-yeah-yeah
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Impact in Agile workflows</h3>
+                        <p>
+                            Checklist to review in your Dev environment:
+                        </p>
+                        <ul>
+                            <li>Are you Squad well balanced & mature?</li>
+                            <li>Do you have Senior software engineers?</li>
+                            <li>Do you practice Pair programming?</li>
+                            <li>Do you practice code reviews in the PRs?</li>
+                            <li>Do you use Git in a profressional way?</li>
+                            <li>Do you have mentoring policies for Juniors?</li>
+                            <li>Do you work alone or your team?</li>
+                            <li>Do you have policies to avoid Knowledge silos?</li>
+                            <li>...</li>
+                        </ul>
+                    </section>
+					<section>
+                        <h3>Impact in Agile workflows</h3>
+						<img src="images/introduction/pirelli-carl-lewis.jpg" width="100%" />
+					</section>
+                    -->
+					<!--
+					<section>
+						<h3>Crossing the chasm</h3>
+						<img src="images/value/chasm.png" width="80%" />
+					</section>
+					<section>
+						<h3>Crossing the chasm</h3>
+						<img src="images/value/crossing-the-chasm.png" width="30%" />
+						<br />
+						<small><strong>Source: </strong><a href="https://en.wikipedia.org/wiki/Crossing_the_Chasm"
+							target="_blank">https://en.wikipedia.org/wiki/Crossing_the_Chasm</a></small>
+					</section>
+					-->
+					<!--
+					<section>
+						<h3>Innovation types</h3>
+						<img src="images/value/innovation-types.png" width="100%" />
+						<small><strong>Source: </strong><a href="https://www.viima.com/blog/types-of-innovation"
+							target="_blank">https://www.viima.com/blog/types-of-innovation</a></small>
+					</section>
+					-->
+					<!--
+					<section>
+						<h3>Cursor development approach</h3>
+						<img src="images/approach/cursor-approach.png" width="80%" />
+						<small><strong>Source: </strong><a href="https://levelup.gitconnected.com/ai-powered-documentation-driven-development-supercharge-your-coding-workflow-3f6125915e8f"
+							target="_blank">https://levelup.gitconnected.com/ai-powered-documentation-driven-development-supercharge-your-coding-workflow-3f6125915e8f</a></small>
+					</section>
+					-->
+                    <section>
+                        <p>
+                            Checklist to review in your Dev quality of the company:
+                        </p>
+                        <ul>
+                            <li>[ ] Are you Squads well balanced?</li>
+                            <li>[ ] Do you have any mentoring policy for entry roles?</li>
+                            <li>[ ] Do you practice Pair programming as a regular practice?</li>
+                            <li>[ ] Do you run healthy code reviews in the PRs?</li>
+                            <!-- <li>[ ] Do you use Git in a professional way?</li> -->
+                            <li>[ ] Do you have policies to avoid Silos?</li>
+                            <li>[ ] Do you have a culture of Knowledge sharing?</li>
+                            <li>[ ] Do you have policies to handle Technical debt?</li>
+                            <li>[ ] Do you have documents about Definition of Done.</li>
+                        </ul>
+                    </section>
+                    <!--
+                    <section>
+                        <h3>Dreifus Model</h3>
+                        <img src="images/impact/dreifus-model.png" width="50%" />
+                        <small><strong>Source: </strong><a href="https://www.researchgate.net/publication/273041020_Technology-enhanced_learning_in_anaesthesia_and_educational_theory"
+							target="_blank">https://www.researchgate.net/publication/273041020_Technology-enhanced_learning_in_anaesthesia_and_educational_theory</a></small>
+                    </section>
+                    -->
+				</section>
+                <section>
+                    <section>
+                        <h2>Takeaways</h2>
+                        <ul>
+                            <li>Cursor AI and other IDEs with AI capabilities are innovating in the IDE market for Java.</li>
+                            <li><u>Cursor Rules for Java</u> could be considered as an evolution of the classical Java Style guides,
+                                but it has more potential capabilities.</li>
+                            <li>Using Tasks are a balanced solution to delegate features to LLMs and get control in any moment for Software Engineers.</li>
+                            <li>LLMs doesn't return the same results for the same Prompt.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Takeaways</h2>
+                        <ul>
+                            <li>Senior software engineers could take more benefits than Junior developers
+                                using this kind of new features.</li>
+
+                            <li>If you work with Early-adopter technologies, commercial LLMs wil not provide good answers. (Example: TornadoVM questions)</li>
+                            <li><u>A key aspect to be considered to adopt Cursor AI/others is the Dev Quality culture of the company.</u></li>
+                        </ul>
+                    </section>
+                </section>
+
+				<section>
+					<section>
+						<h3>References</h3>
+					</section>
+                    <!--
+					<section>
+						<h3>Crossing the Chasm</h3>
+						<img src="images/books/book-crossing-the-chasm.png" width="30%" />
+						<small><strong>Source: </strong><a href="https://www.amazon.com/Crossing-Chasm-3rd-Disruptive-Mainstream/dp/0062292986"
+							target="_blank">https://www.amazon.com/Crossing-Chasm-3rd-Disruptive-Mainstream/dp/0062292986</a></small>
+					</section>
+					-->
+					<section>
+						<h3>Effective Java</h3>
+						<img src="images/books/book-effective-java.png" width="40%" />
+						<small><strong>Source: </strong><a href="https://www.oreilly.com/library/view/effective-java-3rd/9780134685991/"
+							target="_blank">https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/</a></small>
+					</section>
+					<section>
+						<h3>Java Concurrency in Practice</h3>
+						<img src="images/books/book-java-concurrency-in-practice.jpg" width="40%" /><br />
+						<small><strong>Source: </strong><a href="https://jcip.net/"
+							target="_blank">https://jcip.net/</a></small>
+					</section>
+					<section>
+						<h3>Concurrenct programming in Java</h3>
+						<img src="images/books/book-concurrent-programming.jpg" width="40%" /><br />
+						<small><strong>Source: </strong><a href=https://www.oreilly.com/library/view/concurrent-programming-in/0201310090/"
+							target="_blank">https://www.oreilly.com/library/view/concurrent-programming-in/0201310090/</a></small>
+					</section>
+					<section>
+						<h3>Unit Testing</h3>
+						<img src="images/books/book-pragmatic-unit-testing-in-java8.jpg" width="40%" />
+						<small><strong>Source: </strong><a href="https://pragprog.com/titles/utj2/pragmatic-unit-testing-in-java-8-with-junit/"
+							target="_blank">https://pragprog.com/titles/utj2/pragmatic-unit-testing-in-java-8-with-junit/</a></small>
+					</section>
+					<section>
+						<h3>Fifty quick ideas to improve your tests</h3>
+						<img src="images/books/book-fifty-quick-ideas.png" width="40%" />
+						<small><strong>Source: </strong><a href="https://fiftyquickideas.com/fifty-quick-ideas-to-improve-your-tests/"
+							target="_blank">https://fiftyquickideas.com/fifty-quick-ideas-to-improve-your-tests/</a></small>
+					</section>
+					<section>
+						<h3>Mockito made clear</h3>
+						<img src="images/books/book-mockito-made-clear.png" width="40%" />
+						<small><strong>Source: </strong><a href="https://pragprog.com/titles/mockito/mockito-made-clear/"
+							target="_blank">https://pragprog.com/titles/mockito/mockito-made-clear/</a></small>
+					</section>
+					<section>
+						<h3>Mockito Cookbook</h3>
+						<img src="images/books/book-mockito-cookbook.jpg" width="40%" />
+						<small><strong>Source: </strong><a href="https://www.amazon.com/-/es/Marcin-Grzejszczak-ebook/dp/B00LA414IM"
+							target="_blank">https://www.amazon.com/-/es/Marcin-Grzejszczak-ebook/dp/B00LA414IM</a></small>
+					</section>
+					<section>
+						<h3>Instant Mockito</h3>
+						<img src="images/books/book-instant-mockito.jpg" width="40%" />
+						<small><strong>Source: </strong><a href="https://www.amazon.com/Instant-Mockito-Marcin-Grzejszczak/dp/1782167978"
+							target="_blank">https://www.amazon.com/Instant-Mockito-Marcin-Grzejszczak/dp/1782167978</a></small>
+					</section>
+					<section>
+						<h3>Unit Testing</h3>
+						<img src="images/books/book-pragmatic-unit-testing-in-java8.jpg" width="40%" />
+						<small><strong>Source: </strong><a href="https://pragprog.com/titles/utj2/pragmatic-unit-testing-in-java-8-with-junit/"
+							target="_blank">https://pragprog.com/titles/utj2/pragmatic-unit-testing-in-java-8-with-junit/</a></small>
+					</section>
+					<section>
+						<h3>Test Driven Development: By Example</h3>
+						<img src="images/books/book-tdd.jpg" width="30%" />
+						<small><strong>Source: </strong><a href="https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530"
+							target="_blank">https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530</a></small>
+					</section>
+					<section>
+						<h3>Specification by Example</h3>
+						<img src="images/books/book-specification-by-example.png" width="40%" />
+						<br />
+						<small><strong>Source: </strong><a href="https://gojko.net/books/specification-by-example/"
+							target="_blank">https://gojko.net/books/specification-by-example/</a></small>
+					</section>
+					<section>
+						<h3>Extreme Programming Explained</h3>
+						<img src="images/books/book-xp.jpg" width="40%" />
+						<br />
+						<small><strong>Source: </strong><a href="https://kentbeck.com/"
+							target="_blank">https://kentbeck.com/</a></small>
+					</section>
+					<section>
+						<h3>New proposals...</h3>
+					</section>
+					<section>
+						<h3>Quarkus in action</h3>
+						<img src="images/books/book-quarkus-in-action.jpg" width="30%" /><br />
+						<small><strong>Source: </strong><a href="https://www.manning.com/books/quarkus-in-action"
+							target="_blank">https://www.manning.com/books/quarkus-in-action</a></small>
+					</section>
+				</section>
+                <section>
+                    <h3>Slides</h3>
+                    <pre data-id="code-animation">
+                        <code class="hljs bash" data-trim data-line-numbers>
+                            jbang trust list
+                            jbang cache clear
+                            jbang catalog list jabrena
+                            jbang qr-code@jabrena \
+                                --url https://jabrena.github.io/101-cursor/
+                        </code>
+                    </pre>
+                    <img src="images/qr-code.png" width="45%" />
+                </section>
+				<section>
+					<h1>🙏 🙏 🙏</h1>
+					<p>
+						Thanks
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.configure({ slideNumber: true });
+			//Reveal.configure({ slideNumber: 'c/t' });
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+				slideNumber: true,
+				showSlideNumber: 'all',
+				scrollActivationWidth: null, // https://revealjs.com/scroll-view/ from 4.6.1 -> latest version
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			});
+		</script>
+	</body>
+</html>

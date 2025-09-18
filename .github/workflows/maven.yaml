@@ -3,23 +3,24 @@ name: CI Builds
 on: [push]
 
 jobs:
-  run:
-    name: Build
+  build:
+    name: Build ${{ matrix.name }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Spring Boot
+            pom: ./backup/spring-boot/greek-gods-service/pom.xml
+          - name: Quarkus
+            pom: ./backup/quarkus/greek-gods-service/pom.xml
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true  # Fetches all submodules
       - uses: actions/setup-java@v5
         with:
           distribution: 'graalvm' # See 'Supported distributions' for available options
           java-version: '24'
-
-      - name: Maven build (Structurizr MCP)
-        run: mvn --batch-mode --no-transfer-progress verify --file ./demos/others/structurizr-mcp/pom.xml
-
-      - name: Maven build (Spring Boot)
-        run: mvn --batch-mode --no-transfer-progress verify --file ./backup/spring-boot/greek-gods-service/pom.xml
-
-      - name: Maven build (Quarkus)
-        run: mvn --batch-mode --no-transfer-progress verify --file ./backup/quarkus/greek-gods-service/pom.xml
+      - name: Maven build (${{ matrix.name }})
+        run: mvn --batch-mode --no-transfer-progress verify --file ${{ matrix.pom }}
