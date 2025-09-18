@@ -13,14 +13,19 @@ open http://localhost:8005
 
 ## Meetups & Conferences
 
+### W-JAX / Munich (2025/11/06 - 10:30 - 11:30)
+
+- https://jax.de/generative-ai-ecosystem/cursor-ai-101-java-enterprise/
+
+### Devoxx BE / Antwerp (2025/10/07 - 16:50 - 17:20)
+
+- https://m.devoxx.com/events/dvbe25/talks/4708/101-cursor-ai-learning-to-use-for-java-enterprise-projects
+
 ### MadridJUG / Madrid (2025/05/06)
 
 - https://www.meetup.com/es-ES/madridjug/events/307458529/?_xtd=gqFyqTI2NTY4MTI0NqFwo2FwaQ%253D%253D&from=ref
 - https://www.youtube.com/watch?v=LAshLMBb8Bc&ab_channel=MadridJUG
 
-### W-JAX / Munich (2025/11/06 - 16:45 - 17:45)
-
-- https://jax.de/generative-ai-ecosystem/cursor-ai-101-java-enterprise/
 
 ## References
 
