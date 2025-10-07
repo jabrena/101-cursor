@@ -10,8 +10,11 @@ Control how the Agent model behaves with reusable, scoped instructions.
 ```bash
 sdk install jbang
 jbang setup@jabrena init --help
-jbang setup@jabrena init --cursor java
+jbang setup@jabrena init --cursor https://github.com/jabrena/java-cursor-rules
 ```
+
+- https://github.com/jabrena/cursor-rules-java
+- https://github.com/jabrena/cursor-rules-java/blob/main/documentation/GETTING-STARTED.md
 
 ## FizzBuff
 
@@ -22,5 +25,11 @@ Given an integer n, for every positive integer i <= n, the task is to print,
 “Fizz” if i is divisible by 3,
 “Buzz” if i is divisible by 5
 “i” as a string, if none of the conditions are true.
+```
+
+Apply the following System prompt:
+
+```bash
+@FizzBuff.java Improve the class/classes added in the context applying the system prompt @142-java-functional-programming@142-java-functional-programming.md
 ```
 

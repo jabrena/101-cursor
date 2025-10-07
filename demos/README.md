@@ -12,10 +12,10 @@ Data pipelines features
 Cursor Background Agents API
 ```
 
-- [Demo 1: Tab](./demo_01_tab/README.md)
-- [Demo 4: Cursor Rules](./demo_04_cursor_rules/README.md)
-- [Demo 5: Mode Ask](./demo_05_modes_ask/README.md)
-- [Demo 6: Model Agent](./demo_06_modes_agent/README.md)
+- [Demo 1: Tab](./demo_01_tab/README.md) OK
+- [Demo 4: Cursor Rules](./demo_04_cursor_rules/README.md) OK
+- [Demo 5: Mode Ask](./demo_05_modes_ask/README.md) OK
+- [Demo 6: Model Agent](./demo_06_modes_agent/README.md) OK
 - Cursor Background Agents API -> https://cursor.com/agents
 
 ---

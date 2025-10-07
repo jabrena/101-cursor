@@ -6,13 +6,18 @@
 
 **Prompt:**
 
-```bash
-How to refactor the code using a functional approach?
-```
+## Scenario 1: Have a conversation about a Design.
+
+Motivation: https://mail.openjdk.org/pipermail/loom-dev/2025-October/subject.html
 
 ```bash
-./mvnw clean verify
+In what different ways, it is possible to implement a Web Crawler in Java?
+Only list the different styles
 ```
+
+https://github.com/jabrena/java-crawler-demo
+
+--
 
 ## Scenario 2: How to improve this tests?
 

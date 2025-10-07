@@ -44,7 +44,9 @@ To find the total distance between the left list and the right list, add up the 
 **Prompt:**
 
 ```bash
-Can you implement the part 1?. Verify the changes with the command:
+Can you implement the part 1? but not touch the tests.
+Use the signature from the test to implement the solution.
+Verify the changes with the command:
 ./mvnw clean verify
 ```
 
