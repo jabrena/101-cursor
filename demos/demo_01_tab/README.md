@@ -10,6 +10,7 @@
 
 curl -X GET "http://localhost:8080/api/v1/gods/greek"
 curl -X GET "http://localhost:8080/api/v1/gods/roman"
-...
+
+#new endpoint
 curl -X GET "http://localhost:8080/api/v1/gods/indian"
 ```
