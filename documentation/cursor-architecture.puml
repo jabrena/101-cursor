@@ -1,0 +1,119 @@
+@startuml
+!define RECTANGLE class
+skinparam componentStyle rectangle
+skinparam backgroundColor #FFFFFF
+skinparam component {
+    BackgroundColor<<infrastructure>> #FFE6CC
+    BackgroundColor<<ai_provider>> #D5E8D4
+    BackgroundColor<<data_storage>> #DAE8FC
+    BackgroundColor<<security>> #F8CECC
+    BackgroundColor<<dev_tools>> #E1D5E7
+    BorderColor #000000
+}
+skinparam packageStyle rectangle
+title Cursor High-Level Architecture
+' User Layer
+actor "Software Engineer" as user
+' Layer 1: Application
+package "Cursor IDE" as cursor_layer {
+    component "Code Editor" as editor
+    component "Chat Interface" as chat
+    component "Privacy Mode\nController" as privacy
+}
+' Layer 2: Services
+package "AI Model Providers" as ai_layer <<ai_provider>> {
+    component "OpenAI" as openai
+    component "Anthropic" as anthropic
+    component "Google Gemini" as gemini
+    component "xAI" as xai
+    component "Mistral" as mistral
+}
+package "Custom Model Hosting" as custom_layer <<ai_provider>> {
+    component "Fireworks\n(US/Tokyo/EU)" as fireworks
+    component "Baseten\n(US/CA)" as baseten
+    component "Together AI\n(US)" as together
+}
+package "Model Training" as training_layer <<ai_provider>> {
+    component "Databricks\nMosaicML" as databricks
+    component "Foundry\n(US)" as foundry
+}
+package "Data Services" as data_layer <<data_storage>> {
+    component "Turbopuffer\n(US)" as turbopuffer
+    component "MongoDB\n(US)" as mongodb
+    component "Exa\n(US)" as exa
+}
+package "Monitoring & Security" as security_layer <<security>> {
+    component "Datadog\n(US)" as datadog
+    component "Vanta" as vanta
+}
+package "Development Tools" as dev_layer <<dev_tools>> {
+    component "GitHub" as github
+    component "Vercel" as vercel
+    component "Mistral" as mistral
+}
+' Layer 3: Infrastructure
+package "Cloud Infrastructure (US)" as infra_layer <<infrastructure>> {
+    component "Cloudflare\n(DNS/CDN)" as cloudflare
+    component "AWS\n(Primary)" as aws
+    component "Azure\n(Secondary)" as azure
+    component "Google Cloud\n(Secondary)" as gcp
+}
+' User to Cloudflare
+user --> cursor_layer
+' Cloudflare to AWS and Cursor IDE
+cloudflare -down-> aws : Primary Route
+cloudflare -down-> cursor_layer
+' Cursor IDE to AI Providers (horizontal alignment)
+chat -down-> openai
+chat -down-> anthropic
+chat -down-> gemini
+chat -down-> xai
+' Cursor IDE to Custom Models
+chat -down-> fireworks
+chat -down-> baseten
+chat -down-> together
+' Cursor IDE to Data Services
+editor -down-> turbopuffer : Embeddings
+chat -down-> exa : Web Search
+privacy -down-> mongodb : Analytics\n(Privacy OFF)
+' Cursor IDE to Training (controlled by privacy)
+privacy -down-> databricks : Training Data\n(Privacy OFF)
+privacy -down-> foundry : Training Data\n(Privacy OFF)
+' Cursor IDE to Monitoring & Security
+cursor_layer -down-> datadog : Logs
+cursor_layer -down-> vanta : Security
+' Cursor IDE to Dev Tools
+editor -down-> github : Version Control
+chat -down-> mistral : PDF Parse
+' Services to Infrastructure
+ai_layer -down-> infra_layer
+custom_layer -down-> infra_layer
+training_layer -down-> infra_layer
+data_layer -down-> infra_layer
+security_layer -down-> infra_layer
+dev_layer -down-> infra_layer
+' Infrastructure redundancy
+aws -right-> azure : Failover
+azure -right-> gcp : Failover
+' Training connections
+fireworks -down-> databricks
+fireworks -down-> foundry
+' Notes
+note right of privacy
+  **Privacy Mode Controls:**
+  ✗ No training data sent
+  ✗ No analytics collected
+  ✗ No code in logs
+  ✗ Codebase indexing disabled
+end note
+note bottom of openai
+  Zero data retention
+  agreements with
+  OpenAI & Anthropic
+end note
+note bottom of fireworks
+  May store code if
+  Privacy Mode OFF
+  (inference optimization)
+end note
+@enduml

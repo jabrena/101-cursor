@@ -39,14 +39,14 @@
 					<section data-background-image="images/gradient-hero-prerender.avif">
 						<h2 style="color: white;">101 Cursor AI</h2>
 						<h3 style="color: white;">Learning to use for Java Enterprise projects</h3>
-						<p style="color: white;">v0.3.0-SNAPSHOT  (60min talk)</p>
+						<p style="color: white;">v0.2.0-SNAPSHOT  (30min talk)</p>
                         <img src="images/context/cursor-logo.webp" width="30%" />
 					</section>
                     <section>
                         <h3>Version control</h3>
                         <ul>
                             <li>V3: W-JAX (2025/11/06)</li>
-                            <li>V2: <a href="./v020/index.html" target="_blank">Devoxx BE (2025/10/07)</a></li>
+                            <li>V2: Devoxx BE (2025/10/07)</li>
                             <li>V1: <a href="./v010/index.html" target="_blank">Madrid JUG (2025/05/06)</a></li>
                         </ul>
                     </section>
@@ -154,26 +154,13 @@
 				<!-- Agenda -->
 				<section>
 					<section>
-						<h2>Agenda (60 min)</h2>
+						<h2>Agenda (30min)</h2>
 						<ul>
 							<li>Who I am</li>
 							<li>Context</li>
                             <li>Cursor platform</li>
-                            <li>Data privacy support</li>
+                            <li>Data privacy notes</li>
 							<li>Demos</li>
-                            <li>Takeaways</li>
-							<li>Q&A</li>
-						</ul>
-					</section>
-                    <section>
-						<h2>Agenda (60 min)</h2>
-						<ul>
-							<li>Who I am</li>
-							<li>Context (5min)</li>
-                            <li>Cursor platform (10min)</li>
-                            <li>Data privacy support (5min)</li>
-							<li>Demos (35min)</li>
-                            <li>Takeaways (5min)</li>
 							<li>Q&A</li>
 						</ul>
 					</section>
@@ -252,18 +239,16 @@
                             <li>Cursor AI</li>
                             <li>Intellij Idea Ultimate + Cursor Agent CLI</li>
                             <li>VSCode + Cursor Agent CLI</li>
-                            <li>Github Codespaces + Cursor Agent CLI</li>
-                            <li>Cursor Web</li>
-                            <li>Cursor BugBot</li>
-                            <li>Cursor Rules</li>
+                            <li>DevContainers + Cursor Agent CLI</li>
+                            <li>Cursor Web/Mobile</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Cursor platform</h2>
                         <p><strong>For Data pipelines:</strong></p>
                         <ul>
+                            <li>Cursor Agent CLI</li>
                             <li>Cursor Background Agents API</li>
-                            <li>Cursor Rules</li>
                         </ul>
                     </section>
                     <section>
@@ -279,22 +264,7 @@
                     </section>
                     <section>
                         <h2>Cursor platform</h2>
-                        <p><strong>For Software Engineers: TO BE</strong></p>
-                        <p>
-                            Type in the terminal:
-                        </p>
-                        <pre data-id="code-animation">
-							<code class="hljs bash" data-trim data-line-numbers>
-cursor-agent
-							</code>
-						</pre>
-                        <img src="images/alternatives/cursor-cli.png" width="70%" />
-                        <br />
-                        <small><strong>Source: </strong><a href="https://cursor.com/cli" target="_blank">Cursor CLI</a></small>
-                    </section>
-                    <section>
-                        <h2>Cursor platform</h2>
-                        <p><strong>For Software Engineers: TO BE</strong></p>
+                        <p><strong>For Software Engineers:</strong></p>
                         <img src="images/alternatives/cursor-web.png" width="80%"/>
                         <small><strong>Source: </strong><a href="https://cursor.com/agents"
                             target="_blank">https://cursor.com/agents</a></small>
@@ -308,6 +278,12 @@ cursor-agent
                         <h2>Cursor platform</h2>
                         <p><strong>For Data pipelines: TO BE</strong></p>
                         <img src="images/alternatives/tobe-data.png" />
+                        <small><strong>Source: </strong><a href="https://cursor.com/cli" target="_blank">Cursor CLI</a></small>
+                    </section>
+                    <section>
+                        <h2>Cursor platform</h2>
+                        <p><strong>For Data pipelines: TO BE</strong></p>
+                        <img src="images/alternatives/tobe-data-v2.png" />
                         <small><strong>Source: </strong><a href="https://cursor.com/docs/background-agent" target="_blank">Cursor Background Agent</a></small>
 
                     </section>
@@ -316,7 +292,7 @@ cursor-agent
                 <!-- Data privacy notes -->
                 <section>
                     <section>
-                        <h2>Data privacy support</h2>
+                        <h2>Data privacy notes</h2>
                         <ul>
 							<li>Security features
 								<ul>
@@ -340,14 +316,6 @@ cursor-agent
 						<small><strong>Source: </strong><a href="https://www.cursor.com/privacy"
 							target="_blank">https://www.cursor.com/privacy</a></small>
 					</section>
-                    <section>
-						<h3>Privacy mode</h3>
-						<p>
-                            <img src="images/review/cursor-privacy-dashboard.png" width="50%" />
-                        </p>
-						<small><strong>Source: </strong><a href="https://www.cursor.com/privacy"
-							target="_blank">https://www.cursor.com/dashboard</a></small>
-					</section>
 					<section>
 						<h3>Trust</h3>
 						<p>
@@ -361,33 +329,6 @@ cursor-agent
 						<small><strong>Source: </strong><a href="https://trust.cursor.com/"
 							target="_blank">https://trust.cursor.com/</a></small>
 					</section>
-                    <section>
-                        <h3>Trust</h3>
-                        <p>
-                            Subprocessors are third-party services that Cursor uses to provide its services.
-                        </p>
-                        <table>
-                            <tr>
-                                <td>
-                                    <img src="images/review/subprocessors-I.png" width="80%" />
-                                </td>
-                                <td>
-                                    <img src="images/review/subprocessors-II.png" width="80%" />
-                                </td>
-                            </tr>
-                        </table>
-                        <small><strong>Source: </strong><a href="https://trust.cursor.com/"
-							target="_blank">https://trust.cursor.com/subprocessors</a> & <a href="https://www.vanta.com/products/trust-center" target="_blank">https://www.vanta.com/products/trust-center</a></small>
-                    </section>
-                    <section>
-                        <h3>Trust</h3>
-                        <p>
-                            Cursor High-Level Architecture:
-                        </p>
-                        <img src="images/review/cursor-architecture.png" width="100%" />
-                        <small><strong>Source: </strong><a href="https://trust.cursor.com/"
-							target="_blank">https://trust.cursor.com/subprocessors</a></small>
-                    </section>
                 </section>
 
                 <!-- Demos -->
@@ -397,10 +338,10 @@ cursor-agent
                         <ul>
 							<li>Software Engineer features
                                 <ul>
-                                    <!-- <li>Models</li> -->
-                                    <li>Tab model</li>
+									<li>Tab model</li>
+                                    <li>Models</li>
 									<li>Cursor rules</li>
-                                    <li>Modes (Ask, Agent & Plan)</li>
+                                    <li>Modes (Agent, Ask & Background)</li>
 								</ul>
                             </li>
                             <li>Data pipelines features
@@ -410,20 +351,6 @@ cursor-agent
                             </li>
                         </ul>
                     </section>
-                    <!-- Models
-                    <section>
-						<h3>Models</h3>
-                        <p>
-                            Cursor provides access to latest Commercial LLMs
-                        </p>
-						<img src="images/review/review-cursor-models2.png" width="30%" /><br />
-						<small><strong>Source: </strong><a href="https://docs.cursor.com/settings/models"
-							target="_blank">https://docs.cursor.com/settings/models</a></small>
-					</section>
-                    <section>
-                        <img src="images/demo.png" width="80%" />
-                    </section>
-                     -->
                     <section>
 						<h3>Tab model</h3>
 						<p>
@@ -448,6 +375,18 @@ cursor-agent
                         <img src="images/demo.png" width="80%" />
                     </section>
 					<section>
+						<h3>Models</h3>
+                        <p>
+                            Cursor provides access to latest Commercial LLMs
+                        </p>
+						<img src="images/review/review-cursor-models2.png" width="30%" /><br />
+						<small><strong>Source: </strong><a href="https://docs.cursor.com/settings/models"
+							target="_blank">https://docs.cursor.com/settings/models</a></small>
+					</section>
+                    <section>
+                        <img src="images/demo.png" width="80%" />
+                    </section>
+					<section>
 						<h3>Cursor rules</h3>
 						<p>
 							Using rules in Cursor you can control the behavior of the underlying model. You can think of it as instructions and/or a system prompt for LLMs.
@@ -460,7 +399,7 @@ cursor-agent
 						<h3>Cursor rules</h3>
 						<img src="images/review/cursor-rules.png" width="80%" />
 					</section>
-
+                    -->
 					<section>
 						<h3>Cursor rules</h3>
 						<p>
@@ -473,7 +412,6 @@ cursor-agent
                             <li><a href="https://google.github.io/styleguide/javaguide.html" target="_blank">https://google.github.io/styleguide/javaguide.html</a></li>
                         </ul>
 					</section>
-                    -->
 					<section>
 						<h3>Cursor rules</h3>
 						<p>
@@ -496,13 +434,16 @@ jbang setup@jabrena init \
 --cursor https://github.com/jabrena/cursor-rules-java
 							</code>
 						</pre>
+                        <p>
+                            If you have good ideas, PRs are welcome. 🙏🙏🙏
+                        </p>
 					</section>
 					<section>
 						<img src="images/demo.png" width="80%" />
 					</section>
 					<section>
 						<h3>Modes</h3>
-						<img src="images/review/review-cursor-modes.png" width="40%" />
+						<img src="images/review/review-cursor-modes.png" width="50%" />
                         <p>
                             Natural language interface for exploring, editing, and managing code with contextual AI assistance in Chat mode.
                         </p>
@@ -572,21 +513,6 @@ jbang setup@jabrena init \
 						<img src="images/demo.png" width="80%" />
 					</section>
                     <section>
-                        <h3>Plan Mode</h3>
-                        <p>
-                            When you need to implement a new feature with a higher level
-                            of complexity, you can use the Plan Mode to break down the task into smaller steps.
-                        </p>
-                        <img src="images/review/review-cursor-mode-plan.png" width="40%" />
-                        <br />
-                        <small><strong>Source: </strong><a href="https://cursor.com/docs/agent/modes#plan"
-                            target="_blank">https://cursor.com/docs/agent/modes#plan</a></small>
-                    </section>
-                    <section>
-						<img src="images/demo.png" width="80%" />
-					</section>
-                    <!-- Background agents
-                    <section>
                         <h3>Background agents</h3>
                         <p>
                             Using the Background Agents, you can run tasks in the background.
@@ -604,12 +530,11 @@ jbang setup@jabrena init \
                     <section>
 						<img src="images/demo.png" width="80%" />
 					</section>
-                    -->
                     <section>
                         <h3>Data pipelines features</h3>
                         <p>
-Using the Background Agents, you can run tasks in the cloud, not in local machine, to automate
-some complex tasks in your codebase and submit a PR to your repository later.
+Using the Background Agents, you can run tasks in the background to automate
+some complex tasks in your codebase.
                         </p>
                     </section>
                     <section>
@@ -617,14 +542,7 @@ some complex tasks in your codebase and submit a PR to your repository later.
                         <img src="images/demo.png" width="80%" />
                     </section>
                 </section>
-                <section>
-                    <section>
-                        <h3>Takeaways</h3>
-                        <p>
-                            PENDING
-                        </p>
-                    </section>
-                </section>
+
                 <section>
                     <h3>Slides</h3>
                     <pre data-id="code-animation">
