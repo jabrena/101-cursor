@@ -40,7 +40,7 @@
 						<h2 style="color: white;">101 Cursor AI</h2>
 						<h3 style="color: white;">Learning to use for Java Enterprise projects</h3>
 						<p style="color: white;">v0.3.0-SNAPSHOT  (60min talk)</p>
-                        <img src="images/context/cursor-logo.webp" width="30%" />
+                        <img src="images/context/cursor-logo-v2.svg" width="20%" />
 					</section>
                     <section>
                         <h3>Version control</h3>
@@ -158,6 +158,7 @@
 						<ul>
 							<li>Who I am</li>
 							<li>Context</li>
+                            <!--<li>SLDC & Cursor</li>-->
                             <li>Cursor platform</li>
                             <li>Data privacy support</li>
 							<li>Demos</li>
@@ -183,7 +184,7 @@
 				<section>
 					<section>
 						<h2>Context</h2>
-						<img src="images/context/cursor-logo.webp" width="30%" />
+						<img src="images/context/cursor-logo.svg" width="30%" />
 						<p>
 							<a href="https://www.cursor.com/" target="_blank">https://www.cursor.com/</a>
 						</p>
@@ -218,10 +219,12 @@
                         <small><strong>Source: </strong><a href="https://www.infoq.com/articles/architecture-trends-2025/"
                             target="_blank">https://www.infoq.com/articles/architecture-trends-2025/</a></small>
                     </section>
+                    <!--
                     <section>
                         <img src="images/context/gartner-ai-2025.webp" width="50%" />
                         <h2>Really? 😳 🤔</h2>
                     </section>
+                    -->
                     <!--
 					<section>
 						<img src="images/context/infoq-ai-trends.webp" width="60%" />
@@ -231,7 +234,43 @@
                     -->
 				</section>
 
-
+                <!-- SLDC & Cursor -->
+                <!--
+                <section>
+                    <section>
+                        <h2>SLDC & Cursor</h2>
+                        <table>
+                            <tr>
+                                <td>Planning/Design</td>
+                                <td>Coding/Testing</td>
+                                <td>Operations</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>Specs</li>
+                                        <li>ADRs</li>
+                                        <li>Diagrams</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Sources</li>
+                                        <li>Tests</li>
+                                        <li>Benchmarks</li>
+                                    </ul>
+                                </td>
+                                <td style="vertical-align: top;">
+                                    <ul>
+                                        <li>Monitoring</li>
+                                        <li>Logging</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+                -->
                 <!-- Alternatives to use Cursor platform -->
                 <section>
                     <section>
@@ -379,6 +418,7 @@ cursor-agent
                         <small><strong>Source: </strong><a href="https://trust.cursor.com/"
 							target="_blank">https://trust.cursor.com/subprocessors</a> & <a href="https://www.vanta.com/products/trust-center" target="_blank">https://www.vanta.com/products/trust-center</a></small>
                     </section>
+                    <!--
                     <section>
                         <h3>Trust</h3>
                         <p>
@@ -388,6 +428,7 @@ cursor-agent
                         <small><strong>Source: </strong><a href="https://trust.cursor.com/"
 							target="_blank">https://trust.cursor.com/subprocessors</a></small>
                     </section>
+                    -->
                 </section>
 
                 <!-- Demos -->
@@ -395,12 +436,17 @@ cursor-agent
                     <section>
                         <h2>Demos</h2>
                         <ul>
-							<li>Software Engineer features
+                            <li>Software Engineer features
                                 <ul>
-                                    <!-- <li>Models</li> -->
-                                    <li>Tab model</li>
-									<li>Cursor rules</li>
-                                    <li>Modes (Ask, Agent & Plan)</li>
+                                    <li>Cursor AI Desktop
+                                        <ul>
+                                            <!-- <li>Models</li> -->
+                                            <li>Tab model</li>
+                                            <li>Modes (Ask, Agent & Plan)</li>
+                                            <li>Cursor rules</li>
+                                        </ul>
+                                    </li>
+                                    <li>Cursor Agent CLI</li>
 								</ul>
                             </li>
                             <li>Data pipelines features
@@ -606,6 +652,24 @@ jbang setup@jabrena init \
 					</section>
                     -->
                     <section>
+                        <h3>Cursor Agent CLI</h3>
+                        <p>
+                            Cursor Agent CLI is a command line tool that allows you to use Cursor AI in your terminal.
+                        </p>
+						<pre data-id="code-animation">
+							<code class="hljs bash" data-trim data-line-numbers>
+curl https://cursor.com/install -fsS | bash
+
+cursor-agent \
+-p "analyze the latest threaddump and flamegraph \
+to provide some insigts to fix this memory leak" \
+--print
+							</code>
+						</pre>
+                        <small><strong>Source: </strong><a href="https://cursor.com/cli"
+                            target="_blank">https://cursor.com/cli</a></small>
+                    </section>
+                    <section>
                         <h3>Data pipelines features</h3>
                         <p>
 Using the Background Agents, you can run tasks in the cloud, not in local machine, to automate
@@ -619,10 +683,21 @@ some complex tasks in your codebase and submit a PR to your repository later.
                 </section>
                 <section>
                     <section>
-                        <h3>Takeaways</h3>
-                        <p>
-                            PENDING
-                        </p>
+                        <h2>Takeaways</h2>
+                        <ul>
+                            <li>Use 'Mode Ask' to review solutions and ask for alternatives.</li>
+                            <li>Use 'Mode Agent' to make codebase-wide changes and refactoring.</li>
+                            <li>Use 'Mode Plan' to implement a new feature with a higher level of complexity.</li>
+                            <li>Use 'Default' model for task with average complexity.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Takeaways</h2>
+                        <ul>
+                            <li><u>Cursor Rules for Java</u> could be considered as an evolution of the classical Java Style guides,
+                                but it has more potential capabilities.</li>
+                            <li><u>A key aspect to be considered to adopt Cursor AI/others is the Dev Quality culture of the company.</u></li>
+                        </ul>
                     </section>
                 </section>
                 <section>
