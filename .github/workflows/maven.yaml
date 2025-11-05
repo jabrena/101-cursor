@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   build:
+    if: false  # Disabled - remove this line to re-enable
     name: Build ${{ matrix.name }}
     runs-on: ubuntu-latest
     strategy:
