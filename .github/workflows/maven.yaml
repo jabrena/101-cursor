@@ -16,7 +16,7 @@ jobs:
           - name: Quarkus
             pom: ./backup/quarkus/greek-gods-service/pom.xml
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           submodules: true  # Fetches all submodules
       - uses: actions/setup-java@v5
